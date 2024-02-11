@@ -48,6 +48,9 @@ public class Usuarios {
     @Column(name = "token")
     private String token;
 
-    @OneToMany(mappedBy = "usuario", targetEntity = Personal.class)
+    @OneToMany(mappedBy = "idUsuario", targetEntity = Personal.class)
     private List<Personal> personal;
+
+    @OneToMany(mappedBy = "idUsuario", targetEntity = Lotes.class)
+    private List<Lotes> lote;
 }
