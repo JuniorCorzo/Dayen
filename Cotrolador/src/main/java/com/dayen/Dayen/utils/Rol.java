@@ -1,2 +1,4 @@
-package com.dayen.Dayen.utils;public enum Rol {
+package com.dayen.Dayen.utils;
+
+public enum Rol {
 }
