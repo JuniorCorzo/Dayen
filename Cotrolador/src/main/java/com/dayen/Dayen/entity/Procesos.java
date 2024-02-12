@@ -23,6 +23,10 @@ public class Procesos {
     @JoinColumn(name = "id_lote")
     private Lotes idLote;
 
+    @ManyToOne(targetEntity = TipoProcesos.class)
+    @JoinColumn(name = "id_tipo")
+    private TipoProcesos idTipo;
+
     @Column(name = "descripcion")
     @NotNull
     @NotEmpty
