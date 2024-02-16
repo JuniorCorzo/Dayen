@@ -15,7 +15,7 @@ body {
 /*Contenedor segundari del Inicio de Sesion*/
 .row {
     background-color: #a0d7ac;
-    width: 300px;
+    width: 350px;
     border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
@@ -65,6 +65,7 @@ h1 {
     width: 25px;
     height: 25px;
     background-color: #e2d197;
+    cursor: pointer;
     border: none;
 }
 .form-check-label{
