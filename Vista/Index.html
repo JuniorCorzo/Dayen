@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio de Sesion</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="Assets/Css/style.css" />
+  </head>
+
+  <body>
+    <!-- Contenedor principal que engloba todo el login-->
+    <div class="container">
+      <!-- Contenedor segundario que engloba el login-->
+      <div class="row justify-content-center pt-2 mt-5 m-1">
+        <h1 class="pt-2">INICIO DE SESION</h1>
+        <div class="imagen pt-2">
+          <img class="img" src="Assets/Img/DAYEN-logo.png" />
+        </div>
+        <!-- Contenedor del formulario del login-->
+        <div class="formulario pt-4">
+          <form action="">
+            <!-- Grupos que componen cada div del formulario dellogin-->
+            <div class="form-group mb-4">
+              <i class="bi bi-person"></i>
+              <input
+                type="text"
+                class="form-control"
+                name="usuario"
+                placeholder="Usuario"
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <i class="bi bi-lock"></i>
+              <input
+                type="password"
+                class="form-control"
+                name="Contraseña"
+                placeholder="Contraseña"
+              />
+            </div>
+            <!-- Verificacion de Recordar usuario-->
+            <div class="form-check mx-sm-2 mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                name="checkbox"
+                id=""
+              />
+              <label class="form-check-label mx-sm-3" for="connected"
+                >Recordar</label
+              >
+            </div>
+            <!-- Botones de ingresar y olvido ontraseña-->
+            <div class="d-grid  mb-3">
+              <button
+                type="submit"
+                class="btn btn-block"
+                value="ingresar"
+              >
+                Ingresar
+              </button>
+            </div>
+
+            <div class="mx-sm-4 pb-3">
+              <a href="#" class="olvido">¿Olvido su Contraseña?</a>
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
