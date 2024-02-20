@@ -4,20 +4,35 @@
     margin: 0;
     padding: 0;
 }
+/*Fuentes */
+
+/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
+
+/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
+
 /*Inicio del stilo de login*/
 body {
     background-color: grey;
 }
 /*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
 .container{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 /*Contenedor segundari del Inicio de Sesion*/
-c
+.row {
+    background-color: #a0d7ac;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
+}
 /*Titulo de Inicio de Sesion*/
 h1 {
+    font-family: "Crete Round", serif;
     color: black;
     text-align: center;
     font-size: 30px;
@@ -32,8 +47,13 @@ h1 {
     width: 150px;
     height: 150px;  
 }
-
 /*Contenedor de formulario-principal*/
+.formulario {
+    font-family: "Cormorant", serif;
+    background-color: #a0d7ac;
+    border-radius: 15px;
+}
+/*Formulario del login -- engloba el input */
 .form-control {
     padding-left: 35px !important;
     border-radius: 10px;
@@ -43,11 +63,16 @@ h1 {
     cursor: pointer;
     outline: none;
 }
+/*Sirve para darle color aldar cli encima para escribir  */
+.form-control:focus {
+    background-color: #e2d197;
+    border:none;
+}
+/*Sirve para elcolor al nombre de usuario y password que esta en los campos de formulario*/
 .form-control::placeholder{
     color: black; 
-    border:none;    
 }
-/*Iconos de usuario y password*/
+/*Iconos de usuario y password en los input */
 .bi {
     color: black;
     position: absolute;
@@ -59,43 +84,72 @@ h1 {
     width: 25px;
     height: 25px;
     background-color: #e2d197;
-    cursor: pointer;
     border: none;
+    cursor: pointer;
 }
+/*Sirve para darle el color al cuadro de seleccionar*/
+.form-check-input:focus {
+    background-color: #e0ab4e;
+}
+/*Es para darle el tamaño y la fuente del laberl de la verificacion del usuario*/
 .form-check-label{
     font-size: 20px;
+    font-family: "Cormorant", serif;
 }
 /*Boton de ingresar*/
-.d-grid{
+.btn{
+    font-family: "Cormorant", serif;
+    width: 150px;
+    font-size: 20px;
     background-color: #e0ab4e;
     border-radius: 10px;
-    border: none;
     cursor: pointer;
-}
-.d-grid:hover{
-    box-shadow: 0 3px 2px #e2d197; 
-}
-.btn{
-    font-size: 20px;
     border: none;
 }
+.btn:hover {
+    background-color: #e0ab4e;
+  }
 
-/*Boton deolvido contraseña */
+/*Boton de olvido su contraseña */
 .olvido {
+    font-family: "Cormorant", serif;
+    font-size: 20px;
     color: black;
     text-transform: none;
     text-decoration: none;
-    font-size: 20px;
-  }
-  .olvido:hover {
+    border: none;
+    cursor: pointer;
+}
+.olvido:hover {
     box-shadow: 0 3px 2px #e2d197;
   }
  /**************************************************************************************************************************************/
 /*Modulos de Recuperar contraseña*/ 
+/*Contenedor Principal de recuperar Contraseña*/
 .contenedor {
     background-color: #a0d7ac;
-    width: 400px;
+    width: 350px;
     border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
+}
+/*Contenedor que tiene el contenainer del formulario de recuperar contraseña*/
+.contraseña {
+    font-family: "Cormorant", serif;
+    background-color: #a0d7ac;
+    border-radius: 15px;
+}
+/*Input de formulario de ingresar informacion*/
+.form-control-input{
+    padding-left: 40px !important;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
+}
+.form-control-input::placeholder{
+    color: black;
 }

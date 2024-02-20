@@ -19,39 +19,51 @@
   </head>
 
   <body>
-    <!-- Contenedor principal que engloba todo el login-->
+    <!-- Contenedor principal-->
     <div class="container">
-      <!-- Contenedor segundario que engloba el login-->
+      <!-- Contenedor segundario que engloba el ingreso del correo del usuario para recuperara la contraseña-->
       <div class="contenedor justify-content-center pt-2 mt-5 m-1">
+        <!--Titulo del Registro contraseña-->
         <h1 class="pt-2">RECUPERAR CONTRASEÑA</h1>
+        <!-- Contenedor de la imagen-->
         <div class="imagen pt-2">
           <img class="img" src="Assets/Img/DAYEN-logo.png" />
         </div>
-        <!-- Contenedor del formulario del login-->
-       
-          <form action="">
-            <!-- Grupos que componen cada div del formulario dellogin-->
-            <div class="form-group mb-3">
+
+        <!-- Contenedor del formulario de Recuperar la contraseña-->
+          <div class="contraseña pt-4" >
+            
+            <div class="justify-content-center d-flex pb-3">
+               <!-- Formulario-->
+            <form action="" >
+              <!-- Iconos-->
               <i class="bi bi-envelope-at"></i>
+              <!-- Input de formulario de ingresar informacion-->
               <input
                 type="email"
-                class="form-control"
-                id="floatingInput"
-                placeholder="email@.com"
+                class="form-control-input"
+                id="floatingInputValue" 
+                placeholder="name@example.com"
+                
               />
             </div>
 
-            <!-- Botones de ingresar y volver-->
-            <div class="d-grid gap 2 col-6 mx-auto " >
-              <button class="boton " type="button">Ingresar</button>
-             
-            </div>
-            <div class="d-grid gap 2 col-6 mx-auto " >
-                <button class="boton " type="button">Volver</button>
-               
-              </div>
+            <!-- Boton de Ingresar-->
+            <div class="justify-content-center d-flex pb-3">
+             <button type="submit" class="btn" value="ingresar">Aceptar</button>
+           </div>
+ 
+           <!-- Boton de Volver-->
+           <div class="justify-content-center d-flex pb-3">
+             <a href="Index.html" type="submit" class="btn" value="ingresar">
+               Volver
+             </a>
+           </div>
           </form>
-    
+
+            
+        </div>
+        
       </div>
     </div>
   </body>
