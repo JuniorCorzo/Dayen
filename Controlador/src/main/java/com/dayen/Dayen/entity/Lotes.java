@@ -21,6 +21,12 @@ public class Lotes {
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
     private Usuarios idUsuario;
 
+    @Column(name = "fase")
+    private String fase;
+
+    @Column(name = "hectareas")
+    private Integer hectareas;
+
     @OneToMany(mappedBy = "idLote", targetEntity = Procesos.class)
     private List<Procesos> procesos;
 }
