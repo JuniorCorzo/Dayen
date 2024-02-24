@@ -2,6 +2,7 @@ package com.dayen.Dayen.services;
 
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.repository.ProcesoRepository;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class ProcesoService {
 		this.procesoRepository = procesoRepository;
 	}
 
-	public List<Procesos> getAllProcesos(){
-		return this.procesoRepository.findAll();
+	public List<Procesos> getAllProcesosByLote(@NotNull Integer idLote) {
+		return this.procesoRepository.findAllByIdLote(idLote);
 	}
 }
