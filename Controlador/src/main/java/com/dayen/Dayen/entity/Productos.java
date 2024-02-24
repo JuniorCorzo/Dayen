@@ -28,5 +28,5 @@ public class Productos {
     private String funcion;
 
     @OneToOne(mappedBy = "idProducto")
-    private TipoProcesos tipoProceso;
+    private Procesos procesos;
 }
