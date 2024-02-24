@@ -14,6 +14,6 @@ public class LotesService {
 	}
 
 	public List<Lotes> getAllLotesByUsuario(@NotNull Integer idUsuario){
-		return loteRepository.findAllByIdUsuario(idUsuario);
+		return this.loteRepository.findAllByIdUsuario(idUsuario);
 	}
 }

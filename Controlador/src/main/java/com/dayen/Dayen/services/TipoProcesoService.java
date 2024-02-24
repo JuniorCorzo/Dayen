@@ -15,6 +15,6 @@ public class TipoProcesoService {
 	}
 
 	public List<TipoProcesos> getAllTipoProcesos(){
-		return tipoProcesoRepository.findAll();
+		return this.tipoProcesoRepository.findAll();
 	}
 }

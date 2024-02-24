@@ -15,6 +15,6 @@ public class ProcesoService {
 	}
 
 	public List<Procesos> getAllProcesos(){
-		return procesoRepository.findAll();
+		return this.procesoRepository.findAll();
 	}
 }

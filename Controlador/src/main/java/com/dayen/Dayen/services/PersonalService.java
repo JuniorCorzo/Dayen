@@ -16,6 +16,6 @@ public class PersonalService {
 	}
 
 	public List<Personal> getAllPersonalByUsuario(@NotNull Integer idUsuario){
-		return personalRepository.findAllByIdUsuario(idUsuario);
+		return this.personalRepository.findAllByIdUsuario(idUsuario);
 	}
 }
