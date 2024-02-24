@@ -14,8 +14,8 @@ public class UsuarioService {
 		this.usuarioRepository = usuarioRepository;
 	}
 
-	public Usuarios getUsuarioById(@NotNull Integer id){
-		return this.usuarioRepository.findById(id)
+	public Usuarios getUsuarioById(@NotNull String idUsuario){
+		return this.usuarioRepository.findById(idUsuario)
 				.orElseThrow(() -> new RuntimeException("Usuario no existe"));
 	}
 
@@ -24,7 +24,7 @@ public class UsuarioService {
 	}
 
 	public Usuarios usuarioUpdate(@Valid Usuarios usuario) {
-		if (usuarioRepository.existsById(Integer.valueOf(usuario.getIdUsuario())))
+		if (usuarioRepository.existsById(usuario.getIdUsuario()))
 			throw new RuntimeException("Usuario existe");
 		return this.usuarioRepository.save(usuario);
 	}
