@@ -19,10 +19,6 @@ public class TipoProcesos {
     @Column(name = "id_tipo")
     private Integer idTipo;
 
-    @OneToOne
-    @JoinColumn(name = "id_producto", referencedColumnName = "id_producto")
-    private Productos idProducto;
-
     @Column(name = "tipo_proceso")
     @NotNull
     @NotEmpty
