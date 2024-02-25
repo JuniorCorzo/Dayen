@@ -33,7 +33,7 @@ public class Usuarios {
 
     @Column(name = "rol")
     @NotNull
-    private Rol rol;
+    private String rol;
 
     @Column(name = "correo", unique = true)
     @NotNull
