@@ -2,7 +2,6 @@ package com.dayen.Dayen.controller;
 
 import com.dayen.Dayen.entity.Personal;
 import com.dayen.Dayen.services.PersonalService;
-import com.dayen.Dayen.services.ProcesoService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
