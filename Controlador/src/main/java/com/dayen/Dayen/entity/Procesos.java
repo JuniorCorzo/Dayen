@@ -26,6 +26,9 @@ public class Procesos {
     @ManyToOne(targetEntity = TipoProcesos.class)
     @JoinColumn(name = "id_tipo")
     private TipoProcesos idTipo;
+    @OneToOne
+    @JoinColumn(name = "id_producto")
+    private Productos idProducto;
 
     @Column(name = "descripcion")
     @NotNull
