@@ -1,5 +1,7 @@
 package com.dayen.Dayen.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +21,7 @@ public class Lotes {
 
     @ManyToOne(targetEntity = Usuarios.class)
     @JoinColumn(name = "id_usuario", referencedColumnName = "id_usuario")
+    @JsonBackReference
     private Usuarios idUsuario;
 
     @Column(name = "fase")
@@ -28,5 +31,6 @@ public class Lotes {
     private Integer hectareas;
 
     @OneToMany(mappedBy = "idLote", targetEntity = Procesos.class)
+    @JsonManagedReference
     private List<Procesos> procesos;
 }

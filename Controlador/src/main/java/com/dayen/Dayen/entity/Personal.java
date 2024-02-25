@@ -1,5 +1,8 @@
 package com.dayen.Dayen.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -16,8 +19,10 @@ public class Personal {
     @Id
     @Column(name = "id_personal")
     private Integer idPersonal;
+
     @ManyToOne(targetEntity = Usuarios.class)
     @JoinColumn(name = "id_usuario")
+    @JsonBackReference
     private Usuarios idUsuario;
 
     @Column(name = "nombre")

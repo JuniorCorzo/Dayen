@@ -1,6 +1,5 @@
 package com.dayen.Dayen.controller;
 
-import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.entity.TipoProcesos;
 import com.dayen.Dayen.services.TipoProcesoService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,7 @@ public class TipoProcesoController {
 	}
 
 	@GetMapping("/all")
-	public List<TipoProcesos> getAllTiposProcesos(){
+	public List<TipoProcesos> getAllTipoProcesos(){
 		return this.tipoProcesoService.getAllTipoProcesos();
 	}
 }
