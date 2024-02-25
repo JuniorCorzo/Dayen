@@ -1,16 +1,16 @@
-/*Estilo de modulos deinicio de sesion- Recuperar contraseña- registrar usaurio*/
+/*Estilo de modulos de inicio de sesion- Recuperar contraseña- Registrar usaurio*/
 
 *{
     margin: 0;
     padding: 0;
 }
+
 /*Fuentes */
-
-/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
-
+/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
 /*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
+/****************************************************************************************************************/
 /*Inicio del stilo de login*/
 body {
     background-color: grey;
@@ -22,7 +22,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-/*Contenedor segundari del Inicio de Sesion*/
+/*Contenedor segundario del Inicio de Sesion*/
 .row {
     background-color: #a0d7ac;
     width: 350px;
@@ -30,7 +30,7 @@ body {
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
-/*Titulo de Inicio de Sesion*/
+/*Titulo del inicio de sesion, Recuperar contraseña y Registro de usuario */
 h1 {
     font-family: "Crete Round", serif;
     color: black;
@@ -47,7 +47,7 @@ h1 {
     width: 150px;
     height: 150px;  
 }
-/*Contenedor de formulario-principal*/
+/*Contenedor de formulario-principal del inicio de sesion*/
 .formulario {
     font-family: "Cormorant", serif;
     background-color: #a0d7ac;
@@ -63,16 +63,16 @@ h1 {
     cursor: pointer;
     outline: none;
 }
-/*Sirve para darle color aldar cli encima para escribir  */
+/*Sirve para darle color al dar clic encima para escribir  */
 .form-control:focus {
     background-color: #e2d197;
     border:none;
 }
-/*Sirve para elcolor al nombre de usuario y password que esta en los campos de formulario*/
+/*Sirve para elcolor al nombre de usuario y password y a todos los palanbras o frases que obtengan esta clase por defecto del bootstrap */
 .form-control::placeholder{
     color: black; 
 }
-/*Iconos de usuario y password en los input */
+/* Clases y propiedades de los Iconos en los input */
 .bi {
     color: black;
     position: absolute;
@@ -91,7 +91,7 @@ h1 {
 .form-check-input:focus {
     background-color: #e0ab4e;
 }
-/*Es para darle el tamaño y la fuente del laberl de la verificacion del usuario*/
+/*Es para darle el tamaño y la fuente del label de la verificacion del usuario*/
 .form-check-label{
     font-size: 20px;
     font-family: "Cormorant", serif;
@@ -108,8 +108,7 @@ h1 {
 }
 .btn:hover {
     background-color: #e0ab4e;
-  }
-
+}
 /*Boton de olvido su contraseña */
 .olvido {
     font-family: "Cormorant", serif;
@@ -122,9 +121,12 @@ h1 {
 }
 .olvido:hover {
     box-shadow: 0 3px 2px #e2d197;
-  }
+}
+
+
  /**************************************************************************************************************************************/
 /*Modulos de Recuperar contraseña*/ 
+
 /*Contenedor Principal de recuperar Contraseña*/
 .contenedor {
     background-color: #a0d7ac;
@@ -156,6 +158,8 @@ h1 {
 
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
+
+/*Contenedor principal*/
 .usuario {
     font-family: "Cormorant", serif;
     background-color: #a0d7ac;

@@ -1,0 +1,97 @@
+/*Estilo de modulos de inicio de sesion- Recuperar contraseña- Registrar usaurio*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
+/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
+
+/****************************************************************************************************************/
+/*Inicio del stilo de login*/
+body {
+   
+    background-color: grey;
+}
+/*Barra de Navegacion principal*/
+
+/*Clase principal*/
+header {
+    font-family: "Cormorant", serif;
+    border-radius: 15px;  
+    visibility: visible;
+    border-top:5px solid #a0d7ac;
+	border-right:2px solid #a0d7ac;
+	border-left:2px solid #a0d7ac;
+    border-bottom: 5px solid #a0d7ac;
+}
+
+/*Estilo de cerrar y Administrador*/
+.nav-link{
+    font-size: 30px;
+    color: black;
+}
+ul li a {
+    color: black  !important;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+	text-shadow:2px 2px 20px #04f839;
+}
+/*Ptopiedades de la imagen */
+.imagen {
+    width:100px;
+    height:100px; 
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+/* Clases del icono de cerrar*/
+.bi {
+    color: black;
+    font-size: 30px;
+    margin-right: 37px;
+    pointer-events: none;
+}
+/*position:fixed; sirve para dejar instantaneamente la barar de navegador pero me da problemas esta en preceso.
+
+
+
+/**********************************************************************************/
+/*modolo principal de lotes*/
+
+/*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
+/*Titulo*/
+h1{
+    font-family: "Crete Round", serif;
+    font-size: 50px;
+}
+/*Contenedor de imagne arrocera*/
+.rounded {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+}
+/*Botones*/
+.btn{
+    font-family: "Cormorant", serif;
+    width: 250px;
+    font-size: 20px;
+    background-color: #e0ab4e;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.btn:hover {
+    background-color: #e0ab4e;
+}
+/*Tabla de informacion*/
+.table {
+    
+    background-color: #a0d7ac;
+    border-radius: 15px;
+}
