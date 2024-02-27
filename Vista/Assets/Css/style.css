@@ -36,7 +36,7 @@ ul li a {
     cursor: pointer;
     text-decoration: none;
 }
-a:hover{
+ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
 }
 /*Ptopiedades de la imagen */
@@ -51,14 +51,13 @@ a:hover{
     margin-right: 37px;
    cursor: pointer;
 }
-.fa-solid{
+
+.fa-solid {
     font-size: 30px;
-    margin-left: 90px;
+    margin-left: 37px;
     cursor: pointer;
 }
 /*position:fixed; sirve para dejar instantaneamente la barar de navegador pero me da problemas esta en preceso.
-
-
 
 /**********************************************************************************/
 /*modolo principal de lotes*/
@@ -100,4 +99,4 @@ h1{
     --bs-table-striped-bg: #8febc2; /*Color derecho*/
 }
 
-/***********************************************************************************************************************/
+/*************************************************************************************************************************************/
