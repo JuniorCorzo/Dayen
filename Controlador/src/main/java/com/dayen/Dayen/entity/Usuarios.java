@@ -1,6 +1,8 @@
 package com.dayen.Dayen.entity;
 
 import com.dayen.Dayen.utils.Rol;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -33,7 +35,7 @@ public class Usuarios {
 
     @Column(name = "rol")
     @NotNull
-    private Rol rol;
+    private String rol;
 
     @Column(name = "correo", unique = true)
     @NotNull
@@ -49,8 +51,10 @@ public class Usuarios {
     private String token;
 
     @OneToMany(mappedBy = "idUsuario", targetEntity = Personal.class)
+    @JsonManagedReference
     private List<Personal> personal;
 
     @OneToMany(mappedBy = "idUsuario", targetEntity = Lotes.class)
+    @JsonManagedReference
     private List<Lotes> lote;
 }
