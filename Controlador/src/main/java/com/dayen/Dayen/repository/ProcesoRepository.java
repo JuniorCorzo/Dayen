@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ProcesoRepository extends JpaRepository<Procesos, Integer> {
 	@Query(
-			value = "SELECT * FROM lotes WHERE id_lote=:idLote",
+			value = "SELECT * FROM procesos WHERE id_lote=:idLote",
 			nativeQuery = true
 	)
 	List<Procesos> findAllByIdLote(@Param("idLote") Integer idLote);
