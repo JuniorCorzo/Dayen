@@ -13,24 +13,21 @@
 /****************************************************************************************************************/
 /*Inicio del stilo de login*/
 body {
-   
     background-color: grey;
 }
 /*Barra de Navegacion principal*/
 
 /*Clase principal*/
-header {
+.navbar {
     font-family: "Cormorant", serif;
     border-radius: 15px;  
     visibility: visible;
-    background-color: #a0d7ac;
-   
+    background-color: #a0d7ac !important;
 }
 
 /*Estilo de cerrar y Administrador*/
 .nav-link{
     width: fit-content;
-
     font-size: 30px;
     color: black;
 }
@@ -46,16 +43,18 @@ a:hover{
 .imagen {
     width:100px;
     height:100px; 
-    display: block;
-    align-items: center;
-    justify-content: center;
 }
 /* Clases del icono de cerrar*/
-.bi {
+.bi{
     color: black;
     font-size: 30px;
     margin-right: 37px;
-    pointer-events: none;
+   cursor: pointer;
+}
+.fa-solid{
+    font-size: 30px;
+    margin-left: 90px;
+    cursor: pointer;
 }
 /*position:fixed; sirve para dejar instantaneamente la barar de navegador pero me da problemas esta en preceso.
 
@@ -99,5 +98,6 @@ h1{
     --bs-table-bg: #a0d7ac; /*Color izquierdo*/
     --bs-table-border-color: #0e0e0e;
     --bs-table-striped-bg: #8febc2; /*Color derecho*/
-  
 }
+
+/***********************************************************************************************************************/

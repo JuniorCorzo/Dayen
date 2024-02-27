@@ -175,3 +175,14 @@ h1 {
     width: 130px;
     height: 130px;  
 }
+
+/*************************************************************************************************************************************/
+/*Modulo de Registro dde Lotes-Hectareas*/
+
+/* Clases del icono que estna en el registrode lotes*/
+.fa-solid {
+    font-size: 15px;
+    position: absolute;
+    padding: 12px;
+    pointer-events: none;
+}
