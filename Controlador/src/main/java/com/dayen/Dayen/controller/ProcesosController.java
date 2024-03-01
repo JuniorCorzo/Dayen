@@ -22,7 +22,7 @@ public class ProcesosController {
 		return this.procesoService.getAllProcesosByLote(idLote);
 	}
 
-	@PostMapping()
+	@PostMapping("/create")
 	public void createProceso(@RequestBody ProcesosRequest proceso) {
 		 this.procesoService.createProceso(proceso);
 	}
