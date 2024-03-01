@@ -1,7 +1,6 @@
 package com.dayen.Dayen.repository;
 
 import com.dayen.Dayen.entity.Personal;
-import com.dayen.Dayen.entity.Usuarios;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

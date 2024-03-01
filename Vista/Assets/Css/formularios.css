@@ -16,17 +16,66 @@ body {
     background-color: grey;
 }
 /*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
-.container{
-    height: 100vh;
+.container{ 
     display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
 }
+
+/*Contenedor de Bienvenidos*/
+.content{
+    width: 300px;
+    height: 524px;
+    display: flex;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
+}
+/*Contenedor de que engloba la informacion*/
+.card {
+    background-color:#8febc2;
+    border: none;
+    align-items: center;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/*Contenedor de las imagenes*/
+.galeria {
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+/*Contenedor las imagnes y tamaños*/
+.galeria img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    transition: .7s ease;
+}
+/*Contenedor de las imagenes y sus transicion*/
+.galeria img:hover{
+    width: 200px;
+    opacity: 1;
+    filter: brightness(120%);
+}
+/*Contenedor del parrafo*/
+.text {
+    color: black;
+    font-size: 20px;
+}
+.text:hover{
+    text-shadow:2px 2px 20px #04f839;
+}
+
 /*Contenedor segundario del Inicio de Sesion*/
-.row {
+.row{
     background-color: #a0d7ac;
     width: 350px;
-    border-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
@@ -159,6 +208,13 @@ h1 {
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
 
+.registro {
+    background-color: #a0d7ac;
+    width: 350px;
+   border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
+}
 /*Contenedor principal*/
 .usuario {
     font-family: "Cormorant", serif;
