@@ -1,0 +1,23 @@
+meta {
+  name: Actualizar un usuario
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{HOST}}/usuario/update
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "idUsuario": "1234567890",
+    "nombre": "David",
+    "apellido": "Vasquez",
+    "rol": "ADMINISTRADOR",
+    "correo": "prueba@gmail.com",
+    "clave": "12345",
+    "token": "ESTO_ES_UN_TOKEN"
+  }
+}
