@@ -1,0 +1,20 @@
+meta {
+  name: Crear un nuevo procesos
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HOST}}/proceso/create
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "idTipo": 1,
+      "idProducto": 1,
+      "descripcion": "es no es un proceso",
+      "realizadoEn": "2024-02-25T23:23:34"
+    }
+}
