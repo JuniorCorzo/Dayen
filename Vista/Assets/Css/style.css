@@ -13,24 +13,21 @@
 /****************************************************************************************************************/
 /*Inicio del stilo de login*/
 body {
-   
     background-color: grey;
 }
 /*Barra de Navegacion principal*/
 
 /*Clase principal*/
-header {
+.navbar {
     font-family: "Cormorant", serif;
     border-radius: 15px;  
     visibility: visible;
-    border-top:5px solid #a0d7ac;
-	border-right:2px solid #a0d7ac;
-	border-left:2px solid #a0d7ac;
-    border-bottom: 5px solid #a0d7ac;
+    background-color: #a0d7ac !important;
 }
 
 /*Estilo de cerrar y Administrador*/
 .nav-link{
+    width: fit-content;
     font-size: 30px;
     color: black;
 }
@@ -39,27 +36,28 @@ ul li a {
     cursor: pointer;
     text-decoration: none;
 }
-a:hover{
+ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
 }
 /*Ptopiedades de la imagen */
 .imagen {
     width:100px;
     height:100px; 
-    display: block;
-    align-items: center;
-    justify-content: center;
 }
 /* Clases del icono de cerrar*/
-.bi {
+.bi{
     color: black;
     font-size: 30px;
     margin-right: 37px;
-    pointer-events: none;
+   cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 30px;
+    margin-left: 37px;
+    cursor: pointer;
 }
 /*position:fixed; sirve para dejar instantaneamente la barar de navegador pero me da problemas esta en preceso.
-
-
 
 /**********************************************************************************/
 /*modolo principal de lotes*/
@@ -72,8 +70,8 @@ h1{
 }
 /*Contenedor de imagne arrocera*/
 .rounded {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 15px;
 }
 /*Botones*/
@@ -91,7 +89,14 @@ h1{
 }
 /*Tabla de informacion*/
 .table {
-    
-    background-color: #a0d7ac;
-    border-radius: 15px;
+    width: 500px;
+    font-size: 20px; 
+    border-radius: 15  !important;
 }
+.table-success {  
+    --bs-table-bg: #a0d7ac; /*Color izquierdo*/
+    --bs-table-border-color: #0e0e0e;
+    --bs-table-striped-bg: #8febc2; /*Color derecho*/
+}
+
+/*************************************************************************************************************************************/
