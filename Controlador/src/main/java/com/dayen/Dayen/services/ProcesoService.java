@@ -1,5 +1,6 @@
 package com.dayen.Dayen.services;
 
+import com.dayen.Dayen.dao.ProcesosRequest;
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.repository.ProcesoRepository;
 import jakarta.validation.Valid;
@@ -20,8 +21,10 @@ public class ProcesoService {
 		return this.procesoRepository.findAllByIdLote(idLote);
 	}
 
-	public Procesos createProceso(@Valid Procesos proceso){
-		return this.procesoRepository.save(proceso);
+	public void createProceso(@Valid ProcesosRequest proceso){
+		System.out.println(proceso.idLote());
+		procesoRepository.insertProceso(proceso.idLote(), proceso.idTipo(),
+				proceso.idProducto(), proceso.descripcion(), proceso.realizadoEn());
 	}
 
 	public Procesos updateProcesos(@Valid Procesos proceso){
