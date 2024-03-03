@@ -23,12 +23,17 @@ public class ProcesosController {
 	}
 
 	@PostMapping("/create")
-	public void createProceso(@RequestBody ProcesosRequest proceso) {
-		 this.procesoService.createProceso(proceso);
+	public Procesos createProceso(@RequestBody ProcesosRequest proceso) {
+		 return this.procesoService.createProceso(proceso);
 	}
 
 	@PutMapping("/update")
-	public Procesos updateProceso(@RequestBody Procesos proceso) {
+	public Procesos updateProceso(@RequestBody ProcesosRequest proceso) {
 		return this.procesoService.updateProcesos(proceso);
+	}
+
+	@DeleteMapping("/delete/{id_proceso}")
+	public void deleteProceso(@PathVariable("id_proceso") int idProceso){
+		this.procesoService.deleteProceso(idProceso);
 	}
 }
