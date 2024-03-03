@@ -21,13 +21,22 @@ public class ProcesoService {
 		return this.procesoRepository.findAllByIdLote(idLote);
 	}
 
-	public void createProceso(@Valid ProcesosRequest proceso){
-		System.out.println(proceso.idLote());
-		procesoRepository.insertProceso(proceso.idLote(), proceso.idTipo(),
+	public Procesos createProceso(@Valid ProcesosRequest proceso){
+		this.procesoRepository.insertProceso(proceso.idLote(), proceso.idTipo(),
 				proceso.idProducto(), proceso.descripcion(), proceso.realizadoEn());
+		return this.procesoRepository.findLastProceso();
 	}
 
-	public Procesos updateProcesos(@Valid Procesos proceso){
-		return this.procesoRepository.save(proceso);
+	@SuppressWarnings("OptionalGetWithoutIsPresent")
+	public Procesos updateProcesos(@Valid ProcesosRequest proceso){
+		if (!this.procesoRepository.existsById(proceso.idProceso())) throw new RuntimeException("El Proceso no existe");
+		this.procesoRepository.updateProceso(proceso.idProceso(), proceso.idLote(), proceso.idTipo(),
+				proceso.idProducto(), proceso.descripcion(), proceso.realizadoEn());
+		return this.procesoRepository.findById(proceso.idProceso()).get();
+	}
+
+	public void deleteProceso(@NotNull int idProceso){
+		if (!this.procesoRepository.existsById(idProceso)) throw new RuntimeException("El proceso no existe");
+		this.procesoRepository.deleteById(idProceso);
 	}
 }
