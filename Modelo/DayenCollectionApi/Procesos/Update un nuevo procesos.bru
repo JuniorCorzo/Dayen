@@ -1,21 +1,22 @@
 meta {
-  name: Crear un nuevo procesos
+  name: Update un nuevo procesos
   type: http
-  seq: 2
+  seq: 3
 }
 
-post {
-  url: {{HOST}}/proceso/create
+put {
+  url: {{HOST}}/proceso/update
   body: json
   auth: none
 }
 
 body:json {
   {
+      "idProceso": 1,
       "idLote": 1,
       "idTipo": 1,
       "idProducto": 1,
-      "descripcion": "Este proceso se eliminara",
+      "descripcion": "Se modifico el primer proceso",
       "realizadoEn": "2024-03-02T20:02:00"
   }
 }
