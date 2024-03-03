@@ -1,0 +1,20 @@
+meta {
+  name: Modificar a un personal
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{HOST}}/personal/update
+  body: json
+  auth: none
+}
+
+body:json {
+   {
+     "idPersonal": 3,
+      "idUsuario": "1234567890",
+      "nombre": "Marino Fernando",
+      "telefono": 352163412
+    }
+}
