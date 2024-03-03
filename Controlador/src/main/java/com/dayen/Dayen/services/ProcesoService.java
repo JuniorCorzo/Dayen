@@ -1,6 +1,6 @@
 package com.dayen.Dayen.services;
 
-import com.dayen.Dayen.dao.ProcesosRequest;
+import com.dayen.Dayen.dao.ProcesoRequest;
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.repository.ProcesoRepository;
 import jakarta.validation.Valid;
@@ -21,14 +21,14 @@ public class ProcesoService {
 		return this.procesoRepository.findAllByIdLote(idLote);
 	}
 
-	public Procesos createProceso(@Valid ProcesosRequest proceso){
+	public Procesos createProceso(@Valid ProcesoRequest proceso){
 		this.procesoRepository.insertProceso(proceso.idLote(), proceso.idTipo(),
 				proceso.idProducto(), proceso.descripcion(), proceso.realizadoEn());
 		return this.procesoRepository.findLastProceso();
 	}
 
 	@SuppressWarnings("OptionalGetWithoutIsPresent")
-	public Procesos updateProcesos(@Valid ProcesosRequest proceso){
+	public Procesos updateProcesos(@Valid ProcesoRequest proceso){
 		if (!this.procesoRepository.existsById(proceso.idProceso())) throw new RuntimeException("El Proceso no existe");
 		this.procesoRepository.updateProceso(proceso.idProceso(), proceso.idLote(), proceso.idTipo(),
 				proceso.idProducto(), proceso.descripcion(), proceso.realizadoEn());
