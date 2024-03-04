@@ -2,7 +2,7 @@ package com.dayen.Dayen.dao;
 
 import java.time.LocalDateTime;
 
-public record ProcesosRequest(
+public record ProcesoRequest(
 		Integer idProceso,
 		Integer idLote,
 		Integer idTipo,

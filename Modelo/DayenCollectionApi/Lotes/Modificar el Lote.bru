@@ -1,0 +1,20 @@
+meta {
+  name: Modificar el Lote
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{HOST}}/lotes/update
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "idLote": 3,
+    "idUsuario": "1234567890",
+    "fase": "Siembra",
+    "hectareas": 4
+  }
+}

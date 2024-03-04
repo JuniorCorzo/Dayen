@@ -1,9 +1,8 @@
 package com.dayen.Dayen.controller;
 
-import com.dayen.Dayen.dao.ProcesosRequest;
+import com.dayen.Dayen.dao.ProcesoRequest;
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.services.ProcesoService;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,12 +22,12 @@ public class ProcesosController {
 	}
 
 	@PostMapping("/create")
-	public Procesos createProceso(@RequestBody ProcesosRequest proceso) {
+	public Procesos createProceso(@RequestBody ProcesoRequest proceso) {
 		 return this.procesoService.createProceso(proceso);
 	}
 
 	@PutMapping("/update")
-	public Procesos updateProceso(@RequestBody ProcesosRequest proceso) {
+	public Procesos updateProceso(@RequestBody ProcesoRequest proceso) {
 		return this.procesoService.updateProcesos(proceso);
 	}
 

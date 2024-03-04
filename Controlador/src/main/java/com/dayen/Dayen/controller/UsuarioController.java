@@ -1,5 +1,6 @@
 package com.dayen.Dayen.controller;
 
+import com.dayen.Dayen.dao.UsuarioRequest;
 import com.dayen.Dayen.entity.Usuarios;
 import com.dayen.Dayen.services.UsuarioService;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +20,12 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/create")
-	public Usuarios createUsuario(@RequestBody Usuarios usuario){
-		return this.usuarioService.usuarioCreate(usuario);
+	public void createUsuario(@RequestBody UsuarioRequest usuario){
+		this.usuarioService.usuarioCreate(usuario);
 	}
 
 	@PutMapping("/update")
-	public Usuarios updateUsuario(@RequestBody Usuarios usuario){
-		return this.usuarioService.usuarioUpdate(usuario);
+	public void updateUsuario(@RequestBody UsuarioRequest usuario){
+		this.usuarioService.usuarioUpdate(usuario);
 	}
 }

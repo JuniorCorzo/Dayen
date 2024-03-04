@@ -1,5 +1,6 @@
 package com.dayen.Dayen.services;
 
+import com.dayen.Dayen.dao.UsuarioRequest;
 import com.dayen.Dayen.entity.Usuarios;
 import com.dayen.Dayen.repository.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -19,17 +20,23 @@ public class UsuarioService {
 				.orElseThrow(() -> new RuntimeException("Usuario no existe"));
 	}
 
-	public Usuarios usuarioCreate(@Valid Usuarios usuario) {
-		if(usuarioRepository.existsById(usuario.getIdUsuario())){
+	public void usuarioCreate(@Valid UsuarioRequest usuario) {
+		if(usuarioRepository.existsById(usuario.idUsuario())){
 			throw new RuntimeException("Usuario ya existe");
 		}
-		return this.usuarioRepository.save(usuario);
+
+		this.usuarioRepository.insertUsuario(usuario.idUsuario(), usuario.nombre(),
+				usuario.apellido(), usuario.rol(), usuario.correo(), usuario.clave(),
+				usuario.token());
 	}
 
-	public Usuarios usuarioUpdate(@Valid Usuarios usuario) {
-		if (!usuarioRepository.existsById(usuario.getIdUsuario()))
+	public void usuarioUpdate(@Valid UsuarioRequest usuario) {
+		if (!usuarioRepository.existsById(usuario.idUsuario()))
 			throw new RuntimeException("Usuario no existe");
-		return this.usuarioRepository.save(usuario);
+
+		this.usuarioRepository.updateUsuario(usuario.idUsuario(), usuario.nombre(),
+				usuario.apellido(), usuario.rol(), usuario.correo(), usuario.clave(),
+				usuario.token());
 	}
 
 }

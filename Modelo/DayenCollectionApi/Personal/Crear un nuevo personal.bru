@@ -1,0 +1,19 @@
+meta {
+  name: Crear un nuevo personal
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{HOST}}/personal/create
+  body: json
+  auth: none
+}
+
+body:json {
+   {
+      "idUsuario": "1234567890",
+      "nombre": "Marino Fernando",
+      "telefono": 352163412
+    }
+}
