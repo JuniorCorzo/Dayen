@@ -1,0 +1,15 @@
+meta {
+  name: Crear token de recuperar contraseña
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{HOST}}/recuperar_clave?correo=prueba1@gmail.com
+  body: none
+  auth: none
+}
+
+query {
+  correo: prueba1@gmail.com
+}

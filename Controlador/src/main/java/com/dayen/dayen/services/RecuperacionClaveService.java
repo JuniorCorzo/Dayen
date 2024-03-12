@@ -25,6 +25,7 @@ public class RecuperacionClaveService {
 	public void createTokenRecuperacion(@NotNull @Email String correo){
 		this.usuarioRepository.updateTokenRecuperacion(correo, generateToken());
 	}
+
 	public void changeClave(String token, String newClave){
 		PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		if (isExpire(token)){
@@ -37,7 +38,7 @@ public class RecuperacionClaveService {
 		}
 
 		this.usuarioRepository.updateClaveRecuperacion(token, passwordEncoder.encode(newClave));
-		//this.usuarioRepository.resetToken(token);
+		this.usuarioRepository.resetToken(token);
 	}
 
 	private String generateToken(){
