@@ -28,11 +28,11 @@ body {
     width: 300px;
     height: 524px;
     display: flex;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
+/*Bienvenidos*/
 /*Contenedor de que engloba la informacion*/
 .card {
     background-color:#8febc2;
@@ -74,8 +74,7 @@ body {
 .row{
     background-color: #a0d7ac;
     width: 350px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+  border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
@@ -242,3 +241,4 @@ h1 {
     padding: 12px;
     pointer-events: none;
 }
+

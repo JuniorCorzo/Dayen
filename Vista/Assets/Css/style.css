@@ -11,24 +11,20 @@
 /*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
 /****************************************************************************************************************/
-/*Inicio del stilo de login*/
-body {
-    background-color: grey;
-}
+/*Modulo de Bienvenida*/
 /*Barra de Navegacion principal*/
-
 /*Clase principal*/
 .navbar {
     font-family: "Cormorant", serif;
-    border-radius: 15px;  
+    border-radius: 15px; 
+    height: 100px; 
     visibility: visible;
     background-color: #a0d7ac !important;
 }
-
-/*Estilo de cerrar y Administrador*/
+/*Estilo de infromacion de la barra de navegacion*/
 .nav-link{
     width: fit-content;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
 }
 ul li a {
@@ -39,6 +35,30 @@ ul li a {
 ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
 }
+.bi-inicio{
+    color: black;
+    font-size: 26px;
+    margin-left: 65px;
+    cursor: pointer;
+}
+.bi-people {
+    color: black;
+    font-size: 26px;
+    margin-left: 45px;
+    cursor: pointer;
+}
+/*Contenido de Modulo de bienvenida*/
+p {
+   font-size: 25px;
+   color: white;
+}
+
+/****************************************************************************************************************/
+/*Inicio del stilo de login*/
+body {
+    background-color: grey;
+}
+
 /*Ptopiedades de la imagen */
 .imagen {
     width:100px;
@@ -48,16 +68,15 @@ ul li a:hover{
 /* Clases del icono de cerrar*/
 .bi{
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 37px;
     cursor: pointer;
 }
 .bi-icono{
     color: black;
     font-size: 30px;
-  margin-left: 50px;
+    margin-left: 50px;
     cursor: pointer;
-
 }
 
 .fa-solid {
@@ -133,3 +152,49 @@ h1{
     width: 300px;
     height: 300px;
 }
+
+/****************************************/
+/*ACORDEON*/
+.contenedor-acordeon{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 80px;
+}
+.contenedor-acordeon h2 {
+text-align: center;
+font-size: 40px;
+margin-bottom: 35px;
+}
+.acordeon{
+    background-color: white;
+}
+.acordeon label {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background: #8febc2;
+    color: antiquewhite;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 300ms ease;
+}
+.acordeon label:hover{
+    background: #e0ab4e;
+}
+.acordeon .contenido-acordeon {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon {
+    max-height: 600px;
+    padding: 15px 0px;
+}
+.btn-acordeon {
+    display: none;
+}
+
