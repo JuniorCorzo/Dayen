@@ -1,9 +1,8 @@
 package com.dayen.Dayen.controller;
 
-import com.dayen.Dayen.dao.LoginRequest;
-import com.dayen.Dayen.dao.LoginResponse;
+import com.dayen.Dayen.dao.request.LoginRequest;
+import com.dayen.Dayen.dao.response.LoginResponse;
 import com.dayen.Dayen.services.AuthService;
-import com.dayen.Dayen.services.TokenService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

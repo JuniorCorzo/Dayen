@@ -1,4 +1,4 @@
-package com.dayen.Dayen.dao;
+package com.dayen.Dayen.dao.request;
 
 import jakarta.persistence.Column;
 

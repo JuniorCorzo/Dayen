@@ -1,6 +1,6 @@
 package com.dayen.Dayen.controller;
 
-import com.dayen.Dayen.dao.UsuarioRequest;
+import com.dayen.Dayen.dao.request.UsuarioRequest;
 import com.dayen.Dayen.entity.Usuarios;
 import com.dayen.Dayen.services.UsuarioService;
 import org.springframework.web.bind.annotation.*;

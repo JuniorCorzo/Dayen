@@ -1,7 +1,7 @@
 package com.dayen.Dayen.services;
 
-import com.dayen.Dayen.dao.LoginRequest;
-import com.dayen.Dayen.dao.LoginResponse;
+import com.dayen.Dayen.dao.request.LoginRequest;
+import com.dayen.Dayen.dao.response.LoginResponse;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;

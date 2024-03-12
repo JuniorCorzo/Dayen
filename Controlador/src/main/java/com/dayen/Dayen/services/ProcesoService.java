@@ -1,6 +1,6 @@
 package com.dayen.Dayen.services;
 
-import com.dayen.Dayen.dao.ProcesoRequest;
+import com.dayen.Dayen.dao.request.ProcesoRequest;
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.repository.ProcesoRepository;
 import jakarta.validation.Valid;

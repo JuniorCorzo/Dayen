@@ -1,6 +1,6 @@
 package com.dayen.Dayen.services;
 
-import com.dayen.Dayen.dao.LoteRequest;
+import com.dayen.Dayen.dao.request.LoteRequest;
 import com.dayen.Dayen.entity.Lotes;
 import com.dayen.Dayen.repository.LoteRepository;
 import jakarta.validation.Valid;

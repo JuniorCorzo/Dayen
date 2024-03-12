@@ -1,6 +1,6 @@
 package com.dayen.Dayen.controller;
 
-import com.dayen.Dayen.dao.ProcesoRequest;
+import com.dayen.Dayen.dao.request.ProcesoRequest;
 import com.dayen.Dayen.entity.Procesos;
 import com.dayen.Dayen.services.ProcesoService;
 import org.springframework.web.bind.annotation.*;
