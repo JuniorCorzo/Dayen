@@ -28,6 +28,7 @@ public class RecuperacionClaveService {
 	public void changeClave(String token, String newClave){
 		PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 		if (isExpire(token)){
+			this.usuarioRepository.resetToken(token);
 			throw new RuntimeException("El token expiro");
 		}
 
@@ -36,7 +37,7 @@ public class RecuperacionClaveService {
 		}
 
 		this.usuarioRepository.updateClaveRecuperacion(token, passwordEncoder.encode(newClave));
-		this.usuarioRepository.resetToken(token);
+		//this.usuarioRepository.resetToken(token);
 	}
 
 	private String generateToken(){
@@ -50,7 +51,7 @@ public class RecuperacionClaveService {
 			throw new RuntimeException("El token no puede ser nulo o no tener ningun caracter");
 
 		String expireAt = decodeBase64UrlSafe(token).split("\\.")[1];
-		return Instant.now().getEpochSecond() >= Long.parseLong(expireAt);
+		return Instant.now().toEpochMilli() >= Long.parseLong(expireAt);
 	}
 	private String encodeBase64UrlSafe(String input){
 		return Base64.getUrlEncoder().encodeToString(input.getBytes());
