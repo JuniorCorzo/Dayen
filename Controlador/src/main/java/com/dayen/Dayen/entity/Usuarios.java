@@ -24,7 +24,7 @@ public class Usuarios {
     @Column(name = "nombre")
     @NotNull
     @NotEmpty
-    private String nombre;
+    private String username;
 
     @Column(name = "apellido")
     @NotNull
