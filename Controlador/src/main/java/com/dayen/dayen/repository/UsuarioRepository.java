@@ -14,6 +14,8 @@ import java.util.Optional;
 public interface UsuarioRepository extends JpaRepository<Usuarios, String> {
 
 	Optional<Usuarios> findByUsername(@NotNull @NotEmpty String nombre);
+
+
 	@Transactional
 	@Query(value = """
 				INSERT INTO usuarios (id_usuario, nombre, apellido, rol, correo, clave, token)
@@ -37,4 +39,35 @@ public interface UsuarioRepository extends JpaRepository<Usuarios, String> {
 					   @Param("apellido") String apellido, @Param("rol") String rol,
 					   @Param("correo") String correo, @Param("clave") String clave,
 					   @Param("token") String token);
+
+	@Transactional
+	@Query(value = """
+			UPDATE usuarios
+			SET clave = :clave
+			WHERE token = :token
+			""", nativeQuery = true)
+	@Modifying
+	void updateClaveRecuperacion(@Param("token") String token, @Param("clave") String clave);
+
+	@Transactional
+	@Query(value = """
+			UPDATE usuarios
+			SET token = :token
+			WHERE correo = :correo
+			""", nativeQuery = true)
+	@Modifying
+	void updateTokenRecuperacion(@Param("correo") String correo, @Param("token") String token);
+
+	@Transactional
+	@Query(value = """
+	UPDATE usuarios
+	SET token = null
+	WHERE token = :token
+	""", nativeQuery = true)
+	@Modifying
+	void resetToken(@Param("token") String token);
+
+	boolean existsByToken(String token);
+
+
 }
