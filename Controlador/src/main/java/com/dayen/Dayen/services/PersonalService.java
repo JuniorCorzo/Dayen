@@ -1,6 +1,6 @@
 package com.dayen.Dayen.services;
 
-import com.dayen.Dayen.dao.PersonalRequest;
+import com.dayen.Dayen.dao.request.PersonalRequest;
 import com.dayen.Dayen.entity.Personal;
 import com.dayen.Dayen.repository.PersonalRepository;
 import jakarta.validation.Valid;
