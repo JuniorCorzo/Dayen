@@ -10,6 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "procesos")
@@ -43,4 +44,19 @@ public class Procesos {
 
     @Column(name = "realizado_en")
     private LocalDateTime realizadoEn;
+
+    @JsonManagedReference
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @JoinTable(
+            name = "personal_procesos",
+            joinColumns = @JoinColumn(
+                    name = "procesos_id_proceso",
+                    referencedColumnName = "id_proceso"
+            ),
+            inverseJoinColumns = @JoinColumn(
+                    name = "personal_id_personal",
+                    referencedColumnName = "id_personal"
+            )
+    )
+    private List<Personal> personal;
 }
