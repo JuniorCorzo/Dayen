@@ -30,7 +30,7 @@ CREATE TABLE `lotes` (
   PRIMARY KEY (`id_lote`),
   KEY `fk_lotes_usuarios_idx` (`id_usuario`),
   CONSTRAINT `fk_lotes_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,25 @@ CREATE TABLE `personal` (
   PRIMARY KEY (`id_personal`),
   KEY `fk_personal_usuarios1_idx` (`id_usuario`),
   CONSTRAINT `fk_personal_usuarios1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `personal_procesos`
+--
+
+DROP TABLE IF EXISTS `personal_procesos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `personal_procesos` (
+  `personal_id_personal` int NOT NULL,
+  `procesos_id_proceso` int NOT NULL,
+  PRIMARY KEY (`personal_id_personal`,`procesos_id_proceso`),
+  KEY `fk_personal_has_procesos_procesos1_idx` (`procesos_id_proceso`),
+  KEY `fk_personal_has_procesos_personal1_idx` (`personal_id_personal`),
+  CONSTRAINT `fk_personal_has_procesos_personal1` FOREIGN KEY (`personal_id_personal`) REFERENCES `personal` (`id_personal`),
+  CONSTRAINT `fk_personal_has_procesos_procesos1` FOREIGN KEY (`procesos_id_proceso`) REFERENCES `procesos` (`id_proceso`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +90,7 @@ CREATE TABLE `procesos` (
   CONSTRAINT `fk_procesos_lotes1` FOREIGN KEY (`id_lote`) REFERENCES `lotes` (`id_lote`),
   CONSTRAINT `fk_procesos_productos1` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id_producto`),
   CONSTRAINT `fk_procesos_tipo_procesos1` FOREIGN KEY (`id_tipo`) REFERENCES `tipo_procesos` (`id_tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,4 +151,4 @@ CREATE TABLE `usuarios` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-25 19:42:40
+-- Dump completed on 2024-03-13 12:24:22
