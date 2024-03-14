@@ -11,7 +11,7 @@
 /*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
 /****************************************************************************************************************/
-/*Inicio del stilo de login*/
+/*Inicio del Modulo de Inicio de Sesion*/
 body {
     background-color: grey;
 }
@@ -22,60 +22,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-/*Contenedor de Bienvenidos*/
-.content{
-    width: 300px;
-    height: 524px;
-    display: flex;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
-}
-/*Contenedor de que engloba la informacion*/
-.card {
-    background-color:#8febc2;
-    border: none;
-    align-items: center;
-    text-align: center;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-/*Contenedor de las imagenes*/
-.galeria {
-    display: flex;
-    width: 150px;
-    height: 150px;
-}
-/*Contenedor las imagnes y tamaños*/
-.galeria img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    transition: .7s ease;
-}
-/*Contenedor de las imagenes y sus transicion*/
-.galeria img:hover{
-    width: 200px;
-    opacity: 1;
-    filter: brightness(120%);
-}
-/*Contenedor del parrafo*/
-.text {
-    color: black;
-    font-size: 20px;
-}
-.text:hover{
-    text-shadow:2px 2px 20px #04f839;
-}
-
 /*Contenedor segundario del Inicio de Sesion*/
 .row{
     background-color: #a0d7ac;
     width: 350px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
@@ -117,7 +68,7 @@ h1 {
     background-color: #e2d197;
     border:none;
 }
-/*Sirve para elcolor al nombre de usuario y password y a todos los palanbras o frases que obtengan esta clase por defecto del bootstrap */
+/*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
 .form-control::placeholder{
     color: black; 
 }
@@ -171,12 +122,9 @@ h1 {
 .olvido:hover {
     box-shadow: 0 3px 2px #e2d197;
 }
-
-
- /**************************************************************************************************************************************/
+/**************************************************************************************************************************************/
 /*Modulos de Recuperar contraseña*/ 
-
-/*Contenedor Principal de recuperar Contraseña*/
+/*Contenedor Principal de Recuperar Contraseña*/
 .contenedor {
     background-color: #a0d7ac;
     width: 300px;
@@ -184,7 +132,7 @@ h1 {
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
-/*Contenedor que tiene el contenainer del formulario de recuperar contraseña*/
+/*Contenedor que tiene el contenainer del formulario de Recuperar Contraseña*/
 .contraseña {
     font-family: "Cormorant", serif;
     background-color: #a0d7ac;
@@ -204,22 +152,21 @@ h1 {
 .form-control-input::placeholder{
     color: black;
 }
-
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
-
 .registro {
     background-color: #a0d7ac;
-    width: 350px;
-   border-radius: 15px;
+    width: 330px;
+    border-radius: 15px;
     box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
     box-sizing: border-box;
 }
-/*Contenedor principal*/
-.usuario {
-    font-family: "Cormorant", serif;
-    background-color: #a0d7ac;
-    border-radius: 15px;
+/*Titulo*/
+h2 {
+    font-family: "Crete Round", serif;
+    color: black;
+    text-align: center;
+    font-size: 25px;
 }
 /*Div de la imagen */
 .image {
@@ -231,14 +178,83 @@ h1 {
     width: 130px;
     height: 130px;  
 }
+/*Contenedor principa donde engloba el formulario*/
+.usuario {
+    font-family: "Cormorant", serif;
+    background-color: #a0d7ac;
+    border-radius: 15px;
+}
+/*Propiedades de la clase de form-control que llenan el formulario*/
+.propiedades {
+    height: 40px;
+}
 
-/*************************************************************************************************************************************/
+
+/*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
-
 /* Clases del icono que estna en el registrode lotes*/
 .fa-solid {
     font-size: 15px;
     position: absolute;
     padding: 12px;
     pointer-events: none;
+}
+/*************************************************************************************/
+/*Modulo de Registro de procesos*/
+.form-select{
+    padding-left: 35px !important;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
+}
+/*Sirve para darle color al dar clic encima para escribir  */
+.form-select:focus {
+    background-color: #e2d197;
+    border:none;
+}
+/*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
+.form-select::placeholder{
+    color: black; 
+}
+.form-label{
+    color: black;
+    font-size: 20px;
+}
+/******************************************************************************************/
+/*RESPONSIVE*/
+/*Modulo de inicio de sesion*/
+/* para 768px o menos */
+@media screen and (max-width: 768px) {
+/*Contenedor segundario del Inicio de Sesion*/
+.row{
+    width: 300px;
+}
+/***********************************************/
+/*Modulo de Registro de Usuario*/
+.registro {
+    width: 300px;
+}
+h2 {
+    font-size: 25px;
+}
+/*Div de la imagen */
+.logo {
+    width: 100px;
+    height: 100px;  
+}
+/*Propiedades de la clase de form-control que llenan el formulario*/
+.propiedades {
+    height: 35px;
+}
+/*Boton de ingresar-botones de registro*/
+.btn{
+    width: 130px;
+}
+/***********************************************/
+/*Modulo de Registro de procesos*/
+
+
 }
