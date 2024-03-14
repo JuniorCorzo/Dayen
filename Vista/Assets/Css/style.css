@@ -25,7 +25,6 @@
 .nav-link{
     width: fit-content;
     font-size: 25px;
-    color: black;
 }
 ul li a {
     color: black  !important;
@@ -35,6 +34,7 @@ ul li a {
 ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
 }
+/*Inconos de la barra de navegacion*/
 .bi-inicio{
     color: black;
     font-size: 26px;
@@ -47,14 +47,41 @@ ul li a:hover{
     margin-left: 45px;
     cursor: pointer;
 }
+/*Imagen de DAYEN*/
+.d-inline-block{
+    width: 100px;
+    height: 100px;
+}
 /*Contenido de Modulo de bienvenida*/
+/*Titulos*/
+h1{
+    font-family: "Crete Round", serif;
+    font-size: 50px;
+    color: rgb(232, 230, 230);
+}
+/*Parrafos y contenido*/
 p {
+    text-align: justify;
    font-size: 25px;
-   color: white;
+   color: rgb(232, 230, 230);
+}
+/*Pie de pagina*/
+.nav-footer a{
+    color: rgb(232, 230, 230) !important;
+}
+.bi-whatsapp, .bi-facebook, .bi-github, .bi-instagram {
+    margin-left: 45px;
+    font-size: 40px !important;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    
 }
 
+
 /****************************************************************************************************************/
-/*Inicio del stilo de login*/
+/*Inicio del stilo de Modulo de Lotes*/
 body {
     background-color: grey;
 }
@@ -91,10 +118,7 @@ body {
 
 /*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
 /*Titulo*/
-h1{
-    font-family: "Crete Round", serif;
-    font-size: 50px;
-}
+
 
 /*Contenedor de las imagenes*/
 .galeria {
@@ -198,3 +222,38 @@ margin-bottom: 35px;
     display: none;
 }
 
+
+/*************************************************************************************************************************/
+/*RESPONSIVE*/
+/*Responsi modulo de bienvenida*/
+/* para 768px o menos */
+@media screen and (max-width: 768px) {
+  /*Clase principal*/
+.navbar {
+    height: 100px; 
+}
+/*Estilo de infromacion de la barra de navegacion*/
+.nav-link{
+    font-size: 18px;
+}
+
+/*Inconos de la barra de navegacion*/
+.bi-inicio, .bi-people{
+    visibility: hidden;
+}
+/*Contenido de Modulo de bienvenida*/
+/*Titulos*/
+h1{
+    font-family: "Crete Round", serif;
+    font-size: 40px;
+    color: rgb(232, 230, 230);
+}
+/*Parrafos y contenido*/
+p {
+    text-align: justify;
+   font-size: 18px;
+   color: rgb(232, 230, 230);
+}
+
+
+}
