@@ -4,14 +4,16 @@
     margin: 0;
     padding: 0;
 }
-
+body {
+    background-color: grey;
+}
 /*Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
 /*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
 /*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
-/****************************************************************************************************************/
-/*Modulo de Bienvenida*/
+/*************************************************************************************/
+
 /*Barra de Navegacion principal*/
 /*Clase principal*/
 .navbar {
@@ -35,12 +37,14 @@ ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
 }
 /*Inconos de la barra de navegacion*/
+/*Icono inicio de sesion*/
 .bi-inicio{
     color: black;
     font-size: 26px;
     margin-left: 65px;
     cursor: pointer;
 }
+/*Icono registro de persona*/
 .bi-people {
     color: black;
     font-size: 26px;
@@ -62,8 +66,8 @@ h1{
 /*Parrafos y contenido*/
 p {
     text-align: justify;
-   font-size: 25px;
-   color: rgb(232, 230, 230);
+    font-size: 25px;
+    color: rgb(232, 230, 230);
 }
 /*Pie de pagina*/
 .nav-footer a{
@@ -75,60 +79,35 @@ p {
 }
 .card {
     width: 300px;
-    height: 300px;
-    
+    height: 300px;    
 }
 
-
-/****************************************************************************************************************/
-/*Inicio del stilo de Modulo de Lotes*/
-body {
-    background-color: grey;
-}
-
-/*Ptopiedades de la imagen */
-.imagen {
-    width:100px;
-    height:100px; 
-}
-
-/* Clases del icono de cerrar*/
-.bi{
-    color: black;
-    font-size: 20px;
-    margin-right: 37px;
-    cursor: pointer;
-}
-.bi-icono{
-    color: black;
+/***************************************************************************************/
+/*Inicio del estilo de Modulo de Lotes*/
+/*Barra de menu*/
+/*Icono de ingresar hectarea*/
+.fa-sun-plant-wilt {
     font-size: 30px;
-    margin-left: 50px;
+    margin-left: 60px;
     cursor: pointer;
 }
-
-.fa-solid {
-    font-size: 30px;
-    margin-left: 37px;
+/*Icono de cerrar*/
+.fa-x{
+    font-size: 25px;
+    margin-right: 30px;
     cursor: pointer;
 }
-/*position:fixed; sirve para dejar instantaneamente la barar de navegador pero me da problemas esta en preceso.
-
-/**********************************************************************************/
-/*modolo principal de lotes*/
-
-/*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
-/*Titulo*/
-
-
 /*Contenedor de las imagenes*/
 .galeria {
     display: flex;
     align-items: center;
     justify-content: center;
-   
- 
     cursor: pointer;
-
+}
+/*Div imagnes */
+.rounded{
+    width: 300px;
+    height: 300px;
 }
 /*Contenedor las imagnes y tamaños*/
 .galeria img {
@@ -169,12 +148,22 @@ body {
     --bs-table-striped-bg: #8febc2; /*Color derecho*/
 }
 
-/*************************************************************************************************************************************/
+/**************************************************************************************/
 /*modulo de modificar procesos*/
 /*Div imagnes */
 .rounded{
     width: 300px;
     height: 300px;
+}
+.fa-tree{
+    font-size: 30px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.fa-plant-wilt {
+    font-size: 30px;
+    margin-left: 25px;
+    cursor: pointer;
 }
 
 /****************************************/
@@ -234,26 +223,64 @@ margin-bottom: 35px;
 }
 /*Estilo de infromacion de la barra de navegacion*/
 .nav-link{
-    font-size: 18px;
+    font-size: 15px;
 }
-
-/*Inconos de la barra de navegacion*/
+/*Inconos de la barra de navegacion de inicio de sesion y registro*/
 .bi-inicio, .bi-people{
     visibility: hidden;
 }
 /*Contenido de Modulo de bienvenida*/
 /*Titulos*/
 h1{
-    font-family: "Crete Round", serif;
     font-size: 40px;
-    color: rgb(232, 230, 230);
 }
 /*Parrafos y contenido*/
 p {
     text-align: justify;
-   font-size: 18px;
-   color: rgb(232, 230, 230);
+    font-size: 18px;
 }
 
+/**************************************************/
+/*Inicio del estilo de Modulo de Lotes*/
+/*Barra de menu*/
+/*Icono de ingresar hectarea y cerrar*/
+.fa-sun-plant-wilt, .fa-x{
+    visibility: hidden;
+}
+/*Hola Administrador*/
+.active{
+    font-size: 10px;
+}
+/*Imagen de dayen*/
+.d-inline-block{
+    width: 80px;
+    height: 80px;
+}
+/*Div imagnes */
+.rounded{
+    width: 200px;
+    height: 200px;
+}
+/*Contenedor de las imagenes y sus transicion*/
+.galeria img:hover{
+    width: 200px;
+}
+/*Div de botones*/
+.d-grid {
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+}
+/*Botones*/
+.btn{
+    width: 200px;
+    font-size: 20px;
+}
+/**************************************************/
+/*modulo de modificar procesos*/
+/*Iconos de modulos*/
+.fa-tree, .fa-plant-wilt {
+    visibility: hidden;
+}
 
 }
