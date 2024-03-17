@@ -20,12 +20,12 @@ public class UsuarioController {
 	}
 
 	@PostMapping("/create")
-	public void createUsuario(@RequestBody UsuarioRequest usuario){
-		this.usuarioService.usuarioCreate(usuario);
+	public Usuarios createUsuario(@RequestBody UsuarioRequest usuario){
+		return this.usuarioService.usuarioCreate(usuario);
 	}
 
 	@PutMapping("/update")
-	public void updateUsuario(@RequestBody UsuarioRequest usuario){
-		this.usuarioService.usuarioUpdate(usuario);
+	public Usuarios updateUsuario(@RequestBody UsuarioRequest usuario){
+		return this.usuarioService.usuarioUpdate(usuario);
 	}
 }
