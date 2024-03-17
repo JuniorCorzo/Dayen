@@ -24,23 +24,33 @@ public class UsuarioService {
 				.orElseThrow(() -> new RuntimeException("Usuario no existe"));
 	}
 
-	public void usuarioCreate(@Valid UsuarioRequest usuario) {
+	public Usuarios usuarioCreate(@Valid UsuarioRequest usuario) {
 		if (usuarioRepository.existsById(usuario.idUsuario())) {
 			throw new RuntimeException("Usuario ya existe");
 		}
 
-		this.usuarioRepository.insertUsuario(usuario.idUsuario(), usuario.nombre(),
-				usuario.apellido(), usuario.rol(), usuario.correo(),
-				passwordEncoder.encode(usuario.clave()), usuario.token());
+		return this.usuarioRepository.save(Usuarios.builder()
+						.idUsuario(usuario.idUsuario())
+						.username(usuario.nombre())
+						.apellido(usuario.apellido())
+						.rol(usuario.rol())
+						.correo(usuario.correo())
+						.clave(passwordEncoder.encode(usuario.clave()))
+				.build());
 	}
 
-	public void usuarioUpdate(@Valid UsuarioRequest usuario) {
+	public Usuarios usuarioUpdate(@Valid UsuarioRequest usuario) {
 		if (!usuarioRepository.existsById(usuario.idUsuario()))
 			throw new RuntimeException("Usuario no existe");
 
-		this.usuarioRepository.updateUsuario(usuario.idUsuario(), usuario.nombre(),
-				usuario.apellido(), usuario.rol(), usuario.correo(),
-				passwordEncoder.encode(usuario.clave()), usuario.token());
+		return this.usuarioRepository.save(Usuarios.builder()
+				.idUsuario(usuario.idUsuario())
+				.username(usuario.nombre())
+				.apellido(usuario.apellido())
+				.rol(usuario.rol())
+				.correo(usuario.correo())
+				.clave(passwordEncoder.encode(usuario.clave()))
+				.build());
 	}
 
 }

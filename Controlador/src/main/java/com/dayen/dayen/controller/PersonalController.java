@@ -22,13 +22,13 @@ public class PersonalController {
 	}
 
 	@PostMapping("/create")
-	public void createPersonal(@RequestBody PersonalRequest personal){
-		this.personalService.createPersonal(personal);
+	public Personal createPersonal(@RequestBody PersonalRequest personal){
+		return this.personalService.createPersonal(personal);
 	}
 
 	@PutMapping("/update")
-	public void updatePersonal(@RequestBody PersonalRequest personal){
-		this.personalService.updatePersonal(personal);
+	public Personal updatePersonal(@RequestBody PersonalRequest personal){
+		return this.personalService.updatePersonal(personal);
 	}
 
 	@DeleteMapping("/delete/{id_personal}")
