@@ -19,6 +19,8 @@ public class HttpSecurityConfig {
 				.csrf(AbstractHttpConfigurer::disable)
 				.authorizeHttpRequests(authorize -> {
 					authorize.requestMatchers(HttpMethod.POST, "/api/v1/auth/login").permitAll();
+					authorize.requestMatchers(HttpMethod.POST, "/api/v1/recuperar_clave").permitAll();
+					authorize.requestMatchers(HttpMethod.PUT, "/api/v1/recuperar_clave/**").permitAll();
 					authorize.requestMatchers("/error").permitAll();
 
 					authorize.anyRequest().authenticated();
