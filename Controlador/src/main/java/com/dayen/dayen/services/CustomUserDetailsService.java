@@ -1,6 +1,7 @@
 package com.dayen.dayen.services;
 
 import com.dayen.dayen.entity.Usuarios;
+import com.dayen.dayen.exceptions.usuario.UserNotExists;
 import com.dayen.dayen.repository.UsuarioRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		LOGGER.info("Cargando usuario");
 		Usuarios usuario = usuarioRepository.findByUsername(username)
-				.orElseThrow(() -> new RuntimeException("Usuario no existe"));
+				.orElseThrow(UserNotExists::new);
 
 		return org.springframework.security.core.userdetails.User
 				.withUsername(usuario.getUsername())
