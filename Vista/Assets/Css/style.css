@@ -131,9 +131,10 @@ p {
     border-radius: 10px;
     cursor: pointer;
     border: none;
+    transition: .5s;
 }
 .btn:hover {
-    background-color: #e0ab4e;
+    background-color: #a0d7ac;;
 }
 /*Tabla de informacion*/
 .table {
@@ -149,70 +150,62 @@ p {
 }
 
 /**************************************************************************************/
-/*modulo de modificar procesos*/
+/*Modulo de modificar procesos*/
 /*Div imagnes */
 .rounded{
     width: 300px;
     height: 300px;
 }
+/*Icono de Registrar Procesos*/
 .fa-tree{
     font-size: 30px;
     margin-left: 100px;
     cursor: pointer;
 }
+/*Icono de lotes*/
 .fa-plant-wilt {
     font-size: 30px;
     margin-left: 25px;
     cursor: pointer;
 }
-
-/****************************************/
-/*ACORDEON*/
-.contenedor-acordeon{
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    margin-top: 80px;
+/**************************************************************************************/
+/*Modal Eliminar*/
+.modal-content{
+    background-color: #bdf7dd;
 }
-.contenedor-acordeon h2 {
-text-align: center;
-font-size: 40px;
-margin-bottom: 35px;
+.modal-title{
+    color: black;
 }
-.acordeon{
-    background-color: white;
-}
-.acordeon label {
-    display: block;
-    padding: 20px;
+.btn-modal{
+    font-family: "Cormorant", serif;
+    width: 150px;
     font-size: 20px;
-    background: #8febc2;
-    color: antiquewhite;
+    background-color: #e0ab4e;
+    border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 2px;
-    transition: all 300ms ease;
+    border: none;
 }
-.acordeon label:hover{
-    background: #e0ab4e;
+/******************************************************************************************/
+/*Modulo de Modificar Informacion de los Lotes*/
+
+/*Titulo*/
+h2 {
+    font-family: "Crete Round", serif;
+    color: black;
+    text-align: center;
+    font-size: 25px;
 }
-.acordeon .contenido-acordeon {
-    padding: 0px;
-    margin: 0px 20px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 300ms ease;
+.form-select{
+    padding-left: 25px !important;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
 }
 
-.btn-acordeon:checked ~ .contenido-acordeon {
-    max-height: 600px;
-    padding: 15px 0px;
-}
-.btn-acordeon {
-    display: none;
-}
-
-
-/*************************************************************************************************************************/
+/*********************************************************************************************/
 /*RESPONSIVE*/
 /*Responsi modulo de bienvenida*/
 /* para 768px o menos */

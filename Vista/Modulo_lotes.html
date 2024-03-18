@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modulo de lotes</title>
     <!-- Estilo del logo de doble ventana-->
     <link rel="icon" href="Assets/Img/DAYEN-logo.png" type="image/x-icon" />
@@ -25,6 +25,19 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Estilo de css que se le asigna del css-->
     <link rel="stylesheet" href="Assets/Css/style.css" />
+
+    <!-- Estilo de las las tablas -->
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://cdn.datatables.net/1.13.3/js/importmap.js"></script>
+    
+    <script type="module">
+     import DataTable from 'datatables.net';
+
+     window.addEventListener('DOMContentLoaded',function () {
+       new DataTable('#tabla');
+     });
+   </script>
   </head>
 
   <body>
@@ -109,16 +122,42 @@
         />
 
         </div>
+
           <!--Contenedor de botones-->
-          <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-center">
+          <div class="d-grid gap-3 mt-4 d-md-flex justify-content-md-center">
             <!-- Button modificar -->
-            <a type="button" class="btn btn-lg me-5 fluid" href="Modulo_Modificar.html"> Modificar</a>
-            <!-- Button Eliminar-->
-            <button type="button" class="btn btn-lg me-5 fluid">
-              Eliminar
-            </button>
+            <a type="button" class="btn btn-lg fluid" href="Modulo_Modificar.html"> Modificar</a>
+
+            <!--Empieza el modal--Button Eliminar-->
+             <!-- Button trigger modal -->
+              <button type="button" class="btn btn-lg fluid" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Eliminar
+              </button>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Procesos</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Procesos
+                    </div>
+                    <div class="modal-footer">
+                      <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-center">
+                        <button type="button" class="btn-modal" data-bs-dismiss="modal">Aceptar</button>
+                        <button type="button" class="btn-modal" data-bs-dismiss="modal">Volver</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             <!-- Button Procesos -->
-            <a type="button" class="btn btn-lg me-5 fluid" href="Modulo_Procesos.html"> Proceso</a>
+            <a type="button" class="btn btn-lg fluid" href="Modulo_Procesos.html"> Proceso</a>
           </div>
 
           <!--Contenedor Tablas-->
@@ -126,28 +165,60 @@
             <!-- Segundo contenedor de las tablas-->
             <div class="text-center table-responsive">
               <!-- Empoieza la table -->
-              <table
-                class="table table-success table-striped-columns table-bordered"
-              >
+              <table id="tabla" class="display" style="width:100%">
                 <thead>
-                  <tr>
-                    <th>Tipo de Proceso</th>
-                    <th>Fumigacion</th>
-                  </tr>
-                  <tr>
-                    <th>Produccion</th>
-                    <th>Producto</th>
-                  </tr>
-                  <tr>
-                    <th>Descripcion</th>
-                    <th>Descripcion del proceso</th>
-                  </tr>
-                  <tr>
-                    <th>Realizado En</th>
-                    <th>Fecha del Procedimiento</th>
-                  </tr>
+                    <tr>
+                        <th>Tipo de Proceso</th>
+                        <th>Produccion</th>
+                        <th>Descripcion</th>
+                        <th>Realizado En</th>
+                       
+                    </tr>
                 </thead>
-              </table>
+                <tbody>
+                    <tr>
+                        <td>Fumigacion</td>
+                        <td>DualGold 960 EC</td>
+                        <td>Se realiza los dias martes de cada semana.</td>
+                        <td>02/03/2024</td>
+                      
+                    </tr>
+                    <tr>
+                      <td>Abonado</td>
+                        <td>AmBox</td>
+                        <td>Se realiza una semana despues de haber realizado el tratado d el suelo.</td>
+                        <td>16/04/2024</td>
+                       
+                    </tr>
+                    <tr>
+                      <td>Maquinaria</td>
+                        <td>Pelican 500 S</td>
+                        <td>Se Utilizara para tratar el suelo y recoleccion de cosecha.</td>
+                        <td>12/04/2024</td>
+                   
+                    </tr>
+                    <tr>
+                      <td>Empleados</td>
+                        <td>Bongo 600</td>
+                        <td>Cada empleado realizara sus tarea esfecifica.</td>
+                        <td>08/03/2024</td>
+                 
+                    </tr>
+                    <tr>
+                      <td>Corte Cosecha</td>
+                        <td>Gruya</td>
+                        <td>Se realiza cuando el cultivo del arroza a logrado su proceso.</td>
+                        <td>10/04/2024</td>
+                   
+                    </tr>
+                    <tr>
+                      <td>Preparacion Suelo</td>
+                        <td>Agrotin</td>
+                        <td>Se realiza la semana despues del corte de la cosecha.</td>
+                        <td>02/02/2024</td>
+                    </tr>
+                </tbody>  
+            </table>
             </div>
           </div>
         </div>
