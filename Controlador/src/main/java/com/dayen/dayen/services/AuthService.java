@@ -2,8 +2,10 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.LoginRequest;
 import com.dayen.dayen.dao.response.LoginResponse;
+import com.dayen.dayen.exceptions.usuario.CredentialsNotValid;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -20,8 +22,12 @@ public class AuthService {
 		UsernamePasswordAuthenticationToken authToken =
 				new UsernamePasswordAuthenticationToken(loginRequest.username(),
 						loginRequest.password());
-		authManager.authenticate(authToken);
 
+		try {
+			authManager.authenticate(authToken);
+		} catch (AuthenticationException e){
+			throw new CredentialsNotValid();
+		}
 		return new LoginResponse(this.tokenService.generateToken(authToken));
 	}
 }

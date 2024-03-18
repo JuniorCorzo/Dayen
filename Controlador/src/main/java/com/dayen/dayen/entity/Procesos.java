@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,9 +18,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class Procesos {
     @Id
     @Column(name = "id_proceso")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idProceso;
 
     @ManyToOne(targetEntity = Lotes.class)
@@ -32,10 +35,19 @@ public class Procesos {
     @JsonManagedReference
     private TipoProcesos idTipo;
 
-    @OneToOne
-    @JoinColumn(name = "id_producto")
-    @JsonManagedReference
-    private Productos idProducto;
+    @ManyToMany
+    @JoinTable(
+            name = "procesos_productos",
+            joinColumns = @JoinColumn(
+                    name = "id_proceso",
+                    referencedColumnName = "id_proceso"
+            ),
+            inverseJoinColumns = @JoinColumn(
+                    name = "id_producto",
+                    referencedColumnName = "id_producto"
+            )
+    )
+    private List<Productos> idProducto;
 
     @Column(name = "descripcion")
     @NotNull
@@ -50,11 +62,11 @@ public class Procesos {
     @JoinTable(
             name = "personal_procesos",
             joinColumns = @JoinColumn(
-                    name = "procesos_id_proceso",
+                    name = "id_proceso",
                     referencedColumnName = "id_proceso"
             ),
             inverseJoinColumns = @JoinColumn(
-                    name = "personal_id_personal",
+                    name = "id_personal",
                     referencedColumnName = "id_personal"
             )
     )

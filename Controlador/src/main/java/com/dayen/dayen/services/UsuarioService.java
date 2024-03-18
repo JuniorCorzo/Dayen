@@ -2,6 +2,8 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.UsuarioRequest;
 import com.dayen.dayen.entity.Usuarios;
+import com.dayen.dayen.exceptions.usuario.UserExists;
+import com.dayen.dayen.exceptions.usuario.UserNotExists;
 import com.dayen.dayen.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -21,26 +23,36 @@ public class UsuarioService {
 
 	public Usuarios getUsuarioById(@NotNull String idUsuario) {
 		return this.usuarioRepository.findById(idUsuario)
-				.orElseThrow(() -> new RuntimeException("Usuario no existe"));
+				.orElseThrow(UserNotExists::new);
 	}
 
-	public void usuarioCreate(@Valid UsuarioRequest usuario) {
+	public Usuarios usuarioCreate(@Valid UsuarioRequest usuario) {
 		if (usuarioRepository.existsById(usuario.idUsuario())) {
-			throw new RuntimeException("Usuario ya existe");
+			throw new UserExists();
 		}
 
-		this.usuarioRepository.insertUsuario(usuario.idUsuario(), usuario.nombre(),
-				usuario.apellido(), usuario.rol(), usuario.correo(),
-				passwordEncoder.encode(usuario.clave()), usuario.token());
+		return this.usuarioRepository.save(Usuarios.builder()
+						.idUsuario(usuario.idUsuario())
+						.username(usuario.nombre())
+						.apellido(usuario.apellido())
+						.rol(usuario.rol())
+						.correo(usuario.correo())
+						.clave(passwordEncoder.encode(usuario.clave()))
+				.build());
 	}
 
-	public void usuarioUpdate(@Valid UsuarioRequest usuario) {
+	public Usuarios usuarioUpdate(@Valid UsuarioRequest usuario) {
 		if (!usuarioRepository.existsById(usuario.idUsuario()))
-			throw new RuntimeException("Usuario no existe");
+			throw new UserNotExists();
 
-		this.usuarioRepository.updateUsuario(usuario.idUsuario(), usuario.nombre(),
-				usuario.apellido(), usuario.rol(), usuario.correo(),
-				passwordEncoder.encode(usuario.clave()), usuario.token());
+		return this.usuarioRepository.save(Usuarios.builder()
+				.idUsuario(usuario.idUsuario())
+				.username(usuario.nombre())
+				.apellido(usuario.apellido())
+				.rol(usuario.rol())
+				.correo(usuario.correo())
+				.clave(passwordEncoder.encode(usuario.clave()))
+				.build());
 	}
 
 }

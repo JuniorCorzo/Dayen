@@ -2,7 +2,9 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.PersonalRequest;
 import com.dayen.dayen.entity.Personal;
+import com.dayen.dayen.exceptions.personal.PersonalNotExists;
 import com.dayen.dayen.repository.PersonalRepository;
+import com.dayen.dayen.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.stereotype.Service;
@@ -12,31 +14,40 @@ import java.util.List;
 @Service
 public class PersonalService {
 	private final PersonalRepository personalRepository;
+	private final UsuarioRepository usuarioRepository;
 
-	public PersonalService(PersonalRepository personalRepository) {
+	public PersonalService(PersonalRepository personalRepository, UsuarioRepository usuarioRepository) {
 		this.personalRepository = personalRepository;
+		this.usuarioRepository = usuarioRepository;
 	}
 
-	public List<Personal> getAllPersonalByUsuario(@NotNull Integer idUsuario){
+	public List<Personal> getAllPersonalByUsuario(@NotNull Integer idUsuario) {
 		return this.personalRepository.findAllByIdUsuario(idUsuario);
 	}
 
-	public void createPersonal(@Valid PersonalRequest personal){
-		this.personalRepository.createPersonal(personal.idUsuario(),
-				personal.nombre(), personal.telefono());
+	public Personal createPersonal(@Valid PersonalRequest personal) {
+		return this.personalRepository.save(Personal.builder()
+				.idUsuario(this.usuarioRepository.findById(personal.idUsuario()).orElseThrow())
+				.nombre(personal.nombre())
+				.telefono(personal.telefono())
+				.build());
 	}
 
-	public void updatePersonal(@Valid PersonalRequest personal){
+	public Personal updatePersonal(@Valid PersonalRequest personal) {
 		if (!this.personalRepository.existsById(personal.idPersonal()))
-			throw new RuntimeException("El personal no existe");
+			throw new PersonalNotExists();
 
-		this.personalRepository.updatePersonal(personal.idPersonal(),
-				personal.idUsuario(), personal.nombre(), personal.telefono());
+		return this.personalRepository.save(Personal.builder()
+				.idPersonal(personal.idPersonal())
+				.idUsuario(this.usuarioRepository.findById(personal.idUsuario()).orElseThrow())
+				.nombre(personal.nombre())
+				.telefono(personal.telefono())
+				.build());
 	}
 
-	public void deletePersonal(Integer idPersonal){
+	public void deletePersonal(Integer idPersonal) {
 		if (!this.personalRepository.existsById(idPersonal))
-			throw new RuntimeException("El personal no existe");
+			throw new PersonalNotExists();
 
 		this.personalRepository.deleteById(idPersonal);
 	}

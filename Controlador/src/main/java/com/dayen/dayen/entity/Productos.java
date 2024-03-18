@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "productos")
 @AllArgsConstructor
@@ -28,7 +30,7 @@ public class Productos {
     @NotEmpty
     private String funcion;
 
-    @OneToOne(mappedBy = "idProducto")
+    @ManyToMany(mappedBy = "idProducto")
     @JsonBackReference
-    private Procesos procesos;
+    private List<Procesos> procesos;
 }
