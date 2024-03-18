@@ -2,6 +2,7 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.LoteRequest;
 import com.dayen.dayen.entity.Lotes;
+import com.dayen.dayen.exceptions.lote.LoteNotExists;
 import com.dayen.dayen.repository.LoteRepository;
 import com.dayen.dayen.repository.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -34,7 +35,7 @@ public class LotesService {
 
 	public Lotes updateLote(@Valid LoteRequest lote) {
 		if (!loteRepository.existsById(lote.idLote()))
-			throw new RuntimeException("El lote no existe");
+			throw new LoteNotExists();
 
 		return this.loteRepository.save(Lotes.builder()
 				.idLote(lote.idLote())
@@ -46,7 +47,7 @@ public class LotesService {
 
 	public void deleteLote(int idLote) {
 		if (!loteRepository.existsById(idLote))
-			throw new RuntimeException("El lote no existe");
+			throw new LoteNotExists();
 		this.loteRepository.deleteById(idLote);
 	}
 }

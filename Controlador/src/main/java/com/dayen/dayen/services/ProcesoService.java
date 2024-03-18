@@ -2,6 +2,9 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.ProcesoRequest;
 import com.dayen.dayen.entity.Procesos;
+import com.dayen.dayen.exceptions.lote.LoteNotExists;
+import com.dayen.dayen.exceptions.proceso.ProcesoNotExists;
+import com.dayen.dayen.exceptions.tipoProceso.TipoProcesoNotExists;
 import com.dayen.dayen.repository.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
@@ -32,8 +35,9 @@ public class ProcesoService {
 	public Procesos createProceso(@Valid ProcesoRequest proceso) {
 		return this.procesoRepository.save(Procesos.builder()
 				.idLote(this.loteRepository.findById(proceso.idLote())
-						.orElseThrow(() -> new RuntimeException("El id del lote no existe")))
-				.idTipo(this.tipoProcesoRepository.findById(proceso.idTipo()).orElseThrow())
+						.orElseThrow(LoteNotExists::new))
+				.idTipo(this.tipoProcesoRepository.findById(proceso.idTipo())
+						.orElseThrow(TipoProcesoNotExists::new))
 				.idProducto(this.productoRepository.findAllById(proceso.idProducto()))
 				.descripcion(proceso.descripcion())
 				.realizadoEn(proceso.realizadoEn())
@@ -43,12 +47,14 @@ public class ProcesoService {
 	}
 
 	public Procesos updateProcesos(@Valid ProcesoRequest proceso) {
-		if (!this.procesoRepository.existsById(proceso.idProceso())) throw new RuntimeException("El Proceso no existe");
+		if (!this.procesoRepository.existsById(proceso.idProceso()))
+			throw new ProcesoNotExists();
+
 		return this.procesoRepository.save(Procesos.builder()
 				.idProceso(proceso.idProceso())
 				.idLote(this.loteRepository.findById(proceso.idLote())
-						.orElseThrow(() -> new RuntimeException("El id del lote no existe")))
-				.idTipo(this.tipoProcesoRepository.findById(proceso.idTipo()).orElseThrow())
+						.orElseThrow(LoteNotExists::new))
+				.idTipo(this.tipoProcesoRepository.findById(proceso.idTipo()).orElseThrow(TipoProcesoNotExists::new))
 				.idProducto(this.productoRepository.findAllById(proceso.idProducto()))
 				.descripcion(proceso.descripcion())
 				.realizadoEn(proceso.realizadoEn())
@@ -57,7 +63,9 @@ public class ProcesoService {
 	}
 
 	public void deleteProceso(@NotNull int idProceso) {
-		if (!this.procesoRepository.existsById(idProceso)) throw new RuntimeException("El proceso no existe");
+		if (!this.procesoRepository.existsById(idProceso))
+			throw new ProcesoNotExists();
+
 		this.procesoRepository.deleteById(idProceso);
 	}
 }

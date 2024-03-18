@@ -2,6 +2,7 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.PersonalRequest;
 import com.dayen.dayen.entity.Personal;
+import com.dayen.dayen.exceptions.personal.PersonalNotExists;
 import com.dayen.dayen.repository.PersonalRepository;
 import com.dayen.dayen.repository.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -34,7 +35,7 @@ public class PersonalService {
 
 	public Personal updatePersonal(@Valid PersonalRequest personal) {
 		if (!this.personalRepository.existsById(personal.idPersonal()))
-			throw new RuntimeException("El personal no existe");
+			throw new PersonalNotExists();
 
 		return this.personalRepository.save(Personal.builder()
 				.idPersonal(personal.idPersonal())
@@ -46,7 +47,7 @@ public class PersonalService {
 
 	public void deletePersonal(Integer idPersonal) {
 		if (!this.personalRepository.existsById(idPersonal))
-			throw new RuntimeException("El personal no existe");
+			throw new PersonalNotExists();
 
 		this.personalRepository.deleteById(idPersonal);
 	}
