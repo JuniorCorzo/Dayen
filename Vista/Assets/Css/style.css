@@ -13,7 +13,7 @@ body {
 /*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
 /*************************************************************************************/
-
+/*Modulo de Bienvenida*/
 /*Barra de Navegacion principal*/
 /*Clase principal*/
 .navbar {
@@ -35,8 +35,10 @@ ul li a {
 }
 ul li a:hover{
 	text-shadow:2px 2px 20px #04f839;
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
 }
-/*Inconos de la barra de navegacion*/
+/*Inconos de la barra de navegacion de Bienvenida*/
 /*Icono inicio de sesion*/
 .bi-inicio{
     color: black;
@@ -56,12 +58,18 @@ ul li a:hover{
     width: 100px;
     height: 100px;
 }
+
 /*Contenido de Modulo de bienvenida*/
 /*Titulos*/
 h1{
     font-family: "Crete Round", serif;
     font-size: 50px;
     color: #e8e6e6;
+}
+h1:hover {
+    text-shadow:2px 2px 20px #151615;
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
 }
 /*Parrafos y contenido*/
 p {
@@ -77,10 +85,24 @@ p {
     margin-left: 45px;
     font-size: 40px !important;
 }
-.card {
-    width: 300px;
-    height: 300px;    
+
+.img-1, .img-9, .img-7 {
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px#a0d7ac ;
+    -webkit-box-shadow: 0px 0px 15px 15px #a0d7ac ;
+
 }
+
+
+.col:hover{
+    -webkit-transform:scale(0.9);
+    transform:scale(0.9);
+}
+
 
 /***************************************************************************************/
 /*Inicio del estilo de Modulo de Lotes*/
