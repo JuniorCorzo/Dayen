@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inicio de Sesion</title>
+  <!-- Estilo del logo de doble ventana-->
+  <link rel="icon" href="../assets/img/DAYEN-logo.png" type="image/x-icon" />
+  <!-- Estilo del Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <!-- Estilo de los iconos de bootstrap-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Estilo de css que se le asigna-->
+  <link rel="stylesheet" href="../assets/css/formularios.css" />
+</head>
+
+<body>
+  <!-- Contenedor principal-->
+  <div class="container">
+    <!-- Contenedor segundario que engloba el login-->
+    <div class="row justify-content-center pt-2">
+
+      <!--Titulo-->
+      <h1 class="pt-2">INICIO DE SESION</h1>
+      <!-- Contenedor de la imagen-->
+      <div class="imagen pt-2">
+        <img class="img" src="../assets/img/DAYEN-logo.png" />
+      </div>
+      <!-- Contenedor del formulario del login-->
+      <div class=" formulario pt-4">
+        <form action="../pages/modulo_lotes.html">
+
+           <!-- Div que esta compuesta por la clase form-grup que componen el formulario de Registro de Inicio de Sesion-->
+           <div class="form-group mb-3">
+            <!-- Iconos-->
+            <i class="bi bi-person-badge"></i>
+            <!-- Input de Cedulas-->
+            <input
+              type="text"
+              class="form-control propiedades"
+              name="cedula"
+              placeholder="Cedula"
+            />
+          </div>
+
+          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de Inicio de Sesion-->
+          <div class="form-group mb-3">
+            <!-- Iconos-->
+            <i class="bi bi-envelope-at"></i>
+            <!-- Input de de correo electronico con la clase form-control para dar las propiedades-->
+            <input
+              type="email"
+              class="form-control propiedades"
+              name="correo"
+              placeholder="Dayen@.com"
+            />
+          </div>
+         
+            <!-- Div que esta compuesta por la clase form-grup que componen el formulario de login-->
+          <div class="form-group mb-3">
+             <!-- Iconos-->  
+            <i class="bi bi-lock"></i>
+            <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
+            <input
+              type="password"
+              class="form-control"
+              name="Contraseña"
+              placeholder="Contraseña"
+            />
+          </div>
+
+          <!-- Div del form-check para Verificar el guardar la infromacion del usuario-->
+          <div class="form-check  mx-sm-2 mb-3">
+            <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="checkbox"
+              id=""
+            />
+            <!-- label donde damos el nombre de recordad y la clase de form-check-label para darle las propiedades-->
+            <label class="form-check-label  mx-sm-3" for="connected"
+              >Recordar</label
+            >
+          </div>
+
+          <!-- Div que contiene la clase d-flex justify-content-centerpara agrupar el Boton de Ingresar-->
+          <div class=" justify-content-center d-flex pb-2">
+            <!-- Boton de Ingresar-->
+            <button type="submit" class="btn" value="ingresar">
+              Ingresar
+            </button>
+          </div>
+
+          <!-- Div que contiene la clase d-flex justify-content-center para agrupar el Botones de Olvido Contraseña y olvidar-->
+            <!-- Botones de Volver-->
+          <div class="d-flex justify-content-center pb-2">
+           <a href="../index.html" class="btn" >Volver</a>
+         </div>
+
+         <!-- Botones de Olvido Contraseña-->
+         <div class="d-flex justify-content-center pb-2">
+         <a href="registros/recuperar_contraseña.html" class="olvido" >¿Olvido su Contraseña?</a>
+       </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
