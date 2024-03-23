@@ -26,6 +26,7 @@ body {
 /*Estilo de infromacion de la barra de navegacion*/
 .nav-link{
     width: fit-content;
+    margin-left: 10px;
     font-size: 25px;
 }
 ul li a {
@@ -58,7 +59,6 @@ ul li a:hover{
     width: 100px;
     height: 100px;
 }
-
 /*Contenido de Modulo de bienvenida*/
 /*Titulos*/
 h1{
@@ -68,8 +68,8 @@ h1{
 }
 h1:hover {
     text-shadow:2px 2px 20px #151615;
-    -webkit-transform:scale(1.2);
-    transform:scale(1.2);
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
 }
 /*Parrafos y contenido*/
 p {
@@ -85,7 +85,7 @@ p {
     margin-left: 45px;
     font-size: 40px !important;
 }
-
+/*Estilo de imagenes de Bienvenida*/
 .img-1, .img-9, .img-7 {
     width: 350px;
     height: 350px;
@@ -94,16 +94,12 @@ p {
     -webkit-border-radius:50%;
     box-shadow: 0px 0px 15px 15px#a0d7ac ;
     -webkit-box-shadow: 0px 0px 15px 15px #a0d7ac ;
-
 }
-
-
-.col:hover{
+/*Cover del div de columna*/
+.img-lote:hover{
     -webkit-transform:scale(0.9);
     transform:scale(0.9);
 }
-
-
 /***************************************************************************************/
 /*Inicio del estilo de Modulo de Lotes*/
 /*Barra de menu*/
@@ -119,6 +115,59 @@ p {
     margin-right: 30px;
     cursor: pointer;
 }
+/*Icono de ingresar personal*/
+.bi-people-fill{
+    font-size: 25px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+/*Subtitulo de cada uno de los modulos*/
+h3{
+    font-family: "Crete Round", serif;
+    font-size: 35px;
+    color: #e8e6e6;
+}
+h3:hover{
+    text-shadow:2px 2px 20px #05f805;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
+/*Cambio de los link*/
+a{
+    text-decoration: none;
+}
+/*Imagnes de lotes*/
+.IMG-27, .IMG-6, .IMG-33, .IMG-55 {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+/*Hover de cada imagen de los lotes*/
+/*Rotacion del lote dayen*/
+.IMG-27:hover{
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+    transition: 1s ease;
+}
+/*Rotacion de lote Darian */
+.IMG-33:hover{
+    transform: scale(1.2);
+}
+/*Rotacion de lote Star*/
+.IMG-6:hover{
+    -webkit-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    transform: rotateZ(15deg);
+    transition:  1s ease;
+}
+.IMG-55:hover{
+    -webkit-transform:scale(0.9);
+    transform:scale(0.9);
+}
+/********************************************************************************/
+/*Modulo de Modificar lotes*/
 /*Contenedor de las imagenes*/
 .galeria {
     display: flex;
@@ -126,11 +175,7 @@ p {
     justify-content: center;
     cursor: pointer;
 }
-/*Div imagnes */
-.rounded{
-    width: 300px;
-    height: 300px;
-}
+
 /*Contenedor las imagnes y tamaños*/
 .galeria img {
     width: 0px;
@@ -158,6 +203,9 @@ p {
 .btn:hover {
     background-color: #a0d7ac;;
 }
+
+
+/************************************************************/
 /*Tabla de informacion*/
 .table {
     width: 500px;
@@ -238,7 +286,7 @@ h2 {
 }
 /*Estilo de infromacion de la barra de navegacion*/
 .nav-link{
-    font-size: 15px;
+    font-size: 20px;
 }
 /*Inconos de la barra de navegacion de inicio de sesion y registro*/
 .bi-inicio, .bi-people{
@@ -254,22 +302,40 @@ p {
     text-align: justify;
     font-size: 18px;
 }
+/*Estilo de imagenes de Bienvenida*/
+.img-1, .img-9, .img-7 {
+    width: 300px;
+    height: 300px;
+   
+}
+
 
 /**************************************************/
 /*Inicio del estilo de Modulo de Lotes*/
 /*Barra de menu*/
 /*Icono de ingresar hectarea y cerrar*/
-.fa-sun-plant-wilt, .fa-x{
+/*Icono de ingresar personal*/
+.bi-people-fill{
     visibility: hidden;
+}
+/*Icono de ingresar hectarea*/
+.fa-sun-plant-wilt {
+    visibility: hidden;
+}
+/*Icono de cerrar*/
+.fa-x{
+   visibility: hidden;
 }
 /*Hola Administrador*/
 .active{
-    font-size: 10px;
+    font-size: 15px;
+  
 }
 /*Imagen de dayen*/
 .d-inline-block{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
+    margin-left: 70px;
 }
 /*Div imagnes */
 .rounded{

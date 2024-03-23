@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modulo de Lotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modulo de Procesos</title>
   <!-- Estilo del logo de doble ventana-->
   <link rel="icon" href="../assets/img/DAYEN-logo.png" type="image/x-icon" />
   <!-- Estilo del Bootstrap-->
@@ -17,21 +17,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Estilo de css que se le asigna del css-->
   <link rel="stylesheet" href="../assets/css/style.css" />
-
-  <!-- Estilo de las las tablas -->
-  <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-
-  <script src="https://cdn.datatables.net/1.13.3/js/importmap.js"></script>
-
-  <script type="module">
-    import DataTable from 'datatables.net';
-
-    window.addEventListener('DOMContentLoaded', function () {
-      new DataTable('#tabla');
-    });
-  </script>
 </head>
 
 <body>
@@ -64,16 +52,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 
           <ul class="navbar-nav">
-            <!--li de Registar Persona  -->
+            <!--li de registrar Procesos -->
             <li class="nav-item">
-              <a class="nav-link" href="../pages/registros/registro_personal.html">Registrar Personal</a>
-              <i class="bi bi-people-fill"></i>
+              <a class="nav-link" href="Registros/registro_procesos.html">Registrar Procesos</a>
+              <i class="fa-solid fa-tree"></i>
             </li>
 
-            <!--li de registrar lotes  -->
+            <!--li de regresara al modulo delotes lotes  -->
             <li class="nav-item">
-              <a class="nav-link" href="registros/registro_hectareas.html">Registrar Lotes</a>
-              <i class="fa-solid fa-sun-plant-wilt"></i>
+              <a class="nav-link" href="modulo_lotes.html">Lotes</a>
+              <i class="fa-solid fa-plant-wilt"></i>
             </li>
 
             <!--li de Cerrar  -->
@@ -87,55 +75,80 @@
     </nav>
   </header>
 
-  <!--Empieza el contenido del modulo de lotes -->
+  <!--Donde empieza el contenido de la pagina de lotes -->
   <main>
-     <!--Contenedor principal de lotes-->
-    <div class="container px-4 text-center">
-      <!--Contenedor segundario de los lotes-->
-      <div class="row gx-5 mt-3">
-          <!--Titulo-->
-        <h1>Lotes</h1>
-        <!--Contenedor 1 sobre la informacion del lote Dayen-->
-        <div class="col">
-          <div class="p-3">
-            <a href="modulo_modificar_lotes.html"> 
-              <h3>Lotes Dayen</h3>
-                <img  class="IMG-27 mt-4" src="../assets/img/IMG-27.jpg" alt="img">
-            </a>
-          </div>
-          
+    <!--Contenedor principal-->
+    <div class="container mt-4">
+      <!--titulo-->
+      <div class="text-center">
+        <h1>Modificar Informacion</h1>
+      </div>
+
+      <!--Contenedor Segundario-->
+      <div>
+        <!--Contenedor  donde esta la aimagen -->
+        <div class="text-center">
+          <img src="../assets/img/Arrocera-4.png" class="rounded img-fluid" alt="Arrocera 3" />
         </div>
 
-         <!--Contenedor 2 sobre la informacion sobre del lote Darian-->
-        <div class="col">
-          <div class="p-3">
-            <a href="#">
-              <h3>Lotes Darian</h3>
-              <img class="IMG-33 mt-4" src="../assets/img/IMG-33.jpg" alt="img">
-            </a>
+
+        <!--Contenedor Tablas-->
+        <div class="d-md-flex justify-content-center mt-4">
+          <!-- Segundo contenedor de las tablas-->
+          <div class="text-center table-responsive">
+            <!-- Empoieza la table -->
+            <table class="table table-success table-striped-columns table-bordered">
+              <thead>
+                <tr>
+
+                  <th colspan="2">Informacion</th>
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+
+                  <td>Lotes</td>
+
+                </tr>
+                <tr>
+                  <td>Tipo</td>
+
+                </tr>
+                <tr>
+                  <td>Tipo de Procesos</td>
+                </tr>
+                <tr>
+                  <td>Proceso Abonado</td>
+
+                </tr>
+                <tr>
+                  <td>Descripcion</td>
+
+                </tr>
+                <tr>
+                  <td>Tipo de Procesos</td>
+                </tr>
+                <tr>
+                  <td>Tiempos</td>
+                </tr>
+              </tbody>
+              </thead>
+            </table>
           </div>
         </div>
 
-         <!--Contenedor 3 sobre la informacion del lote Star-->
-        <div class="col">
-          <div class="p-3">
-            <a href="#">
-              <h3>Lotes Star</h3>
-              <img class="IMG-6 mt-4" src="../assets/img/IMG-6.jpg" alt="img">
-            </a>
-          </div>
-        </div>
-        
-         <!--Contenedor 4 sobre la informacion del lote Sun-->
-        <div class="col">
-          <div class="p-3">
-           <a href="#">
-            <h3>Lotes Sun</h3>
-            <img class="IMG-55 mt-4" src="../assets/img/IMG-55.jpg" alt="img">
-           </a>
-          </div>
-        </div>
+        <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
+        <div class="justify-content-center d-flex pb-3">
+          <!-- Boton de Ingresar-->
+          <!-- Boton de Ingresar-->
+          <button type="submit" class="btn mb-3  btn-sm mx-sm-2" value="ingresar">
+            Aceptar
+          </button>
+          <!-- Boton de Volver-->
+          <a class="btn mb-3  btn-sm" href="modulo_lotes.html" role="button">Volver</a>
 
+        </div>
       </div>
     </div>
   </main>
