@@ -16,19 +16,19 @@ body {
   background-color: grey;
 }
 /*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
-.container {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+.container{ 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /*Contenedor segundario del Inicio de Sesion*/
-.row {
-  background-color: #a0d7ac;
-  width: 350px;
-  border-radius: 15px;
-  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-  box-sizing: border-box;
+.row{
+    background-color: #a0d7ac;
+    width: 340px;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
 }
 /*Titulo del inicio de sesion, Recuperar contraseña y Registro de usuario */
 h1 {
@@ -44,8 +44,8 @@ h1 {
   justify-content: center;
 }
 .img {
-  width: 150px;
-  height: 150px;
+    width: 140px;
+    height: 140px;  
 }
 /*Contenedor de formulario-principal del inicio de sesion*/
 .formulario {
@@ -55,13 +55,13 @@ h1 {
 }
 /*Formulario del login -- engloba el input */
 .form-control {
-  padding-left: 35px !important;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: #e2d197;
-  border: none;
-  cursor: pointer;
-  outline: none;
+    padding-left: 35px !important;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-control:focus {
@@ -92,9 +92,9 @@ h1 {
   background-color: #e0ab4e;
 }
 /*Es para darle el tamaño y la fuente del label de la verificacion del usuario*/
-.form-check-label {
-  font-size: 20px;
-  font-family: "Cormorant", serif;
+.form-check-label{
+    font-size: 18px;
+    font-family: "Cormorant", serif;
 }
 /*Boton de ingresar*/
 .btn {
@@ -122,15 +122,15 @@ h1 {
 .olvido:hover {
   box-shadow: 0 3px 2px #e2d197;
 }
-/**************************************************************************************************************************************/
-/*Modulos de Recuperar contraseña*/
+/********************************************************************************************/
+/*Modulos de Recuperar contraseña*/ 
 /*Contenedor Principal de Recuperar Contraseña*/
 .contenedor {
-  background-color: #a0d7ac;
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-  box-sizing: border-box;
+    background-color: #a0d7ac;
+    width: 310px;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
 }
 /*Contenedor que tiene el contenainer del formulario de Recuperar Contraseña*/
 .contraseña {
@@ -155,11 +155,11 @@ h1 {
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
 .registro {
-  background-color: #a0d7ac;
-  width: 330px;
-  border-radius: 15px;
-  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-  box-sizing: border-box;
+    background-color: #a0d7ac;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
 }
 /*Titulo*/
 h2 {
@@ -188,7 +188,6 @@ h2 {
 .propiedades {
   height: 40px;
 }
-
 /*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
 /* Clases del icono que estna en el registrode lotes*/
@@ -200,14 +199,21 @@ h2 {
 }
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
-.form-select {
-  padding-left: 35px !important;
-  border-radius: 10px;
-  font-size: 20px;
-  background-color: #e2d197;
-  border: none;
-  cursor: pointer;
-  outline: none;
+.proceosos{
+    background-color: #a0d7ac;
+    width: 330px !important;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
+}
+.form-select{
+    padding-left: 35px !important;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-select:focus {
@@ -227,6 +233,30 @@ h2 {
   font-size: 16px;
   font-family: "Cormorant", serif;
   font-weight: bold;
+}
+.calen, .descripcion{
+    padding-left: 15px !important;
+}
+/******************************************************************************************/
+/*Modulode Registro de personal*/
+
+.registro {
+    background-color: #a0d7ac;
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+    box-sizing: border-box;
+}
+
+/*Contenedor principa donde engloba el formulario*/
+.personal {
+    font-family: "Cormorant", serif;
+    background-color: #a0d7ac;
+    border-radius: 15px;
+}
+/*Propiedades de la clase de form-control que llenan el formulario*/
+.propiedades {
+    height: 40px;
 }
 /******************************************************************************************/
 /*RESPONSIVE*/
