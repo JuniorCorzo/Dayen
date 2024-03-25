@@ -22,7 +22,7 @@
     <!-- Contenedor principal -->
     <div class="container">
         <!-- Contenedor SEGUNDARIO que engloba la estructura del registro de lotes-->
-        <div class="row justify-content-center pt-2">
+        <div class="row procesos justify-content-center pt-2">
             <!--Titulo-->
             <h2 class="pt-2">REGISTRAR PROCESOS</h2>
 
@@ -36,22 +36,23 @@
                 <!--formulario-->
                 <form action="#">
                     <!-- Contenedor  del selecte de Lotes-->
-                    <div class="form-group mb-4">
+                    <div class="form-group mb-3">
                         <!-- Iconos-->
                         <i class="fa-solid fa-sun-plant-wilt"></i>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Lotes</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <option value="1">Lote Dayen</option>
+                            <option value="2">Lote Darian</option>
+                            <option value="3">Lote Star</option>
+                            <option value="3">Lote Sun</option>
                         </select>
                     </div>
                     <!-- Contenedor  del selecte de LTipos-->
-                    <div class="form-group mb-4">
+                    <div class="form-group mb-3">
                         <!-- Iconos-->
                         <i class="fa-solid fa-plant-wilt"></i>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Tipos</option>
+                            <option selected>Tipos de procesos</option>
                             <option value="1">Abonado</option>
                             <option value="2">Fumigacion</option>
                             <option value="3">Maquinaria</option>
@@ -61,24 +62,30 @@
                         </select>
                     </div>
                     <!-- Contenedor  del selecte de Productos-->
-                    <div class="form-group mb-4">
+                    <div class="form-group mb-3">
                         <i class="fa-solid fa-tree"></i>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Productos</option>
-
+                            <option selected>Productos de Fumigacion</option>
+                            <option value="1">DualGold 960 EC</option>
+                            <option value="2">AmBox</option>
+                            <option value="3">Pelican 500 S</option>
+                            <option value="4">Bongo 600</option>
+                            <option value="5">Gruya</option>
+                            <option value="6">Agrotin</option>
                         </select>
                     </div>
 
                     <!-- Div de Realizado en-calendario-->
-                    <div class="form-group mb-4">
+                    <div class="form-group mb-3">
                         <!-- Input de Nombres con la clase form-control para dar las propiedades-->
-                        <input type="date" class="form-control" name="calendario" placeholder="Realizado En" />
+                        <input type="date" class="form-control calen" name="calendario" placeholder="Realizado En" />
                     </div>
 
+                     <!-- Div de Descripcion de la infromacion-->
                     <div class="mb-3">
-
                         <label for="exampleFormControlTextarea1" class="form-label">Descripcion:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        
+                        <textarea class="form-control descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
                     <!-- Boton de Ingresar-->
@@ -87,7 +94,7 @@
                             Ingresar
                         </button>
                         <!-- Boton de Volver-->
-                        <a class="btn mb-3 " href="../modulo_procesos.html" role="button">Volver</a>
+                        <a class="btn mb-3 " href="../modulo_procesos_lotes.html" role="button">Volver</a>
                     </div>
                 </form>
             </div>

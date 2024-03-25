@@ -30,32 +30,64 @@
       </div>
       <!-- Contenedor del formulario del login-->
       <div class=" formulario pt-4">
-        <form action="modulo_lotes.html">
+        <form action="../pages/modulo_lotes.html">
 
-          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de login-->
-          <div class="form-group mb-4">
+           <!-- Div que esta compuesta por la clase form-grup que componen el formulario de Registro de Inicio de Sesion-->
+           <div class="form-group mb-3">
             <!-- Iconos-->
-            <i class="bi bi-person"></i>
-            <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
-            <input type="text" class="form-control" name="usuario" placeholder="Usuario" />
+            <i class="bi bi-person-badge"></i>
+            <!-- Input de Cedulas-->
+            <input
+              type="text"
+              class="form-control propiedades"
+              name="cedula"
+              placeholder="Cedula"
+            />
           </div>
-          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de login-->
-          <div class="form-group mb-4">
+
+          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de Inicio de Sesion-->
+          <div class="form-group mb-3">
             <!-- Iconos-->
+            <i class="bi bi-envelope-at"></i>
+            <!-- Input de de correo electronico con la clase form-control para dar las propiedades-->
+            <input
+              type="email"
+              class="form-control propiedades"
+              name="correo"
+              placeholder="Dayen@.com"
+            />
+          </div>
+         
+            <!-- Div que esta compuesta por la clase form-grup que componen el formulario de login-->
+          <div class="form-group mb-3">
+             <!-- Iconos-->  
             <i class="bi bi-lock"></i>
             <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
-            <input type="password" class="form-control" name="Contraseña" placeholder="Contraseña" />
+            <input
+              type="password"
+              class="form-control"
+              name="Contraseña"
+              placeholder="Contraseña"
+            />
           </div>
+
           <!-- Div del form-check para Verificar el guardar la infromacion del usuario-->
           <div class="form-check  mx-sm-2 mb-3">
             <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
-            <input class="form-check-input" type="checkbox" name="checkbox" id="" />
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="checkbox"
+              id=""
+            />
             <!-- label donde damos el nombre de recordad y la clase de form-check-label para darle las propiedades-->
-            <label class="form-check-label  mx-sm-3" for="connected">Recordar</label>
+            <label class="form-check-label  mx-sm-3" for="connected"
+              >Recordar</label
+            >
           </div>
 
           <!-- Div que contiene la clase d-flex justify-content-centerpara agrupar el Boton de Ingresar-->
-          <div class=" justify-content-center d-flex pb-3">
+          <div class=" justify-content-center d-flex pb-2">
             <!-- Boton de Ingresar-->
             <button type="submit" class="btn" value="ingresar">
               Ingresar
@@ -63,15 +95,15 @@
           </div>
 
           <!-- Div que contiene la clase d-flex justify-content-center para agrupar el Botones de Olvido Contraseña y olvidar-->
-          <!-- Botones de Volver-->
-          <div class="d-flex justify-content-center pb-3">
-            <a href="../index.html" class="btn">Volver</a>
-          </div>
+            <!-- Botones de Volver-->
+          <div class="d-flex justify-content-center pb-2">
+           <a href="../index.html" class="btn" >Volver</a>
+         </div>
 
-          <!-- Botones de Olvido Contraseña-->
-          <div class="d-flex justify-content-center pb-3">
-            <a href="registros/recuperar_contraseña.html" class="olvido">¿Olvido su Contraseña?</a>
-          </div>
+         <!-- Botones de Olvido Contraseña-->
+         <div class="d-flex justify-content-center pb-2">
+         <a href="registros/recuperar_contraseña.html" class="olvido" >¿Olvido su Contraseña?</a>
+       </div>
         </form>
       </div>
     </div>
