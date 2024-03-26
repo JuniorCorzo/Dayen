@@ -58,7 +58,7 @@ h1 {
     padding-left: 35px !important;
     border-radius: 10px;
     font-size: 18px;
-    background-color: #e2d197;
+    background-color: #e2d197 ;
     border:none; 
     cursor: pointer;
     outline: none;
@@ -83,7 +83,7 @@ h1 {
 .form-check-input{
     width: 25px;
     height: 25px;
-    background-color: #e2d197;
+    background-color: #e2d197 !important;
     border: none;
     cursor: pointer;
 }
@@ -197,6 +197,14 @@ h2 {
     padding: 12px;
     pointer-events: none;
 }
+
+
+input[type="file"]{
+    padding-left: 50px !important;
+    cursor: pointer;
+ 
+}
+
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
 .proceosos{

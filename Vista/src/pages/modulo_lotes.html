@@ -1,143 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modulo de Lotes</title>
+    <!-- Estilo del logo de doble ventana-->
+    <link rel="icon" href="../assets/img/DAYEN-logo.png" type="image/x-icon" />
+    <!-- Estilo del Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Estilo de los iconos-->
+    <!-- Estilo de los iconos bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Estilo de los iconos font-awesone-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Estilo de css que se le asigna del css-->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modulo de Lotes</title>
-  <!-- Estilo del logo de doble ventana-->
-  <link rel="icon" href="../assets/img/DAYEN-logo.png" type="image/x-icon" />
-  <!-- Estilo del Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <!-- Estilo de los iconos-->
-  <!-- Estilo de los iconos bootstrap-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Estilo de los iconos font-awesone-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Estilo de css que se le asigna del css-->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <body>
+    <!-- Cabecera- Barra de Navegacion-->
+    <header class="mt-4 ms-3 me-3">
+      <!-- Empieza la barra de navegacion el nav engloba los contenedores-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!--Contenedor que englloba la informacion de la barra de navegacion-->
+        <div class="container-fluid">
+          <!--Contenedor del hola Administrador -->
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active"> Hola, Administrador 🌱 </a>
+              </li>
+            </ul>
+          </div>
 
-</head>
+          <!--Contenedor del logo-->
+          <div class="position-absolute top-0 start-50 translate-middle mt-5">
+            <img
+              src="../assets/img/DAYEN-logo.png"
+              alt="Logo"
+              class="d-inline-block"
+            />
+          </div>
 
-<body>
-  <!-- Cabecera- Barra de Navegacion-->
-  <header class="mt-4 ms-3 me-3">
-    <!-- Empieza la barra de navegacion el nav engloba los contenedores-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <!--Contenedor que englloba la informacion de la barra de navegacion-->
-      <div class="container-fluid">
-        <!--Contenedor del hola Administrador -->
-        <div>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active"> Hola, Administrador 🌱 </a>
-            </li>
-          </ul>
+          <!--Botones de menu-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--Contenedor que engloba el Registro hectareas y Cerrar-->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <!--li de Registar Persona  -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../pages/registros/registro_personal.html"
+                  >Registrar Personal</a
+                >
+                <i class="bi bi-people-fill d-none d-lg-block"></i>
+              </li>
+
+              <!--li de registrar lotes  -->
+              <li class="nav-item">
+                <a class="nav-link" href="registros/registro_hectareas.html"
+                  >Registrar Lotes</a
+                >
+                <i class="fa-solid fa-sun-plant-wilt d-none d-lg-block"></i>
+              </li>
+
+              <!--li de Cerrar  -->
+              <li class="nav-item text-end">
+                <a class="nav-link" href="../index.html">Cerrar</a>
+                <i class="fa-solid fa-x d-none d-lg-block"></i>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!--Contenedor del logo-->
-        <div class="position-absolute top-0 start-50 translate-middle mt-5">
-          <img src="../assets/img/DAYEN-logo.png" alt="Logo" class="d-inline-block">
-        </div>
+      </nav>
+    </header>
 
-        <!--Botones de menu-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!--Contenedor que engloba el Registro hectareas y Cerrar-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-
-          <ul class="navbar-nav">
-            <!--li de Registar Persona  -->
-            <li class="nav-item">
-              <a class="nav-link" href="../pages/registros/registro_personal.html">Registrar Personal</a>
-              <i class="bi bi-people-fill"></i>
-            </li>
-
-            <!--li de registrar lotes  -->
-            <li class="nav-item">
-              <a class="nav-link" href="registros/registro_hectareas.html">Registrar Lotes</a>
-              <i class="fa-solid fa-sun-plant-wilt"></i>
-            </li>
-
-            <!--li de Cerrar  -->
-            <li class="nav-item text-end">
-              <a class="nav-link" href="../index.html">Cerrar</a>
-              <i class="fa-solid fa-x"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!--Empieza el contenido del modulo de lotes -->
-  <main>
-     <!--Contenedor principal de lotes-->
-    <div class="container px-4 text-center">
-      <!--Contenedor segundario de los lotes-->
-      <div class="row gx-5 mt-3">
+    <!--Empieza el contenido del modulo de lotes -->
+    <main>
+      <!--Contenedor principal de lotes-->
+      <div class="container px-4 text-center">
+        <!--Contenedor segundario de los lotes-->
+        <div class="row gx-5 mt-3">
           <!--Titulo-->
-        <h1>Lotes</h1>
-        <!--Contenedor 1 sobre la informacion del lote Dayen-->
-        <div class="col">
-          <div class="p-3">
-            <a href="modulo_procesos_lotes.html"> 
-              <h3>Lotes Dayen</h3>
-                <img  class="IMG-27 mt-4" src="../assets/img/IMG-27.jpg" alt="img">
-            </a>
+          <h1>Lotes</h1>
+          <!--Contenedor 1 sobre la informacion del lote Dayen-->
+          <div class="col">
+            <div class="p-3">
+              <a href="modulo_procesos_lotes.html">
+                <h3>Lotes Dayen</h3>
+                <img
+                  class="IMG-27 mt-4"
+                  src="../assets/img/IMG-27.jpg"
+                  alt="img"
+                />
+              </a>
+            </div>
           </div>
-          
-        </div>
 
-         <!--Contenedor 2 sobre la informacion sobre del lote Darian-->
-        <div class="col">
-          <div class="p-3">
-            <a href="modulo_procesos_lotes.html">
-              <h3>Lotes Darian</h3>
-              <img class="IMG-33 mt-4" src="../assets/img/IMG-33.jpg" alt="img">
-            </a>
+          <!--Contenedor 2 sobre la informacion sobre del lote Darian-->
+          <div class="col">
+            <div class="p-3">
+              <a href="modulo_procesos_lotes.html">
+                <h3>Lotes Darian</h3>
+                <img
+                  class="IMG-33 mt-4"
+                  src="../assets/img/IMG-33.jpg"
+                  alt="img"
+                />
+              </a>
+            </div>
           </div>
-        </div>
 
-         <!--Contenedor 3 sobre la informacion del lote Star-->
-        <div class="col">
-          <div class="p-3">
-            <a href="modulo_procesos_lotes.html">
-              <h3>Lotes Star</h3>
-              <img class="IMG-6 mt-4" src="../assets/img/IMG-6.jpg" alt="img">
-            </a>
+          <!--Contenedor 3 sobre la informacion del lote Star-->
+          <div class="col">
+            <div class="p-3">
+              <a href="modulo_procesos_lotes.html">
+                <h3>Lotes Star</h3>
+                <img
+                  class="IMG-6 mt-4"
+                  src="../assets/img/IMG-6.jpg"
+                  alt="img"
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        
-         <!--Contenedor 4 sobre la informacion del lote Sun-->
-        <div class="col">
-          <div class="p-3">
-           <a href="modulo_procesos_lotes.html">
-            <h3>Lotes Sun</h3>
-            <img class="IMG-55 mt-4" src="../assets/img/IMG-55.jpg" alt="img">
-           </a>
-          </div>
-        </div>
 
+          <!--Contenedor 4 sobre la informacion del lote Sun-->
+          <div class="col">
+            <div class="p-3">
+              <a href="modulo_procesos_lotes.html">
+                <h3>Lotes Sun</h3>
+                <img
+                  class="IMG-55 mt-4"
+                  src="../assets/img/IMG-55.jpg"
+                  alt="img"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!--Link de utilidades-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
-</body>
-
+    <!--Link de utilidades-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
