@@ -17,6 +17,8 @@
   <!-- Script para el login -->
   <script defer src="/Login.js"></script>
   <script defer src="/Env.js"></script>
+  <!-- Verifica que exista una session iniciada -->
+  <script src="/Auth.js"></script>
 </head>
 
 <body>
@@ -44,17 +46,8 @@
             <!-- Iconos-->
             <i class="bi bi-person"></i>
             <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
-            <input type="text" class="form-control" name="usuario" id="username" placeholder="Usuario" />
+            <input type="text" class="form-control" name="usuario" id="idUsuario" placeholder="Cédula" />
           </div>
-
-          <!-- Div que esta compuesta por la clase form-group que componen el formulario de Inicio de Sesion-->
-          <div class="form-group mb-3">
-            <!-- Iconos-->
-            <i class="bi bi-envelope-at"></i>
-            <!-- Input de de correo electronico con la clase form-control para dar las propiedades-->
-            <input type="email" class="form-control propiedades" name="correo" placeholder="Dayen@.com" />
-          </div>
-
           <!-- Div que esta compuesta por la clase form-group que componen el formulario de login-->
           <div class="form-group mb-3">
             <!-- Iconos-->

@@ -48,16 +48,18 @@ class Login {
 
   /*Cuando son validas las credenciales dependiendo de la opción
    de recordar se configura la cookie con tiempo de expiración*/
-  createCookie(jwt) {
+  createCookie(jwt, userId) {
     window.location.replace("/inicio");
     if (document.querySelector('input[name="recordar"]').checked) {
       let date = new Date();
       date.setDate(new Date().getDate() + 90);
-      document.cookie = `jwt=${jwt}; expires=${date.toUTCString()}; path=/`;
+      document.cookie = `jwt=${jwt}; expires=${date.toUTCString()}; SameSite=Strict; path=/`;
+      document.cookie = `userId=${userId}; expires=${date.toUTCString()}; SameSite=Strict; path=/`;
       return;
     }
-
-    document.cookie = `jwt=${jwt}; path=/`;
+    
+    document.cookie = `jwt=${jwt}; SameSite=Strict; path=/`;
+    document.cookie = `userId=${userId}; SameSite=Strict; path=/`;
   }
 
   /**
@@ -73,6 +75,6 @@ class Login {
 
 const form = document.querySelector(".login-form");
 if (form) {
-  const fields = ["username", "password"];
+  const fields = ["idUsuario", "password"];
   new Login(form, fields);
 }
