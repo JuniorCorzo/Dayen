@@ -40,7 +40,7 @@ class Login {
               isUnauthorized = false;
               return;
             }
-            self.authorize(data.jwt);
+            self.createCookie(data.jwt);
           });
       }
     });
@@ -48,17 +48,16 @@ class Login {
 
   /*Cuando son validas las credenciales dependiendo de la opcion
    de recordar se configura la cookie con tiempo de expiracion*/
-  authorize(jwt) {
+  createCookie(jwt) {
+    window.location.replace("modulo_lotes.html");
     if (document.querySelector('input[name="recordar"]').checked) {
       let date = new Date();
       date.setDate(new Date().getDate() + 90);
       document.cookie = `jwt=${jwt}; expires=${date.toUTCString()}; path=/`;
-      window.location.href = "modulo_lotes.html";
       return;
     }
 
     document.cookie = `jwt=${jwt}; path=/`;
-    window.location.href = "modulo_lotes.html";
   }
 
   /**
