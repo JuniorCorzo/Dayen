@@ -143,29 +143,6 @@ a{
     cursor: pointer;
     border-radius: 15px;
 }
-/*Hover de cada imagen de los lotes*/
-/*Rotacion del lote dayen*/
-.IMG-27:hover{
-    -webkit-transform: rotateZ(-10deg);
-    -ms-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
-    transition: 1s ease;
-}
-/*Rotacion de lote Darian */
-.IMG-33:hover{
-    transform: scale(1.2);
-}
-/*Rotacion de lote Star*/
-.IMG-6:hover{
-    -webkit-transform: rotateZ(20deg);
-    -ms-transform: rotateZ(20deg);
-    transform: rotateZ(15deg);
-    transition:  1s ease;
-}
-.IMG-55:hover{
-    -webkit-transform:scale(0.9);
-    transform:scale(0.9);
-}
 /********************************************************************************/
 /*Modulo de Procesos de los lotes*/
 /*Icono de cerrar*/
@@ -343,8 +320,6 @@ h2 {
     cursor: pointer;
     outline: none;
 }
-
-
 /*********************************************************************************************/
 /*RESPONSIVE*/
 /*Responsi modulo de bienvenida*/
@@ -357,10 +332,6 @@ h2 {
 /*Estilo de infromacion de la barra de navegacion*/
 .nav-link{
     font-size: 20px;
-}
-/*Inconos de la barra de navegacion de inicio de sesion y registro*/
-.bi-inicio, .bi-people{
-    visibility: hidden;
 }
 /*Contenido de Modulo de bienvenida*/
 /*Titulos*/
@@ -375,31 +346,15 @@ p {
 /*Estilo de imagenes de Bienvenida*/
 .img-1, .img-9, .img-7 {
     width: 300px;
-    height: 300px;
-   
+    height: 300px;  
 }
-
-
 /**************************************************/
-/*Inicio del estilo de Modulo de Lotes*/
+/*Inicio del estilo de Modulo de proceos del Lotes*/
 /*Barra de menu*/
-/*Icono de ingresar hectarea y cerrar*/
-/*Icono de ingresar personal*/
-.bi-people-fill{
-    visibility: hidden;
-}
-/*Icono de ingresar hectarea*/
-.fa-sun-plant-wilt {
-    visibility: hidden;
-}
-/*Icono de cerrar*/
-.fa-x{
-   visibility: hidden;
-}
+
 /*Hola Administrador*/
 .active{
     font-size: 15px;
-  
 }
 /*Imagen de dayen*/
 .d-inline-block{
@@ -427,11 +382,72 @@ p {
     width: 200px;
     font-size: 20px;
 }
-/**************************************************/
-/*modulo de modificar procesos*/
-/*Iconos de modulos*/
-.fa-tree, .fa-plant-wilt {
-    visibility: hidden;
+/*Tablas de informacion de procesos*/
+/*Contenedor de la tabla*/
+.dataTables_wrapper{
+    font-size: 18px;
+    color: black !important;
+    border-radius: 10px;
 }
+/*Div de enumeracion*/
+.dataTables_length{
+    font-size: 18px;
+    color: #e8e6e6 !important;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+/*Recuadro que hay en el div de enumeracion*/
+.dataTables_length select {
+    border: 2px solid  #e0ab4e !important;
+    color: #e8e6e6 !important;
+}
+/*option del recuadro de enumeracion*/
+option{
+    color: black;
+    background-color: #e2d197;
+}
+/*Div de Busqueda*/
+.dataTables_filter {
+    font-size: 18px;
+    color: #e8e6e6 !important;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/*Imput y color del recuadro de busqueda*/
+[type=search] {
+    border: 2px solid  #e0ab4e !important;
+    outline-offset: -2px;  
+}
+
+/*Clases de la infromacion de las tablas*/
+/*Tabla color de la tabla en general*/
+table{
+    background-color: #a5f5c9;
+    border-radius: 15px ;
+}
+/*Color del cuadro de los titulos*/
+thead {
+    background-color: #e2d197;
+    
+}
+/*Estilo de los recuadrados de informacion sobre las tablas*/
+.odd, .even {
+    font-size: 18px;
+}
+/*Estilo de la enumeracion de abajo*/
+.dataTables_info {
+    font-size: 18px;
+    color: #e8e6e6 !important;
+    margin-top: 10px;
+    margin-left:  10px;
+}
+/*Paginacion*/
+.dataTables_paginate{
+    font-size: 20px;
+    color: #e8e6e6 !important;
+}
+
 
 }
