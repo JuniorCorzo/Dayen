@@ -36,7 +36,7 @@ class Login {
           })
           .then((data) => {
             if (isUnauthorized) {
-              self.innerMesaggeUnauthorized(data.message);
+              self.innerMessageUnauthorized(data.message);
               isUnauthorized = false;
               return;
             }
@@ -46,10 +46,10 @@ class Login {
     });
   }
 
-  /*Cuando son validas las credenciales dependiendo de la opcion
-   de recordar se configura la cookie con tiempo de expiracion*/
+  /*Cuando son validas las credenciales dependiendo de la opción
+   de recordar se configura la cookie con tiempo de expiración*/
   createCookie(jwt) {
-    window.location.replace("modulo_lotes.html");
+    window.location.replace("/inicio");
     if (document.querySelector('input[name="recordar"]').checked) {
       let date = new Date();
       date.setDate(new Date().getDate() + 90);
@@ -64,7 +64,7 @@ class Login {
    * Si la credenciales son incorrectas se muestra un mensaje
    * @param {*} message
    */
-  innerMesaggeUnauthorized(message) {
+  innerMessageUnauthorized(message) {
     const span = document.querySelector(".message-error");
     document.querySelector(".container-message").classList.remove("d-none");
     span.innerHTML = message;
