@@ -1,4 +1,6 @@
 package com.dayen.dayen.dao.response;
 
-public record LoginResponse(String jwt) {
+import com.dayen.dayen.entity.Usuarios;
+
+public record LoginResponse(String jwt, Usuarios usuario) {
 }
