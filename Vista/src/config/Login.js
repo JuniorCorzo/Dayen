@@ -40,7 +40,8 @@ class Login {
               isUnauthorized = false;
               return;
             }
-            self.createCookie(data.jwt);
+            console.log();
+            self.createCookie(data.jwt, data.idUsuario);
           });
       }
     });
@@ -57,7 +58,7 @@ class Login {
       document.cookie = `userId=${userId}; expires=${date.toUTCString()}; SameSite=Strict; path=/`;
       return;
     }
-    
+
     document.cookie = `jwt=${jwt}; SameSite=Strict; path=/`;
     document.cookie = `userId=${userId}; SameSite=Strict; path=/`;
   }

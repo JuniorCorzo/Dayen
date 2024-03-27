@@ -1,15 +1,17 @@
+import { generalSessionStorage } from "/ManageSessionStorage.js";
+
 function validateAuth() {
-  const cookie = getCookie("jwt");
-  if (!cookie && window.location.pathname !== "/login") {
+  const jwt = getCookie("jwt");
+  if (!jwt && window.location.pathname !== "/login") {
     window.location.replace("/login");
     return;
   }
 
-  if (window.location.pathname === "/login" && cookie) {
+  if (window.location.pathname === "/login" && jwt) {
     window.location.replace("/inicio");
   }
 
-  sessionStorage.setItem("jwt", cookie.split("=")[1]);
+  generalSessionStorage(jwt.split("=")[1], getCookie("userId").split("=")[1]);
 }
 
 function getCookie(name) {
