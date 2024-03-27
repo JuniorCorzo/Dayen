@@ -65,11 +65,12 @@ h1 {
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-control:focus {
-    background-color: #e2d197;
+    background-color: #e2d197 !important;
     border:none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
 .form-control::placeholder{
+    background-color: #e2d197 !important;
     color: black; 
 }
 /* Clases y propiedades de los Iconos en los input */

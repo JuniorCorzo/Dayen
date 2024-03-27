@@ -143,6 +143,72 @@ a{
     cursor: pointer;
     border-radius: 15px;
 }
+/*************************************************************************************/
+/*Modulo de Registro dde Lotes-Hectareas*/
+/* Clases del icono que estan en el registrode lotes*/
+/*Iconos hectarea ---- icono camara*/
+.fa-pagelines, .fa-image{
+    font-size: 15px;
+    position: absolute;
+    padding: 12px;
+    pointer-events: none;
+}
+input[type="file"]::file-selector-button {
+    background-color: #e2d197;
+    border-style: none;
+}
+/*Input de formulario de ingresar informacion*/
+.form-control-input{
+    padding-left: 40px !important;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #e2d197;
+    border:none; 
+    cursor: pointer;
+    outline: none;
+}
+.form-control-input::placeholder{
+    color: black;
+}
+/*Formulario del login -- engloba el input */
+.form-control {
+    padding-left: 35px !important;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #e2d197 ;
+    border:none; 
+    cursor: pointer;
+    outline: none;
+}
+/*Sirve para darle color al dar clic encima para escribir  */
+.form-control:focus {
+    background-color: #e2d197 !important;
+    border:none;
+}
+/*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
+.form-control::placeholder{
+    background-color: #e2d197 !important;
+    color: black; 
+}
+*Check de verificacion de recordar usuario */
+.form-check-input{
+    width: 25px;
+    height: 25px;
+    background-color: #e2d197 !important;
+    border: none;
+    cursor: pointer;
+}
+/*Sirve para darle el color al cuadro de seleccionar*/
+.form-check-input:focus {
+    background-color: #e0ab4e;
+}
+/*Es para darle el tamaño y la fuente del label de la verificacion del usuario*/
+.form-check-label{
+    font-size: 18px;
+    font-family: "Cormorant", serif;
+}
+
 /********************************************************************************/
 /*Modulo de Procesos de los lotes*/
 /*Titulo de la tabla de procesos*/
