@@ -13,11 +13,9 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 	private final TokenService tokenService;
 	private final AuthenticationManager authManager;
-	private final UsuarioService usuarioService;
-	public AuthService(TokenService tokenService, AuthenticationManager authManager, UsuarioService usuarioService) {
+	public AuthService(TokenService tokenService, AuthenticationManager authManager) {
 		this.tokenService = tokenService;
 		this.authManager = authManager;
-		this.usuarioService = usuarioService;
 	}
 
 	public LoginResponse login(LoginRequest loginRequest) {
@@ -31,6 +29,6 @@ public class AuthService {
 			throw new CredentialsNotValid();
 		}
 		return new LoginResponse(this.tokenService.generateToken(authToken),
-				usuarioService.getUsuarioById(loginRequest.idUsuario()));
+				loginRequest.idUsuario());
 	}
 }
