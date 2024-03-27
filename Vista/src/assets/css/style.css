@@ -145,6 +145,17 @@ a{
 }
 /********************************************************************************/
 /*Modulo de Procesos de los lotes*/
+/*Titulo de la tabla de procesos*/
+h4{
+    font-family: "Crete Round", serif;
+    font-size: 50px;
+    color: #e8e6e6;
+}
+h4:hover {
+    text-shadow:2px 2px 20px #151615;
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+}
 /*Icono de cerrar*/
 .fa-x{
     font-size: 25px;
@@ -201,7 +212,7 @@ a{
 /*Tablas de informacion de procesos*/
 /*Contenedor de la tabla*/
 .dataTables_wrapper{
-    font-size: 20px;
+    font-size: 18px;
     color: black !important;
     border-radius: 10px;
 }
@@ -264,7 +275,12 @@ thead {
     font-size: 20px;
     color: #e8e6e6 !important;
 }
-
+/*estilo de iconos de modificar y eliminar*/
+.bi-pencil-square, .bi-trash{
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
 /**************************************************************************************/
 /*MODALES*/
 /*Modal Eliminar*/
@@ -312,7 +328,7 @@ h2 {
     font-size: 25px;
 }
 .form-select{
-    padding-left: 25px !important;
+    padding-left: 30px !important;
     border-radius: 10px;
     font-size: 20px;
     background-color: #e2d197;
@@ -320,6 +336,45 @@ h2 {
     cursor: pointer;
     outline: none;
 }
+/*Imagen*/
+.img-crear-proceso{
+    width: 200px;
+    height: 200px;
+}
+/*Sirve para darle color al dar clic encima para escribir  */
+.form-select:focus {
+    background-color: #e2d197;
+    border:none;
+}
+/*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
+.form-select::placeholder{
+    color: black; 
+}
+.form-label{
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*Estilos de cuadro de calendario y descripcion*/
+.calen, .descripcion{
+    padding-left: 15px !important;
+    background-color: #e2d197;
+    border: none;
+    cursor: pointer;
+}/*Estilo del cuadro de descripcion*/
+.descripcion:focus {
+    background-color: #e2d197;
+    border:none;
+}
+/*Iconos*/
+/*Icono de ingresar hectarea*/
+.fa-productos, .fa-procesos, .fa-seedling{
+    font-size: 15px;
+    position: absolute;
+    padding: 12px;
+    pointer-events: none;
+}
+
 /*********************************************************************************************/
 /*RESPONSIVE*/
 /*Responsi modulo de bienvenida*/

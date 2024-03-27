@@ -190,21 +190,17 @@ h2 {
 }
 /*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
-/* Clases del icono que estna en el registrode lotes*/
+/* Clases del icono que estan en el registrode lotes*/
 .fa-solid {
     font-size: 15px;
     position: absolute;
     padding: 12px;
     pointer-events: none;
 }
-
-
-input[type="file"]{
-    padding-left: 50px !important;
-    cursor: pointer;
- 
+input[type="file"]::file-selector-button {
+    background-color: #e2d197;
+    border-style: none;
 }
-
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
 .proceosos{
