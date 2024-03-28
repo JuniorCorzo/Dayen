@@ -7,11 +7,19 @@ function validateAuth() {
     return;
   }
 
-  if (window.location.pathname === "/login" && jwt) {
+  if (jwt && window.location.pathname === "/login") {
     window.location.replace("/inicio");
   }
 
-  generalSessionStorage(jwt.split("=")[1], getCookie("userId").split("=")[1]);
+  if (jwt) {
+    generalSessionStorage();
+  }
+}
+
+function closeSession() {
+  document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
+  document.cookie = "userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
+  sessionStorage.clear();
 }
 
 function getCookie(name) {
@@ -19,3 +27,7 @@ function getCookie(name) {
 }
 
 validateAuth();
+
+document
+  .querySelector(".close-session")
+  .addEventListener("click", closeSession);

@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="/css/style.css" />
   <!-- Verifica que exista una session iniciada -->
   <script type="module" src="/Auth.js"></script>
+  <script type="module" src="/Lotes.js"></script>
   <script src="/Env.js"></script>
 </head>
 
@@ -37,7 +38,7 @@
         <div>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active"> Hola, Administrador 🌱 </a>
+              <a class="username nav-link active"></a>
             </li>
           </ul>
         </div>
@@ -70,7 +71,7 @@
 
             <!--li de Cerrar  -->
             <li class="nav-item text-end">
-              <a class="nav-link" href="/">Cerrar</a>
+              <a class="nav-link close-session" href="/">Cerrar</a>
               <i class="fa-solid fa-x d-none d-lg-block"></i>
             </li>
           </ul>
@@ -82,49 +83,14 @@
   <!--Empieza el contenido del modulo de lotes -->
   <main>
     <!--Contenedor principal de lotes-->
-    <div class="container px-4 text-center">
+    <div class="px-4">
       <!--Contenedor secundario de los lotes-->
-      <div class="row gx-5 mt-3">
+      <div class="d-flex flex-column align-items-center text-center mt-3">
         <!--Titulo-->
         <h1>Lotes</h1>
-        <!--Contenedor 1 sobre la información del lote Dayen-->
-        <div class="col">
-          <div class="p-3">
-            <a href="/procesos">
-              <h3>Lotes Dayen</h3>
-              <img class="IMG-27 mt-4" src="/img/IMG-27.jpg" alt="img">
-            </a>
-          </div>
-        </div>
+        <!--Contenedor de los lotes-->
+        <div class="d-flex flex-wrap justify-content-center align-content-start mt-3 contenedor-lotes">
 
-        <!--Contenedor 2 sobre la información sobre del lote Darian-->
-        <div class="col">
-          <div class="p-3">
-            <a href="/procesos">
-              <h3>Lotes Darian</h3>
-              <img class="IMG-33 mt-4" src="/img/IMG-33.jpg" alt="img">
-            </a>
-          </div>
-        </div>
-
-        <!--Contenedor 3 sobre la información del lote Star-->
-        <div class="col">
-          <div class="p-3">
-            <a href="/procesos">
-              <h3>Lotes Star</h3>
-              <img class="IMG-6 mt-4" src="/img/IMG-6.jpg" alt="img">
-            </a>
-          </div>
-        </div>
-
-        <!--Contenedor 4 sobre la información del lote Sun-->
-        <div class="col">
-          <div class="p-3">
-            <a href="/procesos">
-              <h3>Lotes Sun</h3>
-              <img class="IMG-55 mt-4" src="/img/IMG-55.jpg" alt="img">
-            </a>
-          </div>
         </div>
 
       </div>
@@ -135,7 +101,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <script type="module" src="/Lotes.js"></script>
+
 </body>
 
 </html>

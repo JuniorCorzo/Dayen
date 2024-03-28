@@ -1,10 +1,10 @@
 import FetchData from "./FetchData.js";
 
-function generalSessionStorage(jwt, userId) {
+function generalSessionStorage() {
   const usuario = sessionStorage.getItem("usuario");
   if (!usuario) {
-    sessionStorage.setItem("jwt", jwt);
-    FetchData(`/usuario/${userId}`).then((data) => {
+    sessionStorage.setItem("jwt", getCookie("jwt"));
+    FetchData(`/usuario/${getCookie("userId")}`).then((data) => {
       console.log(data);
       sessionStorage.setItem(
         "usuario",

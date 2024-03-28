@@ -1,378 +1,395 @@
 /*Estilo de modulos de inicio de sesion- Recuperar contraseña- Registrar usaurio*/
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: grey;
+  background-color: grey;
 }
 /*Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
 /*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
-/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
+/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/
 
 /*************************************************************************************/
 /*Modulo de Bienvenida*/
 /*Barra de Navegacion principal*/
 /*Clase principal*/
 .navbar {
-    font-family: "Cormorant", serif;
-    border-radius: 15px; 
-    height: 100px; 
-    visibility: visible;
-    background-color: #a0d7ac !important;
+  font-family: "Cormorant", serif;
+  border-radius: 15px;
+  height: 100px;
+  visibility: visible;
+  background-color: #a0d7ac !important;
 }
 /*Estilo de infromacion de la barra de navegacion*/
-.nav-link{
-    width: fit-content;
-    margin-left: 10px;
-    font-size: 25px;
+.nav-link {
+  width: fit-content;
+  margin-left: 10px;
+  font-size: 25px;
 }
 ul li a {
-    color: black  !important;
-    cursor: pointer;
-    text-decoration: none;
+  color: black !important;
+  cursor: pointer;
+  text-decoration: none;
 }
-ul li a:hover{
-	text-shadow:2px 2px 20px #04f839;
-    -webkit-transform:scale(1.2);
-    transform:scale(1.2);
+ul li a:hover {
+  text-shadow: 2px 2px 20px #04f839;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 /*Inconos de la barra de navegacion de Bienvenida*/
 /*Icono inicio de sesion*/
-.bi-inicio{
-    color: black;
-    font-size: 26px;
-    margin-left: 65px;
-    cursor: pointer;
+.bi-inicio {
+  color: black;
+  font-size: 26px;
+  margin-left: 65px;
+  cursor: pointer;
 }
 /*Icono registro de persona*/
 .bi-people {
-    color: black;
-    font-size: 26px;
-    margin-left: 45px;
-    cursor: pointer;
+  color: black;
+  font-size: 26px;
+  margin-left: 45px;
+  cursor: pointer;
 }
 /*Imagen de DAYEN*/
-.d-inline-block{
-    width: 100px;
-    height: 100px;
+.d-inline-block {
+  width: 100px;
+  height: 100px;
 }
 /*Contenido de Modulo de bienvenida*/
 /*Titulos*/
-h1{
-    font-family: "Crete Round", serif;
-    font-size: 50px;
-    color: #e8e6e6;
+h1 {
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+  color: #e8e6e6;
 }
 h1:hover {
-    text-shadow:2px 2px 20px #151615;
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
+  text-shadow: 2px 2px 20px #151615;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*Parrafos y contenido*/
 p {
-    text-align: justify;
-    font-size: 25px;
-    color: #e8e6e6;
+  text-align: justify;
+  font-size: 25px;
+  color: #e8e6e6;
 }
 /*Pie de pagina*/
-.nav-footer a{
-    color: #e8e6e6 !important;
+.nav-footer a {
+  color: #e8e6e6 !important;
 }
-.bi-whatsapp, .bi-facebook, .bi-github, .bi-instagram {
-    margin-left: 45px;
-    font-size: 40px !important;
+.bi-whatsapp,
+.bi-facebook,
+.bi-github,
+.bi-instagram {
+  margin-left: 45px;
+  font-size: 40px !important;
 }
 /*Estilo de imagenes de Bienvenida*/
-.img-1, .img-9, .img-7 {
-    width: 350px;
-    height: 350px;
-    cursor: pointer;
-    border-radius:50%;
-    -webkit-border-radius:50%;
-    box-shadow: 0px 0px 15px 15px#a0d7ac ;
-    -webkit-box-shadow: 0px 0px 15px 15px #a0d7ac ;
+.img-1,
+.img-9,
+.img-7 {
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px#a0d7ac;
+  -webkit-box-shadow: 0px 0px 15px 15px #a0d7ac;
 }
 /*Cover del div de columna*/
-.img-lote:hover{
-    -webkit-transform:scale(0.9);
-    transform:scale(0.9);
+.img-lote:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 /***************************************************************************************/
 /*Inicio del estilo de Modulo de Lotes*/
 /*Barra de menu*/
 /*Icono de ingresar hectarea*/
 .fa-sun-plant-wilt {
-    font-size: 30px;
-    margin-left: 90px;
-    cursor: pointer;
+  font-size: 30px;
+  margin-left: 90px;
+  cursor: pointer;
 }
 /*Icono de cerrar*/
-.fa-x{
-    font-size: 25px;
-    margin-right: 30px;
-    cursor: pointer;
+.fa-x {
+  font-size: 25px;
+  margin-right: 30px;
+  cursor: pointer;
 }
 /*Icono de ingresar personal*/
-.bi-people-fill{
-    font-size: 25px;
-    margin-left: 100px;
-    cursor: pointer;
+.bi-people-fill {
+  font-size: 25px;
+  margin-left: 100px;
+  cursor: pointer;
 }
 /*Subtitulo de cada uno de los modulos*/
-h3{
-    font-family: "Crete Round", serif;
-    font-size: 35px;
-    color: #e8e6e6;
+h3 {
+  font-family: "Crete Round", serif;
+  font-size: 35px;
+  color: #e8e6e6;
 }
-h3:hover{
-    text-shadow:2px 2px 20px #05f805;
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
+h3:hover {
+  text-shadow: 2px 2px 20px #05f805;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*Cambio de los link*/
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+
+.contenedor-lotes {
+  column-gap: 5em;
+  row-gap: 3em;
 }
 /*Imagnes de lotes*/
-.IMG-27, .IMG-6, .IMG-33, .IMG-55 {
-    width: 250px;
-    height: 250px;
-    cursor: pointer;
-    border-radius: 15px;
+.IMG-27,
+.IMG-6,
+.IMG-33,
+.IMG-55 {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 /********************************************************************************/
 /*Modulo de Procesos de los lotes*/
 /*Titulo de la tabla de procesos*/
-h4{
-    font-family: "Crete Round", serif;
-    font-size: 50px;
-    color: #e8e6e6;
+h4 {
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+  color: #e8e6e6;
 }
 h4:hover {
-    text-shadow:2px 2px 20px #151615;
-    -webkit-transform:scale(1.1);
-    transform:scale(1.1);
+  text-shadow: 2px 2px 20px #151615;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*Icono de cerrar*/
-.fa-x{
-    font-size: 25px;
-    margin-right: 30px;
-    cursor: pointer;
+.fa-x {
+  font-size: 25px;
+  margin-right: 30px;
+  cursor: pointer;
 }
 /*Icono de Lotes*/
-.lotes { 
-    font-size: 30px;
-    margin-left:25px;
-    cursor: pointer;
+.lotes {
+  font-size: 30px;
+  margin-left: 25px;
+  cursor: pointer;
 }
 /*Contenedor de las imagenes*/
 .galeria {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /*Contenedor las imagnes y tamaños*/
 .galeria img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    transition: .7s ease;
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  transition: 0.7s ease;
 }
 /*Contenedor de las imagenes y sus transicion*/
-.galeria img:hover{
-    width: 300px;
-    opacity: 1;
-    filter: brightness(130%);
+.galeria img:hover {
+  width: 300px;
+  opacity: 1;
+  filter: brightness(130%);
 }
 /*Div imagnes */
-.rounded{
-    width: 300px;
-    height: 300px;
+.rounded {
+  width: 300px;
+  height: 300px;
 }
 
 /*Botones de crear--eliminar--modificar*/
-.btn{
-    font-family: "Cormorant", serif;
-    width: 250px;
-    font-size: 20px;
-    background-color: #e0ab4e;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    transition: .5s;
+.btn {
+  font-family: "Cormorant", serif;
+  width: 250px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
 }
 .btn:hover {
-    background-color: #a0d7ac;;
+  background-color: #a0d7ac;
 }
 /*Tablas de informacion de procesos*/
 /*Contenedor de la tabla*/
-.dataTables_wrapper{
-    font-size: 18px;
-    color: black !important;
-    border-radius: 10px;
+.dataTables_wrapper {
+  font-size: 18px;
+  color: black !important;
+  border-radius: 10px;
 }
 /*Div de enumeracion*/
-.dataTables_length{
-    font-size: 20px;
-    color: #e8e6e6 !important;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+.dataTables_length {
+  font-size: 20px;
+  color: #e8e6e6 !important;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 /*Recuadro que hay en el div de enumeracion*/
 .dataTables_length select {
-    border: 2px solid  #e0ab4e !important;
-    color: #e8e6e6 !important;
+  border: 2px solid #e0ab4e !important;
+  color: #e8e6e6 !important;
 }
 /*option del recuadro de enumeracion*/
-option{
-    color: black;
-    background-color: #e2d197;
+option {
+  color: black;
+  background-color: #e2d197;
 }
 /*Div de Busqueda*/
 .dataTables_filter {
-    font-size: 20px;
-    color: #e8e6e6 !important;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  color: #e8e6e6 !important;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 /*Imput y color del recuadro de busqueda*/
-[type=search] {
-    border: 2px solid  #e0ab4e !important;
-    outline-offset: -2px;  
+[type="search"] {
+  border: 2px solid #e0ab4e !important;
+  outline-offset: -2px;
 }
 
 /*Clases de la infromacion de las tablas*/
 /*Tabla color de la tabla en general*/
-table{
-    background-color: #a5f5c9;
-    border-radius: 15px ;
+table {
+  background-color: #a5f5c9;
+  border-radius: 15px;
 }
 /*Color del cuadro de los titulos*/
 thead {
-    background-color: #e2d197;
-    
+  background-color: #e2d197;
 }
 /*Estilo de los recuadrados de informacion sobre las tablas*/
-.odd, .even {
-    font-size: 18px;
+.odd,
+.even {
+  font-size: 18px;
 }
 /*Estilo de la enumeracion de abajo*/
 .dataTables_info {
-    font-size: 20px;
-    color: #e8e6e6 !important;
-    margin-top: 10px;
-    margin-left:  10px;
+  font-size: 20px;
+  color: #e8e6e6 !important;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 /*Paginacion*/
-.dataTables_paginate{
-    font-size: 20px;
-    color: #e8e6e6 !important;
+.dataTables_paginate {
+  font-size: 20px;
+  color: #e8e6e6 !important;
 }
 /*estilo de iconos de modificar y eliminar*/
-.bi-pencil-square, .bi-trash{
-    font-size: 20px;
-    color: black;
-    cursor: pointer;
+.bi-pencil-square,
+.bi-trash {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
 }
 /**************************************************************************************/
 /*MODALES*/
 /*Modal Eliminar*/
 /*Contenedor del modal eliminar*/
-.modal-content{
-    background-color: #a3d4be;
+.modal-content {
+  background-color: #a3d4be;
 }
 /*Titulo del modal eliminar*/
-.modal-title{
-    color: black;
+.modal-title {
+  color: black;
 }
 /*Boton del modal eliminar*/
-.btn-modal{
-    font-family: "Cormorant", serif;
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #e0ab4e;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+.btn-modal {
+  font-family: "Cormorant", serif;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 /*conteendor del body del modal eliminar mensaje*/
-.modal-body{
-    font-size: 20px;
+.modal-body {
+  font-size: 20px;
 }
 /**************************************************************************************/
 /*Modal de modificar procesos*/
 /*Botones de modificar*/
 .botton {
-    font-family: "Cormorant", serif;
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-    background-color: #e0ab4e;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+  font-family: "Cormorant", serif;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 /*Titulo*/
 h2 {
-    font-family: "Crete Round", serif;
-    color: black;
-    text-align: center;
-    font-size: 25px;
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
 }
-.form-select{
-    padding-left: 30px !important;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #e2d197;
-    border:none; 
-    cursor: pointer;
-    outline: none;
+.form-select {
+  padding-left: 30px !important;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 /*Imagen*/
-.img-crear-proceso{
-    width: 200px;
-    height: 200px;
+.img-crear-proceso {
+  width: 200px;
+  height: 200px;
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-select:focus {
-    background-color: #e2d197;
-    border:none;
+  background-color: #e2d197;
+  border: none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
-.form-select::placeholder{
-    color: black; 
+.form-select::placeholder {
+  color: black;
 }
-.form-label{
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
+.form-label {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
 }
 /*Estilos de cuadro de calendario y descripcion*/
-.calen, .descripcion{
-    padding-left: 15px !important;
-    background-color: #e2d197;
-    border: none;
-    cursor: pointer;
-}/*Estilo del cuadro de descripcion*/
+.calen,
+.descripcion {
+  padding-left: 15px !important;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+} /*Estilo del cuadro de descripcion*/
 .descripcion:focus {
-    background-color: #e2d197;
-    border:none;
+  background-color: #e2d197;
+  border: none;
 }
 /*Iconos*/
 /*Icono de ingresar hectarea*/
-.fa-productos, .fa-procesos, .fa-seedling{
-    font-size: 15px;
-    position: absolute;
-    padding: 12px;
-    pointer-events: none;
+.fa-productos,
+.fa-procesos,
+.fa-seedling {
+  font-size: 15px;
+  position: absolute;
+  padding: 12px;
+  pointer-events: none;
 }
 
 /*********************************************************************************************/
@@ -381,128 +398,128 @@ h2 {
 /* para 768px o menos */
 @media screen and (max-width: 768px) {
   /*Clase principal*/
-.navbar {
-    height: 100px; 
-}
-/*Estilo de infromacion de la barra de navegacion*/
-.nav-link{
+  .navbar {
+    height: 100px;
+  }
+  /*Estilo de infromacion de la barra de navegacion*/
+  .nav-link {
     font-size: 20px;
-}
-/*Contenido de Modulo de bienvenida*/
-/*Titulos*/
-h1{
+  }
+  /*Contenido de Modulo de bienvenida*/
+  /*Titulos*/
+  h1 {
     font-size: 40px;
-}
-/*Parrafos y contenido*/
-p {
+  }
+  /*Parrafos y contenido*/
+  p {
     text-align: justify;
     font-size: 18px;
-}
-/*Estilo de imagenes de Bienvenida*/
-.img-1, .img-9, .img-7 {
+  }
+  /*Estilo de imagenes de Bienvenida*/
+  .img-1,
+  .img-9,
+  .img-7 {
     width: 300px;
-    height: 300px;  
-}
-/**************************************************/
-/*Inicio del estilo de Modulo de proceos del Lotes*/
-/*Barra de menu*/
+    height: 300px;
+  }
+  /**************************************************/
+  /*Inicio del estilo de Modulo de proceos del Lotes*/
+  /*Barra de menu*/
 
-/*Hola Administrador*/
-.active{
+  /*Hola Administrador*/
+  .active {
     font-size: 15px;
-}
-/*Imagen de dayen*/
-.d-inline-block{
+  }
+  /*Imagen de dayen*/
+  .d-inline-block {
     width: 60px;
     height: 60px;
     margin-left: 70px;
-}
-/*Div imagnes */
-.rounded{
+  }
+  /*Div imagnes */
+  .rounded {
     width: 200px;
     height: 200px;
-}
-/*Contenedor de las imagenes y sus transicion*/
-.galeria img:hover{
+  }
+  /*Contenedor de las imagenes y sus transicion*/
+  .galeria img:hover {
     width: 200px;
-}
-/*Div de botones*/
-.d-grid {
+  }
+  /*Div de botones*/
+  .d-grid {
     margin-left: 20px;
     align-items: center;
     justify-content: center;
-}
-/*Botones*/
-.btn{
+  }
+  /*Botones*/
+  .btn {
     width: 200px;
     font-size: 20px;
-}
-/*Tablas de informacion de procesos*/
-/*Contenedor de la tabla*/
-.dataTables_wrapper{
+  }
+  /*Tablas de informacion de procesos*/
+  /*Contenedor de la tabla*/
+  .dataTables_wrapper {
     font-size: 18px;
     color: black !important;
     border-radius: 10px;
-}
-/*Div de enumeracion*/
-.dataTables_length{
+  }
+  /*Div de enumeracion*/
+  .dataTables_length {
     font-size: 18px;
     color: #e8e6e6 !important;
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
-}
-/*Recuadro que hay en el div de enumeracion*/
-.dataTables_length select {
-    border: 2px solid  #e0ab4e !important;
+  }
+  /*Recuadro que hay en el div de enumeracion*/
+  .dataTables_length select {
+    border: 2px solid #e0ab4e !important;
     color: #e8e6e6 !important;
-}
-/*option del recuadro de enumeracion*/
-option{
+  }
+  /*option del recuadro de enumeracion*/
+  option {
     color: black;
     background-color: #e2d197;
-}
-/*Div de Busqueda*/
-.dataTables_filter {
+  }
+  /*Div de Busqueda*/
+  .dataTables_filter {
     font-size: 18px;
     color: #e8e6e6 !important;
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-}
-/*Imput y color del recuadro de busqueda*/
-[type=search] {
-    border: 2px solid  #e0ab4e !important;
-    outline-offset: -2px;  
-}
+  }
+  /*Imput y color del recuadro de busqueda*/
+  [type="search"] {
+    border: 2px solid #e0ab4e !important;
+    outline-offset: -2px;
+  }
 
-/*Clases de la infromacion de las tablas*/
-/*Tabla color de la tabla en general*/
-table{
+  /*Clases de la infromacion de las tablas*/
+  /*Tabla color de la tabla en general*/
+  table {
     background-color: #a5f5c9;
-    border-radius: 15px ;
-}
-/*Color del cuadro de los titulos*/
-thead {
+    border-radius: 15px;
+  }
+  /*Color del cuadro de los titulos*/
+  thead {
     background-color: #e2d197;
-    
-}
-/*Estilo de los recuadrados de informacion sobre las tablas*/
-.odd, .even {
+  }
+  /*Estilo de los recuadrados de informacion sobre las tablas*/
+  .odd,
+  .even {
     font-size: 18px;
-}
-/*Estilo de la enumeracion de abajo*/
-.dataTables_info {
+  }
+  /*Estilo de la enumeracion de abajo*/
+  .dataTables_info {
     font-size: 18px;
     color: #e8e6e6 !important;
     margin-top: 10px;
-    margin-left:  10px;
-}
-/*Paginacion*/
-.dataTables_paginate{
+    margin-left: 10px;
+  }
+  /*Paginacion*/
+  .dataTables_paginate {
     font-size: 20px;
     color: #e8e6e6 !important;
-}
-
-
+  }
 }
