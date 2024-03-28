@@ -7,6 +7,7 @@ function route(url, page) {
   app.use(express.static(path.join(__dirname, "public")));
   app.use(express.static(path.join(__dirname, "src/config")));
   app.use(express.static(path.join(__dirname, "src/utils")));
+  app.use(express.static(path.join(__dirname, "public/library/DataTables")));
 
   app.get(url, (req, res) => {
     res.sendFile(path.join(__dirname, page));

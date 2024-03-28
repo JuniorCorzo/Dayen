@@ -19,16 +19,17 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Estilo de css que se le asigna del css-->
   <link rel="stylesheet" href="/css/style.css" />
-
-
   <!-- Verifica que exista una session iniciada -->
   <script type="module" src="/Auth.js"></script>
   <script src="/Env.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
-  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+  <!-- Estilo de las las tablas -->
+  <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdn.datatables.net/1.13.3/js/importmap.js"></script>
+
   <script type="module">
-    import DataTable from "./datatables.net-dt"
+    import DataTable from "./datatables.net";
 
     window.addEventListener("DOMContentLoaded", function () {
       new DataTable("#tablaprocesos");
