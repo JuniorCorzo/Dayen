@@ -1,19 +1,3 @@
-const changeUsername = (usuario) => {
-  if (usuario === null) {
-    setTimeout(() => {
-      usuario = JSON.parse(sessionStorage.getItem("usuario"));
-      changeUsername(usuario);
-    });
-    return;
-  }
-
-  let username = document.querySelector(".username");
-  username.innerHTML = `Hola, ${usuario.nombre} ${usuario.apellido}🌱`;
-};
-
-let usuario = JSON.parse(sessionStorage.getItem("usuario"));
-changeUsername(usuario);
-
 setTimeout(() => {
   const data = JSON.parse(sessionStorage.getItem("lotes"))
     .map((data) => {
@@ -39,4 +23,4 @@ setTimeout(() => {
     return;
   }
   document.querySelector(".contenedor-lotes").innerHTML = data;
-}, 300);
+}, 500);

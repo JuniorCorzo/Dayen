@@ -20,20 +20,20 @@
   <!-- Estilo de css que se le asigna del css-->
   <link rel="stylesheet" href="/css/style.css" />
 
-  <!-- Estilo de las las tablas -->
-  <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
 
-  <script src="https://cdn.datatables.net/1.13.3/js/importmap.js"></script>
+  <!-- Verifica que exista una session iniciada -->
+  <script type="module" src="/Auth.js"></script>
+  <script src="/Env.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.css" />
+  <script src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
   <script type="module">
-    import DataTable from "datatables.net";
+    import DataTable from "./datatables.net-dt"
 
     window.addEventListener("DOMContentLoaded", function () {
       new DataTable("#tablaprocesos");
     });
   </script>
-  <!-- Verifica que exista una session iniciada -->
-  <script type="module" src="/Auth.js"></script>
 </head>
 
 
@@ -48,7 +48,7 @@
         <div>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active">Hola, Administrador 🌱 </a>
+              <a class="nav-link active username"></a>
             </li>
           </ul>
         </div>
@@ -68,13 +68,13 @@
           <ul class="navbar-nav">
             <!--li de  lotes  -->
             <li class="nav-item">
-              <a class="nav-link" href="/inicio"> Lotes</a>
+              <a class="nav-link" href="/inicio">Lotes</a>
               <i class="fa-solid fa-sun-plant-wilt lotes d-none d-lg-block"></i>
             </li>
 
             <!--li de Cerrar  -->
             <li class="nav-item text-end">
-              <a class="nav-link" href="/">Cerrar</a>
+              <a class="nav-link close-session" href="/">Cerrar</a>
               <i class="fa-solid fa-x"></i>
             </li>
           </ul>
