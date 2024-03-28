@@ -65,11 +65,12 @@ h1 {
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-control:focus {
-    background-color: #e2d197;
+    background-color: #e2d197 !important;
     border:none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
 .form-control::placeholder{
+    background-color: #e2d197 !important;
     color: black; 
 }
 /* Clases y propiedades de los Iconos en los input */
@@ -190,21 +191,17 @@ h2 {
 }
 /*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
-/* Clases del icono que estna en el registrode lotes*/
+/* Clases del icono que estan en el registrode lotes*/
 .fa-solid {
     font-size: 15px;
     position: absolute;
     padding: 12px;
     pointer-events: none;
 }
-
-
-input[type="file"]{
-    padding-left: 50px !important;
-    cursor: pointer;
- 
+input[type="file"]::file-selector-button {
+    background-color: #e2d197;
+    border-style: none;
 }
-
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
 .proceosos{

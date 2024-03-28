@@ -14,9 +14,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <!-- Estilo de css que se le asigna-->
   <link rel="stylesheet" href="/css/formularios.css" />
-  <!-- Script para el login -->
-  <script defer src="/Login.js"></script>
-  <script defer src="/Env.js"></script>
+  <!-- Verifica que exista una session iniciada -->
+  <script type="module" src="/Auth.js"></script>
 </head>
 
 <body>
@@ -37,24 +36,15 @@
         <div class="container-message d-none d-flex justify-content-center my-2">
           <span class="message-error"></span>
         </div>
-        <form class="login-form" method="post">
+        <form class="login-form">
 
           <!-- Div que esta compuesta por la clase form-group que componen el formulario de Registro de Inicio de Sesion-->
           <div class="form-group mb-3">
             <!-- Iconos-->
             <i class="bi bi-person"></i>
             <!-- Input de formulario de ingresar usuario y su clase respectiva form-class para darle las propiedades-->
-            <input type="text" class="form-control" name="usuario" id="username" placeholder="Usuario" />
+            <input type="text" class="form-control" name="usuario" id="idUsuario" placeholder="Cédula" />
           </div>
-
-          <!-- Div que esta compuesta por la clase form-group que componen el formulario de Inicio de Sesion-->
-          <div class="form-group mb-3">
-            <!-- Iconos-->
-            <i class="bi bi-envelope-at"></i>
-            <!-- Input de de correo electronico con la clase form-control para dar las propiedades-->
-            <input type="email" class="form-control propiedades" name="correo" placeholder="Dayen@.com" />
-          </div>
-
           <!-- Div que esta compuesta por la clase form-group que componen el formulario de login-->
           <div class="form-group mb-3">
             <!-- Iconos-->
@@ -93,6 +83,9 @@
       </div>
     </div>
   </div>
+  <!-- Script para el login -->
+  <script defer type="module" src="/Login.js"></script>
+  <script defer src="/Env.js"></script>
 </body>
 
 </html>
