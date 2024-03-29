@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Frontend",
+      "type": "npm",
+      "script": "start",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Run API",
+      "type": "shell",
+      "linux": {
+        "command": "../Controlador/gradlew",
+        "args": [
+          "bootRun"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}/../Controlador"
+        }
+      },
+      "windows": {
+        "command": "..\\Controlador\\gradlew.bat",
+        "args": [
+          "bootRun"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}\\..\\Controlador"
+        }
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}
