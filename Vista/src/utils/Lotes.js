@@ -6,7 +6,12 @@ setTimeout(() => {
         <div class="p-3">
             <a href="/procesos?idLote=${data.idLote}">
                 <h3>Lote ${data.idLote}</h3>
-                <img class="IMG-27 mt-4" src="/img/IMG-27.jpg" alt="img">
+                <img 
+                  class="IMG-27 mt-4"
+                  src="/img/IMG-27.jpg"
+                  alt="Foto del lote ${data.idLote}"
+                  title="Ir a los procesos del lote ${data.idLote}"
+                  >
             </a>
         </div>
       </div>
