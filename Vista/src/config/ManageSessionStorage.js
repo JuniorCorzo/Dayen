@@ -5,7 +5,6 @@ function generalSessionStorage() {
   if (!usuario) {
     sessionStorage.setItem("jwt", getCookie("jwt"));
     FetchData(`/usuario/${getCookie("userId")}`).then((data) => {
-      console.log(data);
       sessionStorage.setItem(
         "usuario",
         JSON.stringify({

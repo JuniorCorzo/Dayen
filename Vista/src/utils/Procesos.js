@@ -1,8 +1,9 @@
 import DataTable from "datatables.net-dt";
 
+const idLote = new URLSearchParams(window.location.search);
 new DataTable("#tablaprocesos", {
   ajax: {
-    url: `${window.HOST_API}/proceso/${1}`,
+    url: `${window.HOST_API}/proceso/${idLote.get("idLote")}`,
     method: "GET",
     dataSrc: "",
     beforeSend: function (xhr) {
