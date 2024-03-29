@@ -20,30 +20,18 @@
   <!-- Estilo de css que se le asigna del css-->
   <link rel="stylesheet" href="/css/style.css" />
   <!-- Verifica que exista una session iniciada -->
-  <script type="module" src="/Auth.js"></script>
-  <script src="/Env.js"></script>
 
   <!-- Estilo de las las tablas -->
   <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
-
-  <script src="https://cdn.datatables.net/1.13.3/js/importmap.js"></script>
-
-  <script type="module">
-    import DataTable from "./datatables.net";
-
-    window.addEventListener("DOMContentLoaded", function () {
-      new DataTable("#tablaprocesos");
-    });
-  </script>
+  <script defer type="module" src="src/utils/Procesos.js"></script>
 </head>
 
-
 <body>
-  <!-- Cabecera- Barra de Navegacion-->
+  <!-- Cabecera- Barra de Navegación-->
   <header class="mt-4 ms-3 me-3">
-    <!-- Empieza la barra de navegacion el nav engloba los contenedores-->
+    <!-- Empieza la barra de navegación el nav engloba los contenedores-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <!--Contenedor que englloba la informacion de la barra de navegacion-->
+      <!--Contenedor que engloba la información de la barra de navegación-->
       <div class="container-fluid">
         <!--Contenedor del hola Administrador -->
         <div>
@@ -91,9 +79,9 @@
       <div class="text-center">
         <h1>Proceso del Lote</h1>
       </div>
-      <!--Contenedor Segundario-->
+      <!--Contenedor Secundario-->
       <div class="row p-3">
-        <!--Contenedor  donde esta la galeria de las imagenes -->
+        <!--Contenedor  donde esta la galería de las imágenes -->
         <div class="galeria text-center">
           <img src="/img/IMG-39.jpg" class="rounded img-fluid" alt="img" />
           <img src="/img/IMG-15.jpg" class="rounded img-fluid" alt="img" />
@@ -162,9 +150,9 @@
                       <img src="/img/IMG-45.jpg" class="rounded img-fluid img-crear-proceso" alt="img" />
                     </div>
 
-                    <!-- Contenedor segundario que engloba la informacion del formulario-Modificar-->
+                    <!-- Contenedor secundario que engloba la información del formulario-Modificar-->
                     <form action="#">
-                      <!-- Contenedor  del selecte de Lotes-->
+                      <!-- Contenedor del select de Lotes-->
                       <div class="form-group mt-3">
                         <!-- Iconos-->
                         <i class="fa-solid fa-seedling"></i>
@@ -177,27 +165,27 @@
                         </select>
                       </div>
 
-                      <!-- Contenedor  del selecte de Tipos de procesos -->
+                      <!-- Contenedor  del select de Tipos de procesos -->
                       <div class="form-group mt-3">
                         <!-- Iconos-->
                         <i class="fa-solid fa-plant-wilt fa-procesos"></i>
                         <select class="form-select" aria-label="Default select example">
                           <option selected>Tipos de Procesos</option>
                           <option value="1">Abonado</option>
-                          <option value="2">Fumigacion</option>
+                          <option value="2">Fumigación</option>
                           <option value="3">Maquinaria</option>
                           <option value="4">Empleados</option>
                           <option value="5">Corte Cosecha</option>
-                          <option value="6">Preparacion Suelo</option>
+                          <option value="6">Preparación Suelo</option>
                         </select>
                       </div>
 
-                      <!-- Contenedor  del selecte de Productos-->
+                      <!-- Contenedor  del select de Productos-->
                       <div class="form-group mt-3 mb-3">
                         <!-- Iconos-->
                         <i class="fa-solid fa-tree fa-productos"></i>
                         <select class="form-select" aria-label="Default select example">
-                          <option selected>Productos de Fumigacion</option>
+                          <option selected>Productos de Fumigación</option>
                           <option value="1">DualGold 960 EC</option>
                           <option value="2">AmBox</option>
                           <option value="3">Pelican 500 SC</option>
@@ -216,7 +204,7 @@
                         <input type="date" class="form-control calen" name="calendario" placeholder="Realizado En" />
                       </div>
 
-                      <!-- Div de Descripcion de la infromacion-->
+                      <!-- Div de Descripcion de la información-->
                       <div>
                         <label for="exampleFormControlTextarea1" class="form-label">Descripcion:</label>
                         <textarea class="form-control descripcion" id="exampleFormControlTextarea1" rows="3"></textarea>
@@ -242,118 +230,34 @@
           <a type="button" class="btn btn-lg fluid" href="/inicio">volver</a>
         </div><!--Termina Contenedor botones-->
 
-        <!--Empieza el contenedor que engloba toda la infromacion sobre los procesos de los lotes-->
+        <!--Empieza el contenedor que engloba toda la información sobre los procesos de los lotes-->
         <!--titulo-->
         <div class="text-center">
           <h4>Tabla de Procesos</h4>
         </div>
 
         <!--Contenedor Tablas-->
-        <div class="d-md-flex justify-content-md-center mt-4 ms-2"><!-- Empieeza Contenedor Tablas-->
-          <!-- Empoieza la table -->
+        <div class="d-md-flex justify-content-md-center mt-4 ms-2"><!-- Empieza Contenedor Tablas-->
+          <!-- Empieza la table -->
           <table id="tablaprocesos" class="cell-border" style="width: 100%">
             <thead>
               <tr>
-                <th>Tipo de Proceso</th>
-                <th>Produccion</th>
+                <th class="text-center">ID</th>
+                <th class="text-center">Tipo de Proceso</th>
+                <th class="text-center">Productos</th>
                 <th class="text-center">Descripcion</th>
-                <th>Personal</th>
-                <th>Realizado En</th>
-                <th>Iconos</th>
+                <th class="text-center">Personal</th>
+                <th class="text-center">Realizado En</th>
+                <th class="text-center">Acciones</th>
               </tr>
             </thead>
-
-            <tbody>
-              <tr>
-                <td>Fumigacion</td>
-                <td>DualGold 960 EC</td>
-                <td>Se realiza los dias martes de cada semana.</td>
-                <td>Luis Gonzalez</td>
-                <td>02/03/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Abonado</td>
-                <td>AmBox</td>
-                <td>
-                  Se realiza una semana despues de haber tratado del suelo.
-                </td>
-                <td>Diego Caicedo</td>
-                <td>16/04/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Maquinaria</td>
-                <td>Pelican 500 S</td>
-                <td>
-                  Se Utiliza para tratar el suelo y recoleccion de cosecha.
-                </td>
-                <td>Marcos Martinez</td>
-                <td>12/04/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Empleados</td>
-                <td>Bongo 600</td>
-                <td>Cada empleado realiza sus tarea correspondientes.</td>
-                <td>Daniel Ruiz</td>
-                <td>08/03/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Corte Cosecha</td>
-                <td>Gruya</td>
-                <td>
-                  Se realiza cuando el cultivo del arroz a cumplido su
-                  proceso.
-                </td>
-                <td>Educardo Diaz</td>
-                <td>10/04/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Preparacion Suelo</td>
-                <td>Agrotin</td>
-                <td>Se realiza la semana despues del corte de la cosecha.</td>
-                <td>Damian Duarte</td>
-                <td>02/02/2024</td>
-
-                <td class="text-center"><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                      class="bi bi-pencil-square"></i></a>
-                  <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
-            </tbody>
           </table>
         </div><!-- Termina Contenedor Tablas-->
 
-      </div> <!--Contenedor Segundario-->
+      </div> <!--Contenedor Secundario-->
     </div><!--Contenedor Primario-->
+    <script defer type="module" src="src/config/Auth.js"></script>
+    <script src="src/utils/Env.js"></script>
   </main>
 
 

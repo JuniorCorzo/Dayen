@@ -1,4 +1,4 @@
-import FetchData from "./FetchData.js";
+import FetchData from "../utils/FetchData";
 
 function generalSessionStorage() {
   const usuario = sessionStorage.getItem("usuario");

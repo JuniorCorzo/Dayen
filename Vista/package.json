@@ -4,7 +4,8 @@
   },
   "dependencies": {
     "datatables.net-dt": "^2.0.3",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "vite": "^5.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",

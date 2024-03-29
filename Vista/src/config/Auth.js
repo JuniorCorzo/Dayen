@@ -1,4 +1,4 @@
-import { generalSessionStorage } from "/ManageSessionStorage.js";
+import { generalSessionStorage } from "./ManageSessionStorage";
 
 function validateAuth() {
   const jwt = getCookie("jwt");
@@ -28,6 +28,8 @@ function getCookie(name) {
   return document.cookie.split("; ").find((row) => row.startsWith(name));
 }
 
+validateAuth();
+
 const changeUsername = (usuario) => {
   if (usuario === null) {
     setTimeout(() => {
@@ -50,4 +52,3 @@ if (window.location.pathname !== "/login") {
     .addEventListener("click", closeSession);
 }
 
-validateAuth();
