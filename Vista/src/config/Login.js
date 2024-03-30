@@ -24,7 +24,6 @@ class Login {
       });
 
       if (error === 0) {
-        const TOKEN = "";
         fetch(`${window.HOST_API}/auth/login`, {
           method: "POST",
           headers: {
