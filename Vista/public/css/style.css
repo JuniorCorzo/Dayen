@@ -290,6 +290,13 @@ h4:hover {
   background-color: #a0d7ac;
 }
 /*Tablas de informacion de procesos*/
+#tablaprocesos_wrapper {
+  width: 100%;
+}
+
+#tablaProcesos_wrapper thead tr td {
+  height: 69px;
+}
 /*Contenedor de la tabla*/
 .dataTables_wrapper {
   font-size: 18px;
