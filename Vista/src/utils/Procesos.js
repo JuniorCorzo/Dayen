@@ -1,7 +1,7 @@
 import DataTable from "datatables.net-bs5";
 
 const idLote = new URLSearchParams(window.location.search);
-let dataTable = new DataTable("#tablaprocesos", {
+new DataTable("#tablaprocesos", {
   lengthChange: false,
   pageLength: 10,
   ordering: true,
