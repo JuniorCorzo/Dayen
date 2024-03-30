@@ -3,7 +3,7 @@
     "start": "nodemon --exec babel-node App.js"
   },
   "dependencies": {
-    "datatables.net-dt": "^2.0.3",
+    "datatables.net-bs5": "^2.0.3",
     "express": "^4.19.2",
     "vite": "^5.2.6"
   },

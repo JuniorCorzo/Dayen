@@ -1,7 +1,11 @@
-import DataTable from "datatables.net-dt";
+import DataTable from "datatables.net-bs5";
 
 const idLote = new URLSearchParams(window.location.search);
-new DataTable("#tablaprocesos", {
+let dataTable = new DataTable("#tablaprocesos", {
+  lengthChange: false,
+  pageLength: 10,
+  ordering: true,
+  info: false,
   ajax: {
     url: `${window.HOST_API}/proceso/${idLote.get("idLote")}`,
     method: "GET",
@@ -15,20 +19,22 @@ new DataTable("#tablaprocesos", {
     },
   },
   columns: [
-    { data: "idProceso", title: "ID" },
+    { data: "idProceso", title: "ID", visible: false },
     { data: "idTipo.tipoProceso", title: "Tipo de Proceso" },
     {
       data: "idProducto",
       title: "Productos",
+      orderable: false,
       render: function (data) {
         if (!data || data.length === 0) return "No hay productos asociados";
         return data.map((producto) => producto.nombre).join(", ");
       },
     },
-    { data: "descripcion", title: "Descripción" },
+    { data: "descripcion", title: "Descripción", orderable: false },
     {
       data: "personal",
       title: "Personal",
+      orderable: false,
       render: function (data) {
         if (!data || data.length === 0) return "No hay personal asociado";
         return data.map((personal) => personal.nombre).join(", ");
@@ -38,6 +44,7 @@ new DataTable("#tablaprocesos", {
     {
       data: null,
       title: "Acciones",
+      orderable: false,
       render: function () {
         return `
       <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -50,4 +57,12 @@ new DataTable("#tablaprocesos", {
       },
     },
   ],
+  language: {
+    zeroRecords: "No existen procesos asociados a este lote",
+    emptyTable: "No existen procesos asociados a este lote",
+    search: "Buscar:",
+  },
 });
+
+const containerSearch = document.querySelector(".dt-container .row");
+containerSearch.classList.remove("row");
