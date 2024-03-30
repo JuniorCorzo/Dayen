@@ -1,11 +1,10 @@
-import FetchData from "./FetchData.js";
+import getData from "../utils/FetchData";
 
 function generalSessionStorage() {
   const usuario = sessionStorage.getItem("usuario");
   if (!usuario) {
     sessionStorage.setItem("jwt", getCookie("jwt"));
-    FetchData(`/usuario/${getCookie("userId")}`).then((data) => {
-      console.log(data);
+    getData(`/usuario/${getCookie("userId")}`).then((data) => {
       sessionStorage.setItem(
         "usuario",
         JSON.stringify({
@@ -26,7 +25,7 @@ function generalSessionStorage() {
 function updateUsuarioSession() {
   const usuario = sessionStorage.getItem("usuario");
   if (usuario) {
-    FetchData(`/usuario/${getCookie(userId)}`).then((data) => {
+    getData(`/usuario/${getCookie(userId)}`).then((data) => {
       sessionStorage.setItem(
         "usuario",
         JSON.stringify({
@@ -44,7 +43,7 @@ function updateUsuarioSession() {
 function updatePersonalSession() {
   const personal = sessionStorage.getItem("personal");
   if (personal) {
-    FetchData(`/personal/${getCookie(userId)}`).then((data) => {
+    getData(`/personal/${getCookie(userId)}`).then((data) => {
       sessionStorage.setItem("personal", JSON.stringify(data.personal));
     });
   }
@@ -53,7 +52,7 @@ function updatePersonalSession() {
 function updateLoteSession() {
   const lote = sessionStorage.getItem("lotes");
   if (lote) {
-    FetchData(`/lotes/${getCookie(userId)}`).then((data) => {
+    getData(`/lotes/${getCookie(userId)}`).then((data) => {
       sessionStorage.setItem("lotes", JSON.stringify(data.lote));
     });
   }

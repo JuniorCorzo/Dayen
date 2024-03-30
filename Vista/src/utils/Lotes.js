@@ -1,20 +1,4 @@
-const changeUsername = (usuario) => {
-  if (usuario === null) {
-    setTimeout(() => {
-      usuario = JSON.parse(sessionStorage.getItem("usuario"));
-      changeUsername(usuario);
-    });
-    return;
-  }
-
-  let username = document.querySelector(".username");
-  username.innerHTML = `Hola, ${usuario.nombre} ${usuario.apellido}🌱`;
-};
-
-let usuario = JSON.parse(sessionStorage.getItem("usuario"));
-changeUsername(usuario);
-
-setTimeout(() => {
+const insertLotes = () => {
   const data = JSON.parse(sessionStorage.getItem("lotes"))
     .map((data) => {
       return `
@@ -22,7 +6,12 @@ setTimeout(() => {
         <div class="p-3">
             <a href="/procesos?idLote=${data.idLote}">
                 <h3>Lote ${data.idLote}</h3>
-                <img class="IMG-27 mt-4" src="/img/IMG-27.jpg" alt="img">
+                <img 
+                  class="IMG-27 mt-4"
+                  src="/img/IMG-27.jpg"
+                  alt="Foto del lote ${data.idLote}"
+                  title="Ir a los procesos del lote ${data.idLote}"
+                  >
             </a>
         </div>
       </div>
@@ -39,4 +28,13 @@ setTimeout(() => {
     return;
   }
   document.querySelector(".contenedor-lotes").innerHTML = data;
-}, 300);
+};
+
+new Promise((resolve) => {
+  setInterval(() => {
+    if (sessionStorage.getItem("lotes")) {
+      clearInterval();
+      resolve();
+    }
+  }, 100);
+}).then(insertLotes);

@@ -20,9 +20,9 @@
   <!-- Estilo de css que se le asigna del css-->
   <link rel="stylesheet" href="/css/style.css" />
   <!-- Verifica que exista una session iniciada -->
-  <script type="module" src="/Auth.js"></script>
-  <script type="module" src="/Lotes.js"></script>
-  <script src="/Env.js"></script>
+  <script type="module" src="src/config/Auth.js"></script>
+  <script type="module" src="src/utils/Lotes.js"></script>
+  <script src="src/utils/Env.js"></script>
 </head>
 
 <head>
@@ -63,6 +63,12 @@
               <i class="bi bi-people-fill d-none d-lg-block"></i>
             </li>
 
+            <!--li de registrar lotes  -->
+            <li class="nav-item">
+              <a class="nav-link" href="/registro/lote">Registrar Lotes</a>
+              <i class="fa-solid fa-sun-plant-wilt"></i>
+            </li>
+
             <!--li de Cerrar  -->
             <li class="nav-item text-end">
               <a class="nav-link close-session" href="/">Cerrar</a>
@@ -94,8 +100,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>

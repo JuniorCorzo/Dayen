@@ -1,4 +1,13 @@
 {
   "cSpell.language": "en,es,es-ES",
-  "cSpell.words": ["datatables", "Dayen", "electronico", "sesion"]
+  "cSpell.words": [
+    "ajax",
+    "datatables",
+    "Dayen",
+    "descripcion",
+    "electronico",
+    "sesion",
+    "tablaprocesos",
+    "telefono"
+  ]
 }

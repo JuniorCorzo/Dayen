@@ -1,4 +1,4 @@
-import { generalSessionStorage } from "/ManageSessionStorage.js";
+import { generalSessionStorage } from "./ManageSessionStorage";
 
 function validateAuth() {
   const jwt = getCookie("jwt");
@@ -17,8 +17,10 @@ function validateAuth() {
 }
 
 function closeSession() {
-  document.cookie = "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
-  document.cookie = "userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
+  document.cookie =
+    "jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
+  document.cookie =
+    "userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;";
   sessionStorage.clear();
 }
 
@@ -28,6 +30,25 @@ function getCookie(name) {
 
 validateAuth();
 
-document
-  .querySelector(".close-session")
-  .addEventListener("click", closeSession);
+const changeUsername = (usuario) => {
+  if (usuario === null) {
+    setTimeout(() => {
+      usuario = JSON.parse(sessionStorage.getItem("usuario"));
+      changeUsername(usuario);
+    });
+    return;
+  }
+
+  let username = document.querySelector(".username");
+  username.innerHTML = `Hola, ${usuario.nombre} ${usuario.apellido}🌱`;
+};
+
+let usuario = JSON.parse(sessionStorage.getItem("usuario"));
+changeUsername(usuario);
+
+if (window.location.pathname !== "/login") {
+  document
+    .querySelector(".close-session")
+    .addEventListener("click", closeSession);
+}
+
