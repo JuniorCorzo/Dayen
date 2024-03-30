@@ -1,4 +1,4 @@
-setTimeout(() => {
+const insertLotes = () => {
   const data = JSON.parse(sessionStorage.getItem("lotes"))
     .map((data) => {
       return `
@@ -28,4 +28,13 @@ setTimeout(() => {
     return;
   }
   document.querySelector(".contenedor-lotes").innerHTML = data;
-}, 500);
+};
+
+new Promise((resolve) => {
+  setInterval(() => {
+    if (sessionStorage.getItem("lotes")) {
+      clearInterval();
+      resolve();
+    }
+  }, 100);
+}).then(insertLotes);
