@@ -1,5 +1,5 @@
 const insertLotes = () => {
-  const data = JSON.parse(sessionStorage.getItem("lotes"))
+  const data = JSON.parse(sessionStorage.getItem('lotes'))
     .map((data) => {
       return `
       <div>
@@ -15,26 +15,26 @@ const insertLotes = () => {
             </a>
         </div>
       </div>
-              `;
+              `
     })
-    .join("\n");
+    .join('\n')
 
   if (!data) {
-    document.querySelector(".contenedor-lotes").innerHTML = `
+    document.querySelector('.contenedor-lotes').innerHTML = `
     <div class="p-3">
         <h3>No hay lotes</h3>
     </div>
-    `;
-    return;
+    `
+    return
   }
-  document.querySelector(".contenedor-lotes").innerHTML = data;
-};
+  document.querySelector('.contenedor-lotes').innerHTML = data
+}
 
 new Promise((resolve) => {
   setInterval(() => {
-    if (sessionStorage.getItem("lotes")) {
-      clearInterval();
-      resolve();
+    if (sessionStorage.getItem('lotes')) {
+      clearInterval()
+      resolve()
     }
-  }, 100);
-}).then(insertLotes);
+  }, 100)
+}).then(insertLotes)
