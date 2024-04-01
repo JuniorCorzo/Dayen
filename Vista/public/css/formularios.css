@@ -1,294 +1,382 @@
-/*Estilo de modulos de inicio de sesion- Recuperar contraseña- Registrar usaurio*/
+/*Estilo de módulos de inicio de sesion- Recuperar contraseña- Registrar usuario*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-/*Fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
-/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
-/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/ 
 
 /****************************************************************************************************************/
 /*Inicio del Modulo de Inicio de Sesion*/
 body {
-    background-color: grey;
+  background-color: grey;
 }
-/*Contenedor principal que engloba toda la informacion del Inicio de Sesion*/
-.container{ 
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/*Contenedor principal que engloba toda la información del Inicio de Sesion*/
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/*Contenedor segundario del Inicio de Sesion*/
-.row{
-    background-color: #a0d7ac;
-    width: 340px;
-    border-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
+/*Contenedor secundario del Inicio de Sesion*/
+.row {
+  background-color: #a0d7ac;
+  width: 340px;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
 }
 /*Titulo del inicio de sesion, Recuperar contraseña y Registro de usuario */
 h1 {
-    font-family: "Crete Round", serif;
-    color: black;
-    text-align: center;
-    font-size: 30px;
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 30px;
 }
 /*Div de la imagen */
 .imagen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img {
-    width: 140px;
-    height: 140px;  
+  width: 140px;
+  height: 140px;
 }
 /*Contenedor de formulario-principal del inicio de sesion*/
 .formulario {
-    font-family: "Cormorant", serif;
-    background-color: #a0d7ac;
-    border-radius: 15px;
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  border-radius: 15px;
 }
 /*Formulario del login -- engloba el input */
 .form-control {
-    padding-left: 35px !important;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: #e2d197 ;
-    border:none; 
-    cursor: pointer;
-    outline: none;
+  padding-left: 35px !important;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 /*Sirve para darle color al dar clic encima para escribir  */
 .form-control:focus {
-    background-color: #e2d197 !important;
-    border:none;
+  background-color: #e2d197 !important;
+  border: none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
-.form-control::placeholder{
-    background-color: #e2d197 !important;
-    color: black; 
+.form-control::placeholder {
+  background-color: #e2d197 !important;
+  color: black;
 }
 /* Clases y propiedades de los Iconos en los input */
 .bi {
-    color: black;
-    position: absolute;
-    padding: 10px;
-    pointer-events: none;
+  color: black;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
 }
-/*Check de verificacion de recordar usuario */
-.form-check-input{
-    width: 25px;
-    height: 25px;
-    background-color: #e2d197 !important;
-    border: none;
-    cursor: pointer;
+/*Check de verificación de recordar usuario */
+.form-check-input {
+  width: 25px;
+  height: 25px;
+  background-color: #e2d197 !important;
+  border: none;
+  cursor: pointer;
 }
 /*Sirve para darle el color al cuadro de seleccionar*/
 .form-check-input:focus {
-    background-color: #e0ab4e;
+  background-color: #e0ab4e;
 }
-/*Es para darle el tamaño y la fuente del label de la verificacion del usuario*/
-.form-check-label{
-    font-size: 18px;
-    font-family: "Cormorant", serif;
+/*Es para darle el tamaño y la fuente del label de la verificación del usuario*/
+.form-check-label {
+  font-size: 18px;
+  font-family: "Cormorant", serif;
 }
 /*Boton de ingresar*/
-.btn{
-    font-family: "Cormorant", serif;
-    width: 150px;
-    font-size: 20px;
-    background-color: #e0ab4e;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
+.btn {
+  font-family: "Cormorant", serif;
+  width: 150px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
 }
 .btn:hover {
-    background-color: #e0ab4e;
+  background-color: #e0ab4e;
 }
 /*Boton de olvido su contraseña */
 .olvido {
-    font-family: "Cormorant", serif;
-    font-size: 20px;
-    color: black;
-    text-transform: none;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
+  font-family: "Cormorant", serif;
+  font-size: 20px;
+  color: black;
+  text-transform: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 .olvido:hover {
-    box-shadow: 0 3px 2px #e2d197;
+  box-shadow: 0 3px 2px #e2d197;
 }
 /********************************************************************************************/
-/*Modulos de Recuperar contraseña*/ 
+/*Módulos de Recuperar contraseña*/
 /*Contenedor Principal de Recuperar Contraseña*/
 .contenedor {
-    background-color: #a0d7ac;
-    width: 310px;
-    border-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
+  background-color: #a0d7ac;
+  width: 310px;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
 }
-/*Contenedor que tiene el contenainer del formulario de Recuperar Contraseña*/
+/*Contenedor que tiene el container del formulario de Recuperar Contraseña*/
 .contraseña {
-    font-family: "Cormorant", serif;
-    background-color: #a0d7ac;
-    border-radius: 15px;
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  border-radius: 15px;
 }
-/*Input de formulario de ingresar informacion*/
-.form-control-input{
-    padding-left: 40px !important;
-    height: 45px;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #e2d197;
-    border:none; 
-    cursor: pointer;
-    outline: none;
+/*Input de formulario de ingresar información*/
+.form-control-input {
+  padding-left: 40px !important;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
-.form-control-input::placeholder{
-    color: black;
+.form-control-input::placeholder {
+  color: black;
 }
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
 .registro {
-    background-color: #a0d7ac;
-    width: 320px;
-    border-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
+  background-color: #a0d7ac;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
 }
 /*Titulo*/
 h2 {
-    font-family: "Crete Round", serif;
-    color: black;
-    text-align: center;
-    font-size: 25px;
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
 }
 /*Div de la imagen */
 .image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .logo {
-    width: 130px;
-    height: 130px;  
+  width: 130px;
+  height: 130px;
 }
-/*Contenedor principa donde engloba el formulario*/
+/*Contenedor principal donde engloba el formulario*/
 .usuario {
-    font-family: "Cormorant", serif;
-    background-color: #a0d7ac;
-    border-radius: 15px;
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  border-radius: 15px;
 }
 /*Propiedades de la clase de form-control que llenan el formulario*/
 .propiedades {
-    height: 40px;
+  height: 40px;
 }
 /*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
-/* Clases del icono que estan en el registrode lotes*/
+/* Clases del icono que están en el registre lotes*/
 .fa-solid {
-    font-size: 15px;
-    position: absolute;
-    padding: 12px;
-    pointer-events: none;
+  font-size: 15px;
+  position: absolute;
+  padding: 12px;
+  pointer-events: none;
 }
 input[type="file"]::file-selector-button {
-    background-color: #e2d197;
-    border-style: none;
+  background-color: #e2d197;
+  border-style: none;
 }
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
-.proceosos{
-    background-color: #a0d7ac;
-    width: 330px !important;
-    border-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
+.procesos {
+  background-color: #a0d7ac;
+  width: 330px !important;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
 }
-.form-select{
-    padding-left: 35px !important;
-    border-radius: 10px;
-    font-size: 20px;
-    background-color: #e2d197;
-    border:none; 
-    cursor: pointer;
-    outline: none;
+
+.form-select {
+  padding-left: 20px !important;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
-/*Sirve para darle color al dar clic encima para escribir  */
+
+.form-select option {
+  background-color: #e2d197 !important;
+  color: #000;
+}
+/*Sirve para darle color al dar clic encima para escribir */
 .form-select:focus {
-    background-color: #e2d197;
-    border:none;
+  background-color: #e2d197;
+  border: none;
+  outline: none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
-.form-select::placeholder{
-    color: black; 
+.form-select::placeholder {
+  color: black;
 }
-.form-label{
-    color: black;
-    font-size: 20px;
+
+.form-label {
+  color: black;
+  font-size: 17px;
 }
-.calen, .descripcion{
-    padding-left: 15px !important;
+.calen,
+.descripcion {
+  padding-left: 15px !important;
 }
 /******************************************************************************************/
-/*Modulode Registro de personal*/
+/*Modulo de Registro de personal*/
 
 .registro {
-    background-color: #a0d7ac;
-    width: 320px;
-    border-radius: 15px;
-    box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
-    box-sizing: border-box;
+  background-color: #a0d7ac;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
 }
 
-/*Contenedor principa donde engloba el formulario*/
+/*Contenedor principal donde engloba el formulario*/
 .personal {
-    font-family: "Cormorant", serif;
-    background-color: #a0d7ac;
-    border-radius: 15px;
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  border-radius: 15px;
 }
 /*Propiedades de la clase de form-control que llenan el formulario*/
 .propiedades {
-    height: 40px;
+  height: 40px;
 }
 /******************************************************************************************/
 /*RESPONSIVE*/
 /*Modulo de inicio de sesion*/
 /* para 768px o menos */
 @media screen and (max-width: 768px) {
-/*Contenedor segundario del Inicio de Sesion*/
-.row{
+  /*Contenedor secundario del Inicio de Sesion*/
+  .row {
     width: 300px;
-}
-/***********************************************/
-/*Modulo de Registro de Usuario*/
-.registro {
+  }
+  /***********************************************/
+  /*Modulo de Registro de Usuario*/
+  .registro {
     width: 300px;
-}
-h2 {
+  }
+  h2 {
     font-size: 25px;
-}
-/*Div de la imagen */
-.logo {
+  }
+  /*Div de la imagen */
+  .logo {
     width: 100px;
-    height: 100px;  
-}
-/*Propiedades de la clase de form-control que llenan el formulario*/
-.propiedades {
+    height: 100px;
+  }
+  /*Propiedades de la clase de form-control que llenan el formulario*/
+  .propiedades {
     height: 35px;
-}
-/*Boton de ingresar-botones de registro*/
-.btn{
+  }
+  /*Boton de ingresar-botones de registro*/
+  .btn {
     width: 130px;
+  }
+  /***********************************************/
 }
-/***********************************************/
+
 /*Modulo de Registro de procesos*/
+.choices {
+  position: relative;
+  background-color: #e2d197;
+  padding: 6px 0 6px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
+.choices__inner {
+  background-color: #e2d197;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
 
+.choices__input {
+  width: 100px !important;
+  background-color: #e2d197;
+  padding-left: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.choices__input:focus {
+  outline: none;
+}
+
+.choices__input::placeholder {
+  color: #000;
+  opacity: 0.8;
+}
+
+.choices__list--dropdown {
+  max-height: 150px;
+  display: none;
+  border-color: #e2d197;
+  border-radius: 10px;
+  color: #000;
+  background-color: #e2d197;
+  overflow-y: auto;
+}
+
+.choices__list--dropdown.is-active {
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.choices__item {
+  background-color: #e2d197;
+  color: #000;
+  padding: 5px 0px 5px 20px;
+}
+
+.choices__item.is-highlighted {
+  background-color: #cbc083;
+}
+
+.choices__list--multiple {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.choices__list--multiple .choices__item {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  gap: 5px;
+}
+
+.choices__button {
+  display: inline-block;
+  background-color: transparent;
+  background-image: url(../img/svg/trash-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 15px;
+  border: none;
+  aspect-ratio: 1 / 1;
+  font-size: 0;
+  text-indent: 9999px;
 }

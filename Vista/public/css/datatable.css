@@ -1,0 +1,75 @@
+/*Tablas de informacion de procesos*/
+#tablaprocesos_wrapper {
+  width: 100%;
+}
+/*Contenedor de la tabla*/
+.dataTables_wrapper {
+  font-size: 18px;
+  color: black !important;
+  border-radius: 10px;
+}
+/*Div de enumeracion*/
+.dataTables_length {
+  font-size: 20px;
+  color: #e8e6e6 !important;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+/*Recuadro que hay en el div de enumeracion*/
+
+/*Div de Búsqueda*/
+.dt-search {
+  text-align: left !important;
+}
+
+.dt-search label {
+  display: flex;
+  color: #e8e6e6;
+}
+
+.dt-search [type="search"] {
+  width: 20vw !important;
+  margin: 0 !important;
+  border: 2px solid #e0ab4e !important;
+  padding-left: 10px !important;
+}
+
+/*Clases de la información de las tablas
+Tabla color de la tabla en general*/
+table {
+  background-color: #a5f5c9;
+}
+/*Color del cuadro de los títulos*/
+thead {
+  background-color: #e2d197;
+}
+/*Estilo de los recuadrados de información sobre las tablas*/
+.odd,
+.even {
+  font-size: 18px;
+}
+/*Estilo de la enumeración de abajo*/
+/* Paginacion */
+.page-link {
+  background-color: #e2d197 !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+.page-item:hover .page-link,
+.active .page-link {
+  background-color: #cbc083 !important;
+}
+
+.page-link:hover {
+  transform: none !important;
+}
+
+/*estilo de iconos de modificar y eliminar*/
+.bi-pencil-square,
+.bi-trash {
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+}
