@@ -28,8 +28,8 @@ function generalSessionStorage () {
       sessionStorage.setItem('personal', JSON.stringify(personal))
     })
 
-    getData('tipoProcess/all').then((procesos) => {
-      sessionStorage.setItem('procesos', JSON.stringify(procesos))
+    getData('/tipoProcesos/all').then((procesos) => {
+      sessionStorage.setItem('tipo_procesos', JSON.stringify(procesos))
     })
   }
 }
