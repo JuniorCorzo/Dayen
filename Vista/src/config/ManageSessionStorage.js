@@ -23,10 +23,9 @@ function generalSessionStorage () {
     getData('/producto/all').then((productos) => {
       sessionStorage.setItem('productos', JSON.stringify(productos))
     })
-    
+
     getData(`/personal/${getCookie('userId')}`).then((personal) => {
       sessionStorage.setItem('personal', JSON.stringify(personal))
-    
     })
   }
 }

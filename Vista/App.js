@@ -6,7 +6,7 @@ async function createServer () {
   const app = express()
 
   const vite = await createServerVite({
-    server: { middlewareMode: 'html' }
+    server: { middlewareMode: 'html ' }
   })
 
   function route (url, page) {
