@@ -27,6 +27,10 @@ function generalSessionStorage () {
     getData(`/personal/${getCookie('userId')}`).then((personal) => {
       sessionStorage.setItem('personal', JSON.stringify(personal))
     })
+
+    getData('tipoProcess/all').then((procesos) => {
+      sessionStorage.setItem('procesos', JSON.stringify(procesos))
+    })
   }
 }
 
