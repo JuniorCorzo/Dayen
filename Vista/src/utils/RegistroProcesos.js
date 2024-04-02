@@ -145,3 +145,5 @@ new Promise((resolve) => {
     }
   }, 0)
 }).then(insertTipoProcesos)
+
+document.querySelector('.volver').setAttribute('href', `/procesos?idLote=${new URLSearchParams(window.location.search).get('idLote')}`)
