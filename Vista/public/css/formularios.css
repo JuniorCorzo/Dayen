@@ -21,7 +21,7 @@ body {
 /*Contenedor secundario del Inicio de Sesion*/
 .row {
   background-color: #a0d7ac;
-  width: 340px;
+  width: 350px;
   border-radius: 15px;
   box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
   box-sizing: border-box;
@@ -72,6 +72,7 @@ h1 {
   background-color: #e2d197 !important;
   color: black;
 }
+
 /* Clases y propiedades de los Iconos en los input */
 .bi {
   color: black;
@@ -89,7 +90,7 @@ h1 {
 }
 /*Sirve para darle el color al cuadro de seleccionar*/
 .form-check-input:focus {
-  background-color: #e0ab4e;
+  background-color: #e0ab4e !important;
 }
 /*Es para darle el tamaño y la fuente del label de la verificación del usuario*/
 .form-check-label {
@@ -127,7 +128,7 @@ h1 {
 /*Contenedor Principal de Recuperar Contraseña*/
 .contenedor {
   background-color: #a0d7ac;
-  width: 310px;
+  width: 320px;
   border-radius: 15px;
   box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
   box-sizing: border-box;
@@ -158,7 +159,7 @@ h1 {
 .registro {
   font-family: "Cormorant", serif;
   background-color: #a0d7ac;
-  width: 320px;
+  width: 340px !important;
   border-radius: 15px;
   box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
   box-sizing: border-box;
@@ -180,18 +181,21 @@ h2 {
   width: 130px;
   height: 130px;
 }
-/*Contenedor principal donde engloba el formulario
-.usuario {
-  font-family: "Cormorant", serif;
-  background-color: #a0d7ac;
-  border-radius: 15px;
-}
 /*Propiedades de la clase de form-control que llenan el formulario*/
 .propiedades {
   height: 40px;
 }
 /*************************************************************************************/
 /*Modulo de Registro dde Lotes-Hectareas*/
+/*Contenedor del fromulario*/
+.registro-lotes{
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  width: 380px !important;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
+}
 /* Clases del icono que están en el registre lotes*/
 .fa-solid {
   font-size: 15px;
@@ -200,53 +204,119 @@ h2 {
   pointer-events: none;
 }
 input[type="file"]::file-selector-button {
-  background-color: #e2d197;
+  background-color: #e2d197 !important;
   border-style: none;
 }
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
-.procesos {
+/*Contenedor principal*/
+.procesos{
   font-family: "Cormorant", serif;
   background-color: #a0d7ac;
-  width: 330px !important;
+  width: 350px !important;
   border-radius: 15px;
   box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
   box-sizing: border-box;
 }
-
-.form-select {
-  padding-left: 20px !important;
-  border-radius: 10px;
-  font-size: 20px;
+/*Imagen logo dayen*/
+.logo-dayen{
+  width: 100px;
+  height: 100px;
+}
+/*Contenedor de los input */
+.choices {
+  position: relative;
   background-color: #e2d197;
+  padding: 6px 0 6px 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*Input principal que engloba los textos*/
+.choices__input {
+  width: 100% !important;
+  background-color: #e2d197;
+  padding-left: 20px;
   border: none;
   cursor: pointer;
-  outline: none;
 }
-
-.form-select option {
-  background-color: #e2d197 !important;
-  color: #000;
-}
-/*Sirve para darle color al dar clic encima para escribir */
-.form-select:focus {
+/*Estilo de las letras dento de los contenedores del intup*/
+.choices__inner {
   background-color: #e2d197;
   border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+/*Focus del input */
+.choices__input:focus {
   outline: none;
+  border: none;
 }
-/*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
-.form-select::placeholder {
+/*Placeholder del input*/
+.choices__input::placeholder {
+  color: #000;
+  border: none;
+}
+/*Informacion sobre los select que conforman los productos*/
+.choices__list--dropdown {
+  max-height: 150px;
+  display: none;
+  border-color: #e2d197;
+  border-radius: 10px;
+  border: none;
+  color: #000;
+  background-color: #e2d197;
+  overflow-y: auto;
+}
+/*Informacion sobre los select*/
+.choices__list--dropdown.is-active {
+  display: block;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+/*Items*/
+.choices__item {
+  background-color: #e2d197;
+  color: #000;
+  padding: 5px 0px 5px 20px;
+}
+.choices__item.is-highlighted {
+  background-color: #cbc083;
+}
+.choices__list--multiple {
+  display: flex;
+  flex-wrap: wrap;
+}
+.choices__list--multiple .choices__item {
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  gap: 5px;
+}
+/*Boton de eliminar que esta en los productos*/
+.choices__button {
+  display: inline-block;
+  background-color: transparent;
+  background-image: url(../img/svg/trash-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 15px;
+  border: none;
+  aspect-ratio: 1 / 1;
+  font-size: 0;
+  text-indent: 9999px;
+}
+/*Tipo de letras de los label*/
+label{
+  font-size: 20px;
   color: black;
 }
-
-.form-label {
-  color: black;
-  font-size: 17px;
-}
-.calen,
-.descripcion {
+/*Clases de calendario y descripcion*/
+.calen, .descripcion {
   padding-left: 15px !important;
 }
+
 /******************************************************************************************/
 /*Modulo de Registro de personal*/
 
@@ -269,6 +339,8 @@ input[type="file"]::file-selector-button {
 .propiedades {
   height: 40px;
 }
+
+
 /******************************************************************************************/
 /*RESPONSIVE*/
 /*Modulo de inicio de sesion*/
@@ -302,88 +374,3 @@ input[type="file"]::file-selector-button {
   /***********************************************/
 }
 
-/*Modulo de Registro de procesos*/
-.choices {
-  position: relative;
-  background-color: #e2d197;
-  padding: 6px 0 6px 0px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.choices__inner {
-  background-color: #e2d197;
-  border: none;
-  border-radius: 10px;
-  font-size: 20px;
-}
-
-.choices__input {
-  width: 100% !important;
-  background-color: #e2d197;
-  padding-left: 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.choices__input:focus {
-  outline: none;
-}
-
-.choices__input::placeholder {
-  color: #000;
-  opacity: 0.8;
-}
-
-.choices__list--dropdown {
-  max-height: 150px;
-  display: none;
-  border-color: #e2d197;
-  border-radius: 10px;
-  color: #000;
-  background-color: #e2d197;
-  overflow-y: auto;
-}
-
-.choices__list--dropdown.is-active {
-  display: block;
-  width: 100%;
-  position: absolute;
-  z-index: 1000;
-}
-
-.choices__item {
-  background-color: #e2d197;
-  color: #000;
-  padding: 5px 0px 5px 20px;
-}
-
-.choices__item.is-highlighted {
-  background-color: #cbc083;
-}
-
-.choices__list--multiple {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.choices__list--multiple .choices__item {
-  display: flex;
-  font-size: 15px;
-  align-items: center;
-  gap: 5px;
-}
-
-.choices__button {
-  display: inline-block;
-  background-color: transparent;
-  background-image: url(../img/svg/trash-solid.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 15px;
-  border: none;
-  aspect-ratio: 1 / 1;
-  font-size: 0;
-  text-indent: 9999px;
-}

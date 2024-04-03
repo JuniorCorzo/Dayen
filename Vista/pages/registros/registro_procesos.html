@@ -24,13 +24,13 @@
   <!-- Contenedor principal -->
   <div class="container p-4">
     <!-- Contenedor SECUNDARIO que engloba la estructura del registro de lotes-->
-    <div class="row justify-content-center pt-2">
+    <div class="row procesos justify-content-center pt-2">
       <!--Titulo-->
       <h2 class="pt-2">REGISTRAR PROCESOS</h2>
 
       <!-- Contenedor de la imagen-->
       <div class="image pt-2 mb-3">
-        <img class="logo" src="/img/DAYEN-logo.png" />
+        <img class="logo-dayen" src="/img/DAYEN-logo.png" />
       </div>
 
       <!-- Contenedor  principal del formulario-->
@@ -38,7 +38,8 @@
         <!--formulario-->
         <form>
           <!-- Contenedor  del select de LTipos-->
-          <label for="select-tipo" class="form-label">Tipo de Proceso</label>
+          
+          <label for="select-tipo" class="form-label">Tipo de Proceso:</label>
           <div class="form-group mb-3">
             <!-- Iconos-->
             <select id="select-tipo" class="select-tipo">
@@ -46,14 +47,14 @@
             </select>
           </div>
           <!-- Contenedor  del select de Productos-->
-          <label for="select-productos" class="form-label">Productos</label>
+          <label for="select-productos" class="form-label">Productos:</label>
           <div class="form-group mb-3">
             <select id="select-productos" class="form-select select-productos" aria-label="Selecciona los productos"
               multiple></select>
           </div>
 
           <!--Select para los trabajadores-->
-          <label for="select-personal" class="form-label">Trabajadores</label>
+          <label for="select-personal" class="form-label">Trabajadores:</label>
           <div class="form-group mb-3">
             <select id="select-personal" class="select-personal" aria-label="Selecciona los trabajadores"
               multiple></select>
@@ -74,7 +75,7 @@
           </div>
 
           <!-- Boton de Ingresar-->
-          <div class="button-regis">
+          <div class="ms-2">
             <button type="submit" class="btn mb-3" value="ingresar">
               Ingresar
             </button>
