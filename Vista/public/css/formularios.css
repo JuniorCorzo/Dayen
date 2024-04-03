@@ -307,12 +307,13 @@ input[type="file"]::file-selector-button {
   font-size: 0;
   text-indent: 9999px;
 }
+/*Tipo de letras de los label*/
 label{
   font-size: 20px;
   color: black;
 }
-.calen,
-.descripcion {
+/*Clases de calendario y descripcion*/
+.calen, .descripcion {
   padding-left: 15px !important;
 }
 

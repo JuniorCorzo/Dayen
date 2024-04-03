@@ -17,14 +17,15 @@
   <!-- Estilo de css que se le asigna-->
   <link rel="stylesheet" href="/css/formularios.css" />
   <!-- Verifica que exista una session iniciada -->
-  <script type="module" src="src/config/Auth.js"></script>
+  <script type="module" src="../src/config/Auth.js"></script>
+  <script src="../src/utils/Env.js"></script>
 </head>
 
 <body>
   <!-- Contenedor principal -->
   <div class="container">
-    <!-- Contenedor SEGUNDARIO que engloba la estructura del registro de lotes-->
-    <div class="row registro-lotes justify-content-center pt-2 mt-5 m-1">
+    <!-- Contenedor SECUNDARIO que engloba la estructura del registro de lotes-->
+    <div class="row registro justify-content-center pt-2">
       <!--Titulo-->
       <h1 class="pt-2">REGISTRAR LOTES</h1>
       <!-- Contenedor de la imagen-->
@@ -33,34 +34,34 @@
       </div>
 
       <!-- Contenedor  principal del formulario-->
-      <div class="pt-4">
-        <!-- Contenedor segundario que engloba la informacion del formulario de registro de lotes-->
-        <form action="#">
+      <div class="usuario pt-4">
+        <!-- Contenedor secundario que engloba la información del formulario de registro de lotes-->
+        <form enctype="multipart/form-data">
 
-          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de lotes-->
+          <!-- Div que esta compuesta por la clase form-group que componen el formulario de registro de lotes-->
 
           <div class="form-group mb-4">
             <!-- Iconos-->
             <i class="fa-solid fa-camera"></i>
-            <!-- Input de imagen lotes-->
-            <input type="file" class="form-control" name="archivo" id="file-upload" />
+            <!-- Input de lotes-->
+            <input type="file" class="form-control" name="tituloImagen" id="file-upload" />
           </div>
 
           <div class="form-group mb-4">
             <!-- Iconos-->
             <i class="fa-solid fa-sun-plant-wilt"></i>
-            <!-- Input de lotess-->
-            <input type="text" class="form-control" name="Lotes" placeholder="Nombre del Lotes" />
+            <!-- Input de lotes-->
+            <input type="text" class="form-control" name="nombre-lote" placeholder="Nombre del Lote" />
           </div>
 
           <div class="form-group mb-4">
             <!-- Iconos-->
             <i class="fa-solid fa-plant-wilt"></i>
             <!-- Input de Hectareas-->
-            <input type="text" class="form-control" name="Hectareas" placeholder="Hectareas" />
+            <input type="text" class="form-control" name="hectareas" placeholder="Hectareas" />
           </div>
 
-          <!-- Div que contiene la clase d-flex justify-content-centerpara agrupar el Boton de }registrar-->
+          <!-- Div que contiene la clase d-flex justify-content-center para agrupar el Boton de registrar-->
           <div class=" justify-content-center d-flex pb-3">
             <!-- Boton de Ingresar-->
             <button type="submit" class="btn" value="Registrar">
@@ -68,7 +69,7 @@
             </button>
           </div>
 
-          <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
+          <!-- div que agrupa cada Boton y da sus respectivas propiedades con la clase justify-content-center-->
           <div class="justify-content-center d-flex pb-3">
             <!-- Boton de Volver-->
             <a href="/inicio" type="submit" class="btn" value="Volver">
@@ -79,6 +80,7 @@
       </div>
     </div>
   </div>
+  <script type="module" src="../src/utils/RegistroLotes.js"></script>
 </body>
 
 </html>

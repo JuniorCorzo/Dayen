@@ -56,7 +56,7 @@ function updatePersonalSession () {
   const personal = sessionStorage.getItem('personal')
   if (personal) {
     getData(`/personal/${getCookie('userId')}`).then((data) => {
-      sessionStorage.setItem('personal', JSON.stringify(data.personal))
+      sessionStorage.setItem('personal', JSON.stringify(data))
     })
   }
 }
@@ -65,7 +65,7 @@ function updateLoteSession () {
   const lote = sessionStorage.getItem('lotes')
   if (lote) {
     getData(`/lotes/${getCookie('userId')}`).then((data) => {
-      sessionStorage.setItem('lotes', JSON.stringify(data.lote))
+      sessionStorage.setItem('lotes', JSON.stringify(data))
     })
   }
 }
@@ -81,5 +81,6 @@ export {
   generalSessionStorage,
   updateUsuarioSession,
   updatePersonalSession,
-  updateLoteSession
+  updateLoteSession,
+  getCookie
 }
