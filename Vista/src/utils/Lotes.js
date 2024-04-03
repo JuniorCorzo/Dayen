@@ -5,12 +5,12 @@ const insertLotes = () => {
       <div>
         <div class="p-3">
             <a href="/procesos?idLote=${data.idLote}">
-                <h3>Lote ${data.idLote}</h3>
+                <h3>Lote ${data.nombre}</h3>
                 <img 
                   class="IMG-27 mt-4"
-                  src="/img/IMG-27.jpg"
-                  alt="Foto del lote ${data.idLote}"
-                  title="Ir a los procesos del lote ${data.idLote}"
+                  src="/uploads/${data.tituloImagen}${data.idLote}.webp"
+                  alt="Foto del lote ${data.nombre}"
+                  title="Ir a los procesos del lote ${data.nombre}"
                   >
             </a>
         </div>
