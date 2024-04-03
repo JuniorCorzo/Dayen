@@ -19,6 +19,7 @@
   <!-- Estilo de css que se le asigna-->
   <link rel="stylesheet" href="/css/style.css" />
 
+  <!-- Verificacon  -->
   <script src="src/utils/Env.js" ;></script>
 </head>
 
@@ -35,7 +36,7 @@
           <img src="/img/DAYEN-logo.png" alt="Logo" class="d-inline-block">
         </div>
 
-        <!--Contenedor del logo-->
+        <!--Contenedor de los botones-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,19 +44,21 @@
         <!--Contenedor que engloba el inicio de sesion y registrar-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
 
-          <ul class="navbar-nav">
-            <!--ul de inicio de Sesion y Registro -->
+          <ul class="navbar-nav"> <!--Empieza engloba el inicio de sesion y registro -->
+            <!-- Inicio de Sesion -->
             <li class="nav-item">
               <a class="nav-link" href="/login">Inicio Sesion</a>
-              <i class="bi-inicio bi-person-check d-none d-lg-block"></i>
+              <a href="/login"> <i class="bi-inicio bi-person-check d-none d-lg-block"></i></a>
             </li>
 
+             <!--Registar usuarios -->
             <li class="nav-item">
               <a class="nav-link" href="/registrarse">Registrar</a>
-              <i class="bi-people bi-people d-none d-lg-block"></i>
+              <a href="/registrarse"><i class="bi-people bi-people d-none d-lg-block"></i></a>
             </li>
-          </ul>
-        </div>
+
+          </ul> <!--Termina engloba el inicio de sesion y registro -->
+        </div> <!--Termina contenedor que engloba el inicio de sesion y registrar -->
       </div>
       </div>
     </nav>
@@ -105,13 +108,13 @@
           </div>
 
         </div>
-      </div>
+      </div> <!--Termina modulo de tarjetas de imágenes -->
 
       <!--Empieza el pie de Pagina -->
       <footer>
 
         <nav class="nav-footer mt-4">
-          <!--ul de inicio de Sesion y Registro -->
+      
           <ul class="nav justify-content-center">
 
             <li class="nav-item">

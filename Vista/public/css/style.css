@@ -1,4 +1,4 @@
-/*Estilo de modulos de inicio de sesion- Recuperar contraseña- Registrar usaurio*/
+/*Estilo de modulos de index, modulo de lotes, modulo de procesos*/
 
 * {
   margin: 0;
@@ -9,8 +9,8 @@ body {
 }
 /*Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
-/*@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); Titulos*/
-/*  font-family: "Cormorant", serif;--------Para los subtitulos- y botones --y el input del formulario*/
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); /*Para los titulos*/
+
 
 /*************************************************************************************/
 /*Modulo de Bienvenida*/
@@ -105,6 +105,7 @@ p {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
 }
+
 /***************************************************************************************/
 /*Inicio del estilo de Modulo de Lotes*/
 /*Barra de menu*/
