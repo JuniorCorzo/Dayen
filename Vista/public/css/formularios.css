@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap');
+/*Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
 
 /****************************************************************************************************************/
 /*Inicio del Modulo de Inicio de Sesion*/
@@ -39,6 +39,7 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+/*Estilo del logo*/
 .img {
   width: 140px;
   height: 140px;
@@ -60,9 +61,10 @@ h1 {
   outline: none;
   font-family: 'Cormorant', sans-serif;
 }
-/*Sirve para darle color al dar clic encima para escribir  */
+/* Cambiar el color del borde cuando el input está enfocado */
 .form-control:focus {
   background-color: #e2d197 !important;
+  box-shadow: 0 0 0 0.25rem #e2d197;
   border: none;
 }
 /*Sirve para darle el color al nombre de usuario y password y a todos los palabras o frases que obtengan esta clase por defecto del bootstrap */
@@ -150,9 +152,11 @@ h1 {
 .form-control-input::placeholder {
   color: black;
 }
+
 /**********************************************************************************************************************************/
 /*Modulo de Registro de Usuario*/
 .registro {
+  font-family: "Cormorant", serif;
   background-color: #a0d7ac;
   width: 320px;
   border-radius: 15px;
@@ -176,7 +180,7 @@ h2 {
   width: 130px;
   height: 130px;
 }
-/*Contenedor principal donde engloba el formulario*/
+/*Contenedor principal donde engloba el formulario
 .usuario {
   font-family: "Cormorant", serif;
   background-color: #a0d7ac;
@@ -202,6 +206,7 @@ input[type="file"]::file-selector-button {
 /*************************************************************************************/
 /*Modulo de Registro de procesos*/
 .procesos {
+  font-family: "Cormorant", serif;
   background-color: #a0d7ac;
   width: 330px !important;
   border-radius: 15px;
@@ -246,6 +251,7 @@ input[type="file"]::file-selector-button {
 /*Modulo de Registro de personal*/
 
 .registro {
+  font-family: "Cormorant", serif;
   background-color: #a0d7ac;
   width: 320px;
   border-radius: 15px;
@@ -313,7 +319,7 @@ input[type="file"]::file-selector-button {
 }
 
 .choices__input {
-  width: 100px !important;
+  width: 100% !important;
   background-color: #e2d197;
   padding-left: 20px;
   border: none;

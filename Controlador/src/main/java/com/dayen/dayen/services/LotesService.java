@@ -28,6 +28,8 @@ public class LotesService {
 	public Lotes createLote(@Valid LoteRequest lote) {
 		return this.loteRepository.save(Lotes.builder()
 				.idUsuario(this.usuarioRepository.findById(lote.idUsuario()).orElseThrow())
+				.nombre(lote.nombre())
+				.tituloImagen(lote.tituloImagen())
 				.fase(lote.fase())
 				.hectareas(lote.hectareas())
 				.build());
@@ -40,6 +42,8 @@ public class LotesService {
 		return this.loteRepository.save(Lotes.builder()
 				.idLote(lote.idLote())
 				.idUsuario(this.usuarioRepository.findById(lote.idUsuario()).orElseThrow())
+				.nombre(lote.nombre())
+				.tituloImagen(lote.tituloImagen())
 				.fase(lote.fase())
 				.hectareas(lote.hectareas())
 				.build());
