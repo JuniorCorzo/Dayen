@@ -21,6 +21,7 @@ class Login {
       // Todo:: Validate fields
       self.fields.forEach((field) => {
         const input = document.querySelector(`#${field}`)
+        // aquí crea la lógica de validar los campos
         data[field] = input.value
       })
 
