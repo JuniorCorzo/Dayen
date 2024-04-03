@@ -4,6 +4,6 @@ public record PersonalRequest(
 		Integer idPersonal,
 		String idUsuario,
 		String nombre,
-		Integer telefono
+		String telefono
 
 ) {}

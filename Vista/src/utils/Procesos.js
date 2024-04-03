@@ -6,6 +6,7 @@ new DataTable('#tablaprocesos', {
   lengthChange: false,
   pageLength: 10,
   ordering: true,
+  order: [[5, 'desc']],
   info: false,
   ajax: {
     url: `${window.HOST_API}/proceso/${idLote.get('idLote')}`,

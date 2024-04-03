@@ -27,13 +27,21 @@ public class Lotes {
     @JsonBackReference
     private Usuarios idUsuario;
 
-    @Column(name = "fase")
-    private String fase;
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "titulo-imagen")
+    private String tituloImagen;
 
     @Column(name = "hectareas")
     private Integer hectareas;
 
+    @Column(name = "fase")
+    private String fase;
+
+
     @JsonManagedReference
     @OneToMany(mappedBy = "idLote", targetEntity = Procesos.class)
     private List<Procesos> procesos;
+
 }

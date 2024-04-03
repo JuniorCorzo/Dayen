@@ -35,7 +35,7 @@ public class Personal {
 
     @Column(name = "telefono")
     @NotNull
-    private Integer telefono;
+    private String telefono;
 
     @JsonBackReference
     @ManyToMany(mappedBy = "personal")

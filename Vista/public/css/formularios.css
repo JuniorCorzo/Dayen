@@ -1,12 +1,10 @@
 /*Estilo de módulos de inicio de sesion- Recuperar contraseña- Registrar usuario*/
-
 * {
   margin: 0;
   padding: 0;
 }
 /*Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
-
 
 /****************************************************************************************************************/
 /*Inicio del Modulo de Inicio de Sesion*/
@@ -48,7 +46,7 @@ h1 {
 }
 /*Contenedor de formulario-principal del inicio de sesion*/
 .formulario {
-  font-family: "Cormorant", serif;
+  font-family: "Crete Round", serif !important;
   background-color: #a0d7ac;
   border-radius: 15px;
 }
@@ -61,6 +59,7 @@ h1 {
   border: none;
   cursor: pointer;
   outline: none;
+  font-family: 'Cormorant', sans-serif;
 }
 /* Cambiar el color del borde cuando el input está enfocado */
 .form-control:focus {
