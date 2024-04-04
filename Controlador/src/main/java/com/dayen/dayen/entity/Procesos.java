@@ -10,7 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -55,7 +55,7 @@ public class Procesos {
     private String descripcion;
 
     @Column(name = "realizado_en")
-    private LocalDateTime realizadoEn;
+    private LocalDate realizadoEn;
 
     @JsonManagedReference
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)

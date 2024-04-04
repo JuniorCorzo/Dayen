@@ -2,7 +2,7 @@ package com.dayen.dayen.dao.request;
 
 import com.dayen.dayen.entity.Personal;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public record ProcesoRequest(
@@ -11,6 +11,6 @@ public record ProcesoRequest(
 		Integer idTipo,
 		List<Integer> idProducto,
 		String descripcion,
-		LocalDateTime realizadoEn,
+		LocalDate realizadoEn,
 		List<Integer> idPersonal
 ) {}
