@@ -3,6 +3,31 @@ import insertsSelectInfo from './FormProcesos'
 
 const params = new URLSearchParams(window.location.search)
 
+function prepararModificar () {
+  document.querySelectorAll('.modificar-proceso').forEach((element) => {
+    element.addEventListener('click', function (event) {
+      event.preventDefault()
+
+      choicesReturn.productos.setChoiceByValue(this.getAttribute('data-productos').split(','))
+      choicesReturn.personal.setChoiceByValue(this.getAttribute('data-personal').split(','))
+      choicesReturn.tipoProceso.setChoiceByValue(this.getAttribute('data-id-tipo'))
+      document.querySelector('.descripcion').value = this.getAttribute('data-descripcion')
+      document.querySelector('.calen').value = this.getAttribute('data-realizado-en')
+
+      document.querySelector('.modificar-proceso').setAttribute('data-id-proceso', this.getAttribute('data-id-proceso'))
+    })
+  })
+}
+
+function prepararEliminar () {
+  document.querySelectorAll('.eliminar-proceso').forEach((element) => {
+    element.addEventListener('click', function (event) {
+      event.preventDefault()
+      document.querySelector('#eliminar_boton').setAttribute('data-id-proceso', this.getAttribute('data-id-proceso'))
+    })
+  })
+}
+
 const tablaProceso = new DataTable('#tablaprocesos', {
   lengthChange: false,
   pageLength: 10,
@@ -83,20 +108,8 @@ const tablaProceso = new DataTable('#tablaprocesos', {
     search: 'Buscar:'
   },
   drawCallback: function () {
-    document.querySelectorAll('.modificar-proceso').forEach((element) => {
-      console.log(element)
-      element.addEventListener('click', function (event) {
-        event.preventDefault()
-
-        choicesReturn.productos.setChoiceByValue(this.getAttribute('data-productos').split(','))
-        choicesReturn.personal.setChoiceByValue(this.getAttribute('data-personal').split(','))
-        choicesReturn.tipoProceso.setChoiceByValue(this.getAttribute('data-id-tipo'))
-        document.querySelector('.descripcion').value = this.getAttribute('data-descripcion')
-        document.querySelector('.calen').value = this.getAttribute('data-realizado-en')
-
-        document.querySelector('.modificar-proceso').setAttribute('data-id-proceso', this.getAttribute('data-id-proceso'))
-      })
-    })
+    prepararModificar()
+    prepararEliminar()
   }
 })
 const choicesReturn = insertsSelectInfo()

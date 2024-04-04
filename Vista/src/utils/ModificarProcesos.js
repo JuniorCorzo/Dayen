@@ -1,14 +1,9 @@
-import { pushData } from './FetchData'
+import { pushData, deleteData } from './FetchData'
 import actualizarTabla from './Procesos'
 
 function modificarProceso (data) {
   pushData('/proceso/update', data, 'PUT').then((res) => {
-    console.log(res)
-    if (res.status === 200) {
-      alert('Proceso modificado con éxito')
-    } else {
-      alert('Error al modificar el proceso')
-    }
+    alert('Proceso modificado con éxito')
     actualizarTabla()
   })
 }
@@ -35,4 +30,15 @@ document.querySelector('#modificar_form').addEventListener('submit', (e) => {
   })
 
   modificarProceso(data)
+})
+
+function eliminarProceso (idProceso) {
+  deleteData(`/proceso/delete/${idProceso}`).then((res) => {
+    actualizarTabla()
+    alert('Proceso eliminado con éxito')
+  })
+}
+
+document.querySelector('#eliminar_boton').addEventListener('click', (e) => {
+  eliminarProceso(e.target.getAttribute('data-id-proceso'))
 })
