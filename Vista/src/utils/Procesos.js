@@ -1,4 +1,6 @@
 import DataTable from 'datatables.net-bs5'
+import 'datatables.net-responsive-bs5'
+import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import insertsSelectInfo from './FormProcesos'
 
 const params = new URLSearchParams(window.location.search)
@@ -29,6 +31,7 @@ function prepararEliminar () {
 }
 
 const tablaProceso = new DataTable('#tablaprocesos', {
+  responsive: true,
   lengthChange: false,
   pageLength: 10,
   ordering: true,
