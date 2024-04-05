@@ -1,0 +1,96 @@
+/*Estilo del Modulo de Registro de Personal*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
+
+/*Color del body */
+body {
+  background-color: grey;
+}
+/*Container principal*/
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Modulo de Registro de personal*/
+
+.registro {
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
+}
+
+/*Contenedor principal donde engloba el formulario*/
+.personal {
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  border-radius: 15px;
+}
+
+/*Titulo*/
+h2 {
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+/*Div de la imagen */
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 130px;
+  height: 130px;
+}
+/* Clases y propiedades de los iconocs que estan en el input */
+.bi {
+  color: black;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+/*Formulario del login -- engloba el input */
+.form-control {
+  padding-left: 35px !important;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Cormorant", sans-serif;
+}
+/* Cambiar el color del borde cuando el input está enfocado */
+.form-control:focus {
+  background-color: #e2d197 !important;
+  box-shadow: 0 0 0 0.25rem #e2d197;
+  border: none;
+}
+/*Sirve para darle el color a los placeholder que esten dentro de la clase form-control*/
+.form-control::placeholder {
+  background-color: #e2d197 !important;
+  color: black;
+}
+/*Boton de ingresar y volver*/
+.btn {
+  font-family: "Cormorant", serif;
+  width: 150px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background-color: #e0ab4e;
+}

@@ -4,9 +4,7 @@
   margin: 0;
   padding: 0;
 }
-body {
-  background-color: grey;
-}
+
 /*Fuentes */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap'); /*Para los titulos*/
@@ -14,6 +12,9 @@ body {
 
 /*************************************************************************************/
 /*Modulo de Bienvenida*/
+body {
+  background-color: grey;
+}
 /*Barra de Navegacion principal*/
 /*Clase principal*/
 .navbar {
@@ -60,8 +61,14 @@ ul li a:hover {
   height: 100px;
 }
 /*Contenido de Modulo de bienvenida*/
-/*Titulos*/
+/*Titulos
 .title {
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+  color: #e8e6e6;
+}
+/*Titulos*/
+h1 {
   font-family: "Crete Round", serif;
   font-size: 50px;
   color: #e8e6e6;
@@ -207,7 +214,7 @@ input[type="file"]::file-selector-button {
   background-color: #e2d197 !important;
   color: black;
 }
-*Check de verificacion de recordar usuario */ 
+/*Check de verificacion de recordar usuario */ 
 .form-check-input {
   width: 25px;
   height: 25px;

@@ -53,7 +53,7 @@ async function createServer () {
   route('/registro/proceso', 'pages/registros/registro_procesos.html')
   route('/registro/personal', 'pages/registros/registro_personal.html')
   route('/procesos', 'pages/modulo_procesos.html')
-  route('/validar_clave', 'pages/registros/validar_contraseña.html')
+  route('/validar_clave', 'pages/registros/registro_contraseña.html')
 
   app.use(vite.middlewares)
   app.listen(5050, () => {
