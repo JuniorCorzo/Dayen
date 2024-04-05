@@ -196,6 +196,14 @@ h2 {
   box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
   box-sizing: border-box;
 }
+
+.icons {
+  font-size: 15px;
+  position: absolute;
+  padding: 12px;
+  pointer-events: none;
+}
+
 /* Clases del icono que están en el registre lotes*/
 input[type="file"]::file-selector-button {
   background-color: #e2d197 !important;
