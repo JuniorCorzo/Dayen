@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
@@ -15,7 +16,6 @@ import org.springframework.util.FileCopyUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -30,6 +30,9 @@ public class RecuperacionClaveService {
 	private final EmailService emailService;
 	private final ResourceLoader resourceLoader;
 	private final PasswordEncoder passwordEncoder;
+	@Value("${URL_RECUPERAR_CLAVE}")
+	private String url;
+
 
 	public RecuperacionClaveService(UsuarioRepository usuarioRepository, EmailService emailService, ResourceLoader resourceLoader) {
 		this.usuarioRepository = usuarioRepository;
@@ -37,7 +40,6 @@ public class RecuperacionClaveService {
 		this.resourceLoader = resourceLoader;
 
 		this.passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
-
 	}
 
 	public void createTokenRecuperacion(@NotNull @Email String correo) {
@@ -47,7 +49,7 @@ public class RecuperacionClaveService {
 		sendMail(correo, TOKEN);
 	}
 
-	public void changeClave(String token, String newClave) throws MessagingException, UnsupportedEncodingException {
+	public void changeClave(String token, String newClave)  {
 		if (isExpire(token)) {
 			this.usuarioRepository.resetToken(token);
 			throw new RuntimeException("El token expiro");
@@ -95,7 +97,7 @@ public class RecuperacionClaveService {
 			byte[] bData = FileCopyUtils.copyToByteArray(inputStream);
 
 			content = new String(bData, StandardCharsets.UTF_8)
-					.replace("{link}", TOKEN);
+					.replace("{link}", url.concat("?token=").concat(TOKEN));
 
 			this.emailService.sendMail(correo, subject, content);
 		} catch (IOException | MessagingException e) {
