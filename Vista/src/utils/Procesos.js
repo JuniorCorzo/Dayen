@@ -1,15 +1,41 @@
 import DataTable from 'datatables.net-bs5'
+import insertsSelectInfo from './FormProcesos'
 
-const idLote = new URLSearchParams(window.location.search)
-// eslint-disable-next-line no-new
-new DataTable('#tablaprocesos', {
+const params = new URLSearchParams(window.location.search)
+
+function prepararModificar () {
+  document.querySelectorAll('.modificar-proceso').forEach((element) => {
+    element.addEventListener('click', function (event) {
+      event.preventDefault()
+
+      choicesReturn.productos.setChoiceByValue(this.getAttribute('data-productos').split(','))
+      choicesReturn.personal.setChoiceByValue(this.getAttribute('data-personal').split(','))
+      choicesReturn.tipoProceso.setChoiceByValue(this.getAttribute('data-id-tipo'))
+      document.querySelector('.descripcion').value = this.getAttribute('data-descripcion')
+      document.querySelector('.calen').value = this.getAttribute('data-realizado-en')
+
+      document.querySelector('.modificar-proceso').setAttribute('data-id-proceso', this.getAttribute('data-id-proceso'))
+    })
+  })
+}
+
+function prepararEliminar () {
+  document.querySelectorAll('.eliminar-proceso').forEach((element) => {
+    element.addEventListener('click', function (event) {
+      event.preventDefault()
+      document.querySelector('#eliminar_boton').setAttribute('data-id-proceso', this.getAttribute('data-id-proceso'))
+    })
+  })
+}
+
+const tablaProceso = new DataTable('#tablaprocesos', {
   lengthChange: false,
   pageLength: 10,
   ordering: true,
   order: [[5, 'desc']],
   info: false,
   ajax: {
-    url: `${window.HOST_API}/proceso/${idLote.get('idLote')}`,
+    url: `${window.HOST_API}/proceso/${params.get('idLote')}`,
     method: 'GET',
     dataSrc: '',
     beforeSend: function (xhr) {
@@ -47,14 +73,31 @@ new DataTable('#tablaprocesos', {
       data: null,
       title: 'Acciones',
       orderable: false,
-      render: function () {
+      render: function (data) {
         return `
-      <a data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <i class="bi bi-pencil-square"></i>
-      </a>
-      <a data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class="bi bi-trash"></i>
-      </a>
+        <div class="d-flex justify-content-center gap-3">
+          <a
+            class="modificar-proceso"
+            data-bs-toggle="modal" 
+            data-bs-target="#modificar_modal"
+            data-id-proceso="${data.idProceso}"  
+            data-id-tipo="${data.idTipo.idTipo}"
+            data-productos="${data.idProducto.map((producto) => producto.idProducto).join(',')}"
+            data-descripcion="${data.descripcion}"
+            data-personal="${data.personal.map((personal) => personal.idPersonal).join(',')}"
+            data-realizado-en="${data.realizadoEn}"
+          >
+            <i class="bi-pencil-square"></i>
+          </a>
+          <a
+            class="eliminar-proceso"
+            data-bs-toggle="modal" 
+            data-bs-target="#eliminar_modal"
+            data-id-proceso="${data.idProceso}"
+          >
+            <i class="bi-trash"></i>
+          </a>
+        </div>
     `
       }
     }
@@ -63,10 +106,19 @@ new DataTable('#tablaprocesos', {
     zeroRecords: 'No existen procesos asociados a este lote',
     emptyTable: 'No existen procesos asociados a este lote',
     search: 'Buscar:'
+  },
+  drawCallback: function () {
+    prepararModificar()
+    prepararEliminar()
   }
 })
-
+const choicesReturn = insertsSelectInfo()
 const containerSearch = document.querySelector('.dt-container .row')
 containerSearch.classList.remove('row')
+document.querySelector('.crear-proceso').href = `/registro/proceso?idLote=${params.get('idLote')}`
 
-document.querySelector('.crear-proceso').href = `/registro/proceso?${idLote}`
+function actualizarTabla () {
+  tablaProceso.ajax.reload()
+}
+
+export default actualizarTabla

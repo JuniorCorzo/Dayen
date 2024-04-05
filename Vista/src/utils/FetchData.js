@@ -30,4 +30,19 @@ export function pushData (url, data, method = 'POST') {
     })
 }
 
+export function deleteData (url) {
+  return fetch(`${window.HOST_API}${url}`, {
+    method: 'DELETE',
+    headers: {
+      'content-type': 'application/json',
+      Authorization: `Bearer ${sessionStorage.getItem('jwt')}`
+    }
+  })
+    .then((response) => {
+      if (!response.ok) throw Error(response.statusText)
+    })
+    .catch((err) => {
+      throw Error(err)
+    })
+}
 export default getData
