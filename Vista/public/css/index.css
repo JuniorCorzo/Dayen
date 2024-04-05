@@ -1,0 +1,108 @@
+/*Estilo de modulos de index, modulo de lotes, modulo de procesos*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap"); /*Para los titulos*/
+
+/*************************************************************************************/
+/*Modulo de Bienvenida*/
+body {
+  background-color: grey;
+}
+/*Barra de Navegacion principal*/
+/*Clase principal*/
+.navbar {
+  font-family: "Cormorant", serif;
+  border-radius: 15px;
+  height: 100px;
+  visibility: visible;
+  background-color: #a0d7ac !important;
+}
+/*Estilo de infromacion de la barra de navegacion*/
+.nav-link {
+  width: fit-content;
+  margin-left: 10px;
+  font-size: 25px;
+}
+ul li a {
+  color: black !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+ul li a:hover {
+  text-shadow: 2px 2px 20px #04f839;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/*Inconos de la barra de navegacion de Bienvenida*/
+/*Icono inicio de sesion*/
+.bi-inicio {
+  color: black;
+  font-size: 26px;
+  margin-left: 65px;
+  cursor: pointer;
+}
+/*Icono registro de persona*/
+.bi-people {
+  color: black;
+  font-size: 26px;
+  margin-left: 45px;
+  cursor: pointer;
+}
+/*Imagen de DAYEN*/
+.d-inline-block {
+  width: 100px;
+  height: 100px;
+}
+/*Contenido de Modulo de bienvenida*/
+
+/*Titulos*/
+h1 {
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+  color: #e8e6e6;
+}
+h1:hover {
+  text-shadow: 2px 2px 20px #151615;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*Parrafos y contenido*/
+p {
+  text-align: justify;
+  font-size: 25px;
+  color: #e8e6e6;
+}
+/*Pie de pagina*/
+.nav-footer a {
+  color: #e8e6e6 !important;
+}
+.bi-whatsapp,
+.bi-facebook,
+.bi-github,
+.bi-instagram {
+  margin-left: 45px;
+  font-size: 40px !important;
+}
+/*Estilo de imagenes de Bienvenida*/
+.img-1,
+.img-9,
+.img-7 {
+  width: 350px;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px#a0d7ac;
+  -webkit-box-shadow: 0px 0px 15px 15px #a0d7ac;
+}
+/*Cover del div de columna*/
+.img-lote:hover {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
