@@ -13,7 +13,7 @@ body {
   background-color: grey;
 }
 /*Contenedor principa*/
-.container {
+.container-form {
   min-height: 100vh;
   display: flex;
   align-items: center;

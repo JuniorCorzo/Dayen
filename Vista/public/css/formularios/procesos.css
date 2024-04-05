@@ -11,14 +11,13 @@ body {
   background-color: grey;
 }
 /*Container principal*/
-.container {
+.container-form {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-/*Contenedor secundario a*/
+/*Contenedor secundario */
 .row {
   font-family: "Cormorant", serif;
   background-color: #a0d7ac;
@@ -57,7 +56,6 @@ label {
 }
 /*Formulario del login -- engloba el input */
 .form-control {
-  padding-left: 35px !important;
   border-radius: 10px;
   font-size: 18px;
   background-color: #e2d197;
