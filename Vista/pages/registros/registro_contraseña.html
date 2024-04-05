@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Validar Contraseña</title>
+    <!-- Estilo del logo de doble ventana-->
+    <link rel="icon" href="/img/DAYEN-logo.png" type="image/x-icon" />
+    <!-- Estilo del Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Estilo de los iconos de bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Estilo de css que se le asigna-->
+    <link rel="stylesheet" href="/css/formularios/contraseña.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Validar Contraseña</title>
-  <!-- Estilo del logo de doble ventana-->
-  <link rel="icon" href="/img/DAYEN-logo.png" type="image/x-icon" />
-  <!-- Estilo del Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <!-- Estilo de los iconos de bootstrap-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Estilo de css que se le asigna-->
-  <link rel="stylesheet" href="/css/formularios/contraseña.css" />
-</head>
+  <body>
+    <!-- Contenedor principal-->
+    <div class="container-form">
+      <!-- Contenedor segundario que engloba el ingreso del correo del usuario para recuperara la contraseña-->
+      <div class="contenedor justify-content-center pt-2 mt-5 m-1">
+        <!--Titulo -->
+        <h1 class="pt-2">RECUPERAR CONTRASEÑA</h1>
+        <!-- Contenedor de la imagen-->
+        <div class="imagen pt-2">
+          <img class="img" src="/img/DAYEN-logo.png" />
+        </div>
 
-<body>
-  <!-- Contenedor principal-->
-  <div class="container-form">
-    <!-- Contenedor segundario que engloba el ingreso del correo del usuario para recuperara la contraseña-->
-    <div class="contenedor justify-content-center pt-2 mt-5 m-1">
-      <!--Titulo -->
-      <h1 class="pt-2">RECUPERAR CONTRASEÑA</h1>
-      <!-- Contenedor de la imagen-->
-      <div class="imagen pt-2">
-        <img class="img" src="/img/DAYEN-logo.png" />
-      </div>
+        <!-- Contenedor principal del formulario de Recuperar la contraseña-->
+        <div class="contraseña pt-4">
+          <!-- Contenedor segundario del formulario de Recuperar la contraseña con la clase justify-content-center para darle las propiedades -->
+          <div class="justify-content-center d-flex pb-3">
+            <!-- Formulario para realizar la accion del envio de correo correctamente-->
+            <form id="cambiar_clave_form">
+              <!-- Div que esta compuesta para recuperar contraseña-->
+              <div class="form-group mb-3">
+                <!-- Iconos-->
+                <i class="bi bi-eye"></i>
+                <!-- input validar contraseña-->
+                <input
+                  type="text"
+                  class="form-control"
+                  name="clave"
+                  placeholder="Contraseña"
+                />
+                <small class="error-clave"></small>
+              </div>
 
-      <!-- Contenedor principal del formulario de Recuperar la contraseña-->
-      <div class="contraseña pt-4">
-        <!-- Contenedor segundario del formulario de Recuperar la contraseña con la clase justify-content-center para darle las propiedades -->
-        <div class="justify-content-center d-flex pb-3">
-          <!-- Formulario para realizar la accion del envio de correo correctamente-->
-          <form action="">
+              <!-- Div que esta compuesta para recuperar contraseña-->
+              <div class="form-group mb-3">
+                <!-- Iconos-->
+                <i class="bi bi-eye-slash"></i>
+                <!-- Input para confirmar la validacion de la contraseña-->
+                <input
+                  type="text"
+                  class="form-control"
+                  name="confirmar-clave"
+                  placeholder="Confirmar Contraseña"
+                />
+                <small class="error-confirmar-clave"></small>
+              </div>
+              <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
+              <div class="justify-content-center d-flex pb-3">
+                <!-- Boton de Ingresar-->
+                <button type="submit" class="btn" value="ingresar">
+                  Aceptar
+                </button>
+              </div>
 
-          <!-- Div que esta compuesta para recuperar contraseña-->
-          <div class="form-group mb-3">
-          <!-- Iconos-->
-          <i class="bi bi-eye"></i>
-            <!-- input validar contraseña-->
-            <input type="text" class="form-control"  name="contraseña" id="" placeholder="Contraseña" />
+              <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
+              <div class="justify-content-center d-flex pb-3">
+                <!-- Boton de Volver-->
+                <a
+                  href="/recuperar_clave"
+                  type="submit"
+                  class="btn"
+                  value="Volver"
+                >
+                  Volver
+                </a>
+              </div>
+            </form>
           </div>
-          
-          <!-- Div que esta compuesta para recuperar contraseña-->
-          <div class="form-group mb-3">
-            <!-- Iconos-->
-            <i class="bi bi-eye-slash"></i>
-              <!-- Input para confirmar la validacion de la contraseña-->
-              <input type="text" class="form-control"  name="contraseña" id="" placeholder="Confirmar Contraseña" />
-            </div>
-          
         </div>
-
-        <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
-        <div class="justify-content-center d-flex pb-3">
-          <!-- Boton de Ingresar-->
-          <button type="submit" class="btn" value="ingresar">Aceptar</button>
-        </div>
-
-        <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
-        <div class="justify-content-center d-flex pb-3">
-          <!-- Boton de Volver-->
-          <a href="/recuperar_clave" type="submit" class="btn" value="Volver">
-            Volver
-          </a>
-        </div>
-        </form>
       </div>
-
     </div>
-  </div>
-</body>
-
+    <script type="module" src="../src/utils/RecuperarClave.js"></script>
+    <script src="../src/utils/Env.js"></script>
+  </body>
 </html>
