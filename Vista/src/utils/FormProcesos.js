@@ -1,5 +1,5 @@
 import Choices from 'choices.js'
-import '../../public/css/formularios.css'
+import '../../public/css/formularios/choices.css'
 
 function insertsSelectInfo () {
   const choicesReturn = {}
