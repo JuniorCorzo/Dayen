@@ -1,4 +1,4 @@
-import { validarClave } from './ValidarForm'
+import { validarClave } from './procesos/ValidarForm'
 function enviarCorreo (email) {
   fetch(`${window.HOST_API}/recuperar_clave?correo=${email}`, {
     method: 'POST',
