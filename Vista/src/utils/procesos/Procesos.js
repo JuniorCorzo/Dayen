@@ -4,6 +4,7 @@ import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
 import insertsSelectInfo from './FormProcesos'
 
 const params = new URLSearchParams(window.location.search)
+document.querySelector('.title').innerHTML = `Procesos del lote ${params.get('nombre')}`
 
 function prepararModificar () {
   document.querySelectorAll('.modificar-proceso').forEach((element) => {

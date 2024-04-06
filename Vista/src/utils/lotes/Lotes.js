@@ -4,7 +4,7 @@ const insertLotes = () => {
       return `
       <div>
         <div class="d-flex flex-column p-3 ">
-            <a href="/procesos?idLote=${data.idLote}">
+            <a href="/procesos?idLote=${data.idLote}&nombre=${data.nombre}">
                 <h3>Lote ${data.nombre}</h3>
                 <img 
                   class="imagen-lotes mt-4"
