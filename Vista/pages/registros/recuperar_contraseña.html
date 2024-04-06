@@ -33,11 +33,11 @@
         <!-- Contenedor segundario del formulario de Recuperar la contraseña con la clase justify-content-center para darle las propiedades -->
         <div class="justify-content-center d-flex pb-3">
           <!-- Formulario para realizar la accion del envio de correo correctamente-->
-          <form action="">
+          <form id="recuperar_clave_form">
             <!-- Iconos-->
             <i class="bi bi-envelope-at"></i>
             <!-- Input con la clase de form-control-input para ingresar el correo electronico-->
-            <input type="email" class="form-control-input" id="floatingInputValue" placeholder="name@example.com" />
+            <input type="email" class="form-control-input" name="email" placeholder="name@example.com" />
         </div>
 
         <!-- div que agrupa cada boton y da sus respectivas propiedades con la clase justify-content-center-->
@@ -58,6 +58,8 @@
 
     </div>
   </div>
+  <script type="module" src="../src/utils/RecuperarClave.js"></script>
+  <script type="module" src="../src/utils/Env.js"></script>
 </body>
 
 </html>

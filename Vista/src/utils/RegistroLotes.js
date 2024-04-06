@@ -6,8 +6,8 @@ function registraLote (data, target) {
     .then((data) => {
       console.log(data)
       guardarImagen(target, data.tituloImagen.concat(data.idLote))
-      alert(`Se registro el lote llamado ${data.nombre}`)
       updateLoteSession()
+      alert(`Se registro el lote llamado ${data.nombre}`)
     })
 }
 
