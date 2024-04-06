@@ -90,11 +90,39 @@
         <h4>Lotes</h4>
         <!--Contenedor de los lotes-->
         <div class="d-flex flex-wrap justify-content-center align-content-start mt-3 contenedor-lotes">
-
+          
         </div>
 
       </div>
     </div>
+
+      <!--Modal eliminar-->
+    
+     <!-- Empieza Modal Eliminar -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Eliminar Lote 🌱
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">Desea eliminar este Lote</div>
+              <div class="modal-footer">
+               <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-center">
+                  <button type="button" class="btn-modal" data-bs-dismiss="modal">
+                  Aceptar
+                  </button>
+                  <button type="button" class="btn-modal" data-bs-dismiss="modal">
+                  Cancelar
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div><!-- Termina Modal Eliminar -->
+
   </main>
   <!--Link de utilidades-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -62,8 +62,8 @@ h4:hover {
 }
 /*Imagen de DAYEN*/
 .d-inline-block {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 /*Titulos*/
 .title {
@@ -72,10 +72,10 @@ h4:hover {
   color: #e8e6e6 !important;
   cursor: pointer;
 }
-.title:hover{
-    text-shadow: 2px 2px 20px #151615;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+.title:hover {
+  text-shadow: 2px 2px 20px #151615;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 /*Contenedor de las imagenes*/
 .galeria {
@@ -116,4 +116,119 @@ h4:hover {
 }
 .btn:hover {
   background-color: #a0d7ac;
+} 
+/*Estilo del cuadro de busqueda */
+.form-control {
+  padding-left: 35px !important;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
+/*para darle el estilo de fondo del recuadro de busqueda */
+.form-control:focus {
+  background-color: #e2d197 !important;
+  box-shadow: 0 0 0 0.25rem #e2d197;
+  border: none;
+}
+/*Color del texto dentro del recuadro de busqueda */
+.form-control::placeholder {
+  background-color: #e2d197 !important;
+  color: black;
+}
+/*Clase del titulo buscar*/
+.dt-search label {
+  display: flex;
+  color: #e8e6e6;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+/************************************/
+/*MODALES*/
+/*Modal Eliminar*/
+/*Contenedor del modal eliminar*/
+.modal-content {
+  background-color: #a3d4be;
+}
+/*Titulo del modal eliminar*/
+.modal-title {
+  color: black;
+}
+/*Boton del modal eliminar*/
+.btn-modal {
+  font-family: "Cormorant", serif;
+  width: 100px;
+  height: 60px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+/*contenedor del modal que tiene mensaje*/
+.modal-body {
+  font-size: 20px;
+}
+/***************************************/
+/*Modal de modificar procesos*/
+
+/*Titulo*/
+h2 {
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+.form-select {
+  padding-left: 30px !important;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+/*Sirve para darle color al dar clic encima para escribir  */
+.form-select:focus {
+  background-color: #e2d197;
+  border: none;
+}
+/*Sirve para darle el color al texto dentro del input*/
+.form-select::placeholder {
+  color: black;
+}
+.form-label {
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*Estilos de cuadro de calendario y descripcion*/
+.calen,
+.descripcion {
+  padding-left: 15px !important;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+} 
+/*Estilo del cuadro de descripcion*/
+.descripcion:focus {
+  background-color: #e2d197;
+  border: none;
+}
+/*Botones de modificar*/
+.botton {
+  font-family: "Cormorant", serif;
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.botton:hover {
+  background-color: #a0d7ac;
+}
+

@@ -104,3 +104,17 @@ a {
   cursor: pointer;
   border-radius: 15px;
 }
+/*Boton de ingresar*/
+.btn {
+  font-family: "Cormorant", serif;
+  width: 80px;
+  height: 35px;
+  font-size: 15px;
+  background-color:  #a0d7ac;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background-color: #e0ab4e;
+}

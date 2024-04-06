@@ -32,7 +32,9 @@ document.querySelector('form').addEventListener('submit', (e) => {
     nombre: document.querySelector('input[name="nombre-lote"]').value,
     tituloImagen: `userId-${getCookie('userId')}-idLote-`,
     hectareas: document.querySelector('input[name="hectareas"]').value,
+    
     fase: 'Preparacion'
   }
+  
   registraLote(data, e.target)
 })

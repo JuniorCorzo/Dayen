@@ -3,7 +3,7 @@ const insertLotes = () => {
     .map((data) => {
       return `
       <div>
-        <div class="p-3">
+        <div class="d-flex flex-column p-3 ">
             <a href="/procesos?idLote=${data.idLote}">
                 <h3>Lote ${data.nombre}</h3>
                 <img 
@@ -11,8 +11,16 @@ const insertLotes = () => {
                   src="/uploads/${data.tituloImagen}${data.idLote}.webp"
                   alt="Foto del lote ${data.nombre}"
                   title="Ir a los procesos del lote ${data.nombre}"
-                  >
+                >
             </a>
+
+            <div class="d-flex gap-3 mt-3 justify-content-center"> 
+            
+              <button class="btn">Modificar</button>
+
+              <button class="btn" data-toggle="modal" data-target="#exampleModal">Eliminar</button>
+            </div>
+           
         </div>
       </div>
               `
