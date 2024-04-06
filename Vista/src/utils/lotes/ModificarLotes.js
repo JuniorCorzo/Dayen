@@ -1,4 +1,4 @@
-import { pushData } from '../FetchData'
+import { pushData, deleteData } from '../FetchData'
 import { getCookie, updateLoteSession } from '../../config/ManageSessionStorage'
 
 const guardarImagen = (target, tituloImagen) => {
@@ -44,6 +44,14 @@ document.querySelector('#modificar_form').addEventListener('submit', (e) => {
   modificaLote(data, e.target)
 })
 
+const eliminarLote = (idLote) => {
+  deleteData(`/lotes/delete/${idLote}`).then(
+    alert('Se elimino el lote')
+  )
+}
+
+document.querySelector('#eliminar_lote').addEventListener('click', (e) => { eliminarLote(e.target.dataset.idLote); updateLoteSession(); window.location.reload() })
+
 setTimeout(() => {
   document.querySelectorAll('.modificar-lote').forEach((button) => {
     button.addEventListener('click', () => {
@@ -55,6 +63,12 @@ setTimeout(() => {
       modificarModal.setAttribute('data-id-lote', idLote)
       modificarModal.setAttribute('data-titulo-imagen', tituloImagen)
       modificarModal.setAttribute('data-fase', fase)
+    })
+
+    document.querySelectorAll('.eliminar-lote').forEach((button) => {
+      button.addEventListener('click', (event) => {
+        document.querySelector('#eliminar_lote').setAttribute('data-id-lote', event.target.dataset.idLote)
+      })
     })
   })
 }, 100)
