@@ -1,5 +1,5 @@
-import { pushData } from './FetchData'
-import { updatePersonalSession } from '../config/ManageSessionStorage'
+import { pushData } from '../FetchData'
+import { updatePersonalSession } from '../../config/ManageSessionStorage'
 
 const postData = (data) => {
   pushData('/personal/create', data).then((data) => {

@@ -1,5 +1,5 @@
-import { pushData } from './FetchData'
-import { getCookie, updateLoteSession } from '../config/ManageSessionStorage'
+import { pushData } from '../FetchData'
+import { getCookie, updateLoteSession } from '../../config/ManageSessionStorage'
 
 function registraLote (data, target) {
   pushData('/lotes/create', data)
