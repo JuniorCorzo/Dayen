@@ -23,6 +23,12 @@ async function createServer () {
 
   const upload = multer({ storage })
   app.post('/subir-imagen', upload.single('tituloImagen'), (req, res) => {
+    if (fs.existsSync(`public/uploads/${req.body.tituloImagen}.webp`)) {
+      fs.unlink(`public/uploads/${req.body.tituloImagen}.webp`, (err) => {
+        console.error(err)
+      })
+    }
+
     sharp(req.file.path)
       .resize(300, 300)
       .webp({ quality: 80 })
@@ -30,6 +36,13 @@ async function createServer () {
         if (err) {
           console.log(err)
         }
+        fs.unlink(req.file.path, (err) => {
+          if (err) {
+            console.log(err)
+            return
+          }
+          console.log('imagen borrada')
+        })
       })
 
     res.send('Imagen subida')

@@ -67,16 +67,16 @@ h1 {
   color: black;
 }
 /*Iconos */
-.fa-solid{
-    color: black;
-    position: absolute;
-    padding: 10px;
-    pointer-events: none;
+.fa-solid {
+  color: black;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
 }
 /*Boton de volver*/
 .btn {
   font-family: "Cormorant", serif;
-  width: 150px;
+  width: 50%;
   font-size: 20px;
   background-color: #e0ab4e;
   border-radius: 10px;

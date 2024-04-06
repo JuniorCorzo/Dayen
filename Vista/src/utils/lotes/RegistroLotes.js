@@ -4,7 +4,6 @@ import { getCookie, updateLoteSession } from '../../config/ManageSessionStorage'
 function registraLote (data, target) {
   pushData('/lotes/create', data)
     .then((data) => {
-      console.log(data)
       guardarImagen(target, data.tituloImagen.concat(data.idLote))
       updateLoteSession()
       alert(`Se registro el lote llamado ${data.nombre}`)
@@ -32,9 +31,10 @@ document.querySelector('form').addEventListener('submit', (e) => {
     nombre: document.querySelector('input[name="nombre-lote"]').value,
     tituloImagen: `userId-${getCookie('userId')}-idLote-`,
     hectareas: document.querySelector('input[name="hectareas"]').value,
-    
     fase: 'Preparacion'
   }
-  
+
   registraLote(data, e.target)
 })
+
+export { guardarImagen }
