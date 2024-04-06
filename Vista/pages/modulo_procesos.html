@@ -28,7 +28,7 @@
       referrerpolicy="no-referrer"
     />
     <!-- Estilo de css que se le asigna del css-->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/procesos.css" />
     <link rel="stylesheet" href="/css/datatable.css" />
     <!-- Verifica que exista una session iniciada -->
 
@@ -111,7 +111,7 @@
       <div class="container">
         <!--Contenedor Primario-->
         <!--titulo-->
-        <div class="text-center">
+        <div class="text-center mt-4">
           <h1 class="title">Proceso del Lote</h1>
         </div>
         <!--Contenedor Secundario-->
@@ -128,21 +128,9 @@
           <div class="d-grid gap-3 mt-4 d-md-flex justify-content-md-center">
             <!--Contenedor botones-->
             <!-- Button modificar -->
-            <a type="button" class="btn btn-lg fluid crear-proceso"
-              >Crear Proceso</a
-            >
+            <a type="button" class="btn btn-lg fluid crear-proceso">Crear Proceso</a>
 
             <!--Empieza el modal--Button Eliminar-->
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-lg fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Eliminar proceso
-            </button>
-
             <!-- Empieza Modal Eliminar -->
             <div
               class="modal fade"
@@ -155,7 +143,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="eliminar_modal_label">
-                      Eliminar Procesos 🌱
+                      Eliminar Proceso: 🌱
                     </h1>
                     <button
                       type="button"
@@ -192,16 +180,6 @@
             <!-- Termina Modal Eliminar -->
 
             <!--Empieza el modal--Button Modificar-->
-            <!-- Button trigger modal Modificar -->
-            <button
-              type="button"
-              class="btn btn-lg fluid"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Modificar Proceso
-            </button>
-
             <!--Empieza Modal Modificar-->
             <div
               class="modal fade"
@@ -216,7 +194,7 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <h1 class="modal-title fs-5" id="modificar-modal">
-                      Modificar Proceso 🌱
+                      Modificar Proceso: 🌱
                     </h1>
                     <button
                       type="button"
@@ -234,7 +212,7 @@
                         <label for="select-tipo" class="form-label"
                           >Tipo de Proceso:</label
                         >
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                           <!-- Iconos-->
                           <select id="select-tipo" class="select-tipo"></select>
                         </div>
@@ -242,7 +220,7 @@
                         <label for="select-productos" class="form-label"
                           >Productos:</label
                         >
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                           <select
                             id="select-productos"
                             class="form-select select-productos"
@@ -255,7 +233,7 @@
                         <label for="select-personal" class="form-label"
                           >Trabajadores:</label
                         >
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                           <select
                             id="select-personal"
                             class="select-personal"
@@ -265,7 +243,7 @@
                         </div>
 
                         <!-- Div de Realizado en-calendario-->
-                        <div class="form-group mb-3">
+                        <div class="form-group mb-2">
                           <!-- Input de Nombres con la clase form-control para dar las propiedades-->
                           <label for="date" class="form-label"
                             >Realizado En:</label
@@ -293,7 +271,7 @@
                         <div class="d-flex justify-content-center">
                           <button
                             type="submit"
-                            class="btn mb-3"
+                            class="btn"
                             value="modificar"
                             data-bs-dismiss="modal"
                           >
@@ -329,7 +307,7 @@
           <!--Empieza el contenedor que engloba toda la información sobre los procesos de los lotes-->
           <!--titulo-->
           <div class="text-center mt-5">
-            <h4>Tabla de Procesos</h4>
+            <h4>Procesos</h4>
           </div>
 
           <!--Contenedor Tablas-->

@@ -104,3 +104,106 @@ a {
   cursor: pointer;
   border-radius: 15px;
 }
+/*Boton de ingresar*/
+.btn {
+  font-family: "Cormorant", serif;
+  width: 80px;
+  height: 35px;
+  font-size: 15px;
+  background-color:  #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background-color: #a3d4be;
+}
+/********************************************************/
+/*Modal Eliminar*/
+/*Contenedor del modal eliminar*/
+.modal-content {
+  background-color: #a3d4be;
+}
+/*Titulo del modal eliminar*/
+.modal-title {
+  color: black;
+}
+/*Boton del modal eliminar*/
+.btn-modal {
+  font-family: "Cormorant", serif;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn-modal:hover{
+  background-color: #9ea3a1;
+}
+/*contenedor del modal que tiene mensaje*/
+.modal-body {
+  font-size: 20px;
+}
+/***************************************/
+/*Modal de modificar procesos*/
+
+/*Titulo*/
+h2 {
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 25px;
+}
+/*Formulario del login -- engloba el input */
+.form-control {
+  padding-left: 35px !important;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Cormorant", sans-serif;
+}
+/* Cambiar el color del borde cuando el input está enfocado */
+.form-control:focus {
+  background-color: #e2d197 !important;
+  box-shadow: 0 0 0 0.25rem #e2d197;
+  border: none;
+}
+/*Sirve para darle el color a los placeholder que esten dentro de la clase form-control*/
+.form-control::placeholder {
+  background-color: #e2d197 !important;
+  color: black;
+}
+/*Iconos */
+.fa-solid, .fa-brands{
+  color: black;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* Clases del icono que están en el registre lotes*/
+input[type="file"]::file-selector-button {
+  background-color: #e2d197 !important;
+  border-style: none;
+}
+/*Botones de modificar*/
+.botton {
+  font-family: "Cormorant", serif;
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.botton:hover {
+  background-color: #a0d7ac;
+}
+
+

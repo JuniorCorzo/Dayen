@@ -90,11 +90,130 @@
         <h4>Lotes</h4>
         <!--Contenedor de los lotes-->
         <div class="d-flex flex-wrap justify-content-center align-content-start mt-3 contenedor-lotes">
-
+          
         </div>
 
       </div>
     </div>
+
+      <!--Empieza modal Eliminar y Modal Modificar-->
+    
+     <!-- Empieza Modal Eliminar -->
+      <div class="modal fade" id="eliminar_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Eliminar Lote 🌱
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">Desea eliminar este Lote</div>
+              <div class="modal-footer">
+               <div class="d-grid gap-2 mt-4 d-md-flex justify-content-md-center">
+                  <button type="button" class="btn-modal" data-bs-dismiss="modal">
+                  Aceptar
+                  </button>
+                  <button type="button" class="btn-modal" data-bs-dismiss="modal">
+                  Cancelar
+                  </button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div><!-- Termina Modal Eliminar -->
+
+       <!--Empieza el modal--Button Modificar-->
+            <!--Empieza Modal Modificar-->
+            <div
+              class="modal fade"
+              id="modificar_modal"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="modificar-modal"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modificar-modal">
+                      Modificar Lote: 🌱
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="p-3">
+                      <!-- Contenedor secundario que engloba la información del formulario-Modificar-->
+                      <form id="modificar_form">
+                        <!-- Contenedor  del select de LTipos-->
+                        <div class="form-group mb-4">
+                          <!-- Iconos-->
+                          <i class="fa-solid fa-camera"></i>
+                          <!-- Input de lotess-->
+                          <input type="file" class="form-control" name="archivo"  id="file-upload"/>
+                        </div>
+              
+                          <div class="form-group mb-4">
+                            <!-- Iconos-->
+                            <i class="fa-brands fa-pagelines"></i>
+                            <!-- Input de lotes-->
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="nombre-lote"
+                              placeholder="Nombre del Lote"
+                            />
+                          </div>
+              
+                          <div class="form-group mb-4">
+                            <!-- Iconos-->
+                            <i class="fa-solid icons fa-plant-wilt"></i>
+                            <!-- Input de Hectareas-->
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="hectareas"
+                              placeholder="Hectareas"
+                            />
+                          </div>
+
+                        <div class="d-flex justify-content-center">
+                          <button
+                            type="submit"
+                            class="btn-modal botton "
+                            value="modificar"
+                            data-bs-dismiss="modal"
+                          >
+                            Modificar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <div
+                      class="d-grid gap-2 d-md-flex justify-content-md-center"
+                    >
+                      <button
+                        type="button"
+                        class="btn-modal botton"
+                        data-bs-dismiss="modal"
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Termina Modal Modificar-->
+
   </main>
   <!--Link de utilidades-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
