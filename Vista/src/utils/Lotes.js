@@ -16,9 +16,9 @@ const insertLotes = () => {
 
             <div class="d-flex gap-3 mt-3 justify-content-center"> 
             
-              <button class="btn">Modificar</button>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modificar_modal">Modificar</button>
 
-              <button class="btn" data-toggle="modal" data-target="#exampleModal">Eliminar</button>
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminar_modal">Eliminar</button>
             </div>
            
         </div>
