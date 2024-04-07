@@ -14,10 +14,8 @@
   <link rel="stylesheet" href="/css/formularios/personal.css" />
   <!-- Verifica que exista una session iniciada -->
   <script type="module" src="../src/config/Auth.js"></script>
-  <script type="module" src="../src/utils/personal/Personal.js"></script>
-  <script src="../src/utils/Env.js"></script>
 </head>
-  <!-- Contenedor principal -->
+<!-- Contenedor principal -->
   <div class="container">
     <!-- Contenedor SEGUNDARIO que engloba la estructura del registro de Personal-->
     <div class="row registro justify-content-center pt-2">
@@ -27,12 +25,12 @@
       <div class="image">
         <img class="logo" src="/img/DAYEN-logo.png" />
       </div>
-
+      
       <!-- Contenedor  principal del formulario-->
       <div class="personal pt-4">
         <!-- Contenedor segundario que engloba la informacion del formulario-->
         <form action="#">
-
+          
           <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
           <div class="form-group mb-3">
             <!-- Iconos-->
@@ -40,7 +38,7 @@
             <!-- Input de Nombres con la clase form-control para dar las propiedades-->
             <input type="text" class="form-control propiedades" name="nombre" placeholder="Nombre" />
           </div>
-
+          
           <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
           <div class="form-group mb-3">
             <!-- Iconos-->
@@ -48,7 +46,7 @@
             <!-- Input de Numero de Telefono con la clase form-control para dar las propiedades-->
             <input type="text" class="form-control propiedades" name="numero" minlength="10" maxlength="10" placeholder="Numero Telefono" />
           </div>
-
+          
           <!-- Boton de Ingresar-->
           <div class="justify-content-center d-flex mb-3 pb-2">
             <button type="submit" class="btn  " value="ingresar">
@@ -64,5 +62,7 @@
       </div>
     </div>
   </div>
-  </body>
+  <script defer type="module" src="../src/utils/personal/RegistroPersonal.js"></script>
+  <script defer src="../src/utils/Env.js"></script>
+</body>
 </html>
