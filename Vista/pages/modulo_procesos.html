@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script defer type="module" src="src/config/Auth.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mostrar los procesos del lote</title>
@@ -111,17 +112,40 @@
       <div class="container">
         <!--Contenedor Primario-->
         <!--titulo-->
-        <div class="text-center mt-4">
+        <div class="text-center mt-4" style="height: 60px">
           <h1 class="title"></h1>
         </div>
         <!--Contenedor Secundario-->
         <div class="row p-3">
           <!--Contenedor  donde esta la galería de las imágenes -->
           <div class="galeria text-center">
-            <img src="/img/IMG-39.jpg" class="rounded img-fluid" alt="img" />
-            <img src="/img/IMG-15.jpg" class="rounded img-fluid" alt="img" />
-            <img src="/img/IMG-56.jpg" class="rounded img-fluid" alt="img" />
-            <img src="/img/IMG-8.jpg" class="rounded img-fluid" alt="img" />
+            <img
+              src="/img/IMG-39.jpg"
+              class="rounded img-fluid"
+              alt="Son imágenes de lotes de arroz"
+              loading="eager"
+              decoding="async"
+            />
+            <img
+              src="/img/IMG-15.jpg"
+              class="rounded img-fluid"
+              alt="Son imágenes de lotes de arroz"
+              loading="eager"
+              decoding="async"
+            />
+            <img
+              src="/img/IMG-56.jpg"
+              class="rounded img-fluid"
+              alt="Son imágenes de lotes de arroz"
+              loading="eager"
+              decoding="async"
+            />
+            <img
+              src="/img/IMG-8.jpg"
+              class="rounded img-fluid"
+              alt="Son imágenes de lotes de arroz"
+              loading="sync"
+            />
           </div>
 
           <!--Contenedor de botones de Crear - Eliminar - Modificar-->
@@ -335,7 +359,6 @@
         <!--Contenedor Secundario-->
       </div>
       <!--Contenedor Primario-->
-      <script defer type="module" src="src/config/Auth.js"></script>
       <script src="src/utils/Env.js"></script>
     </main>
 
