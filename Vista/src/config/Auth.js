@@ -50,7 +50,7 @@ class Auth {
 
 const { cambiarUsername, closeSession } = new Auth()
 const urlWithNavBar = Object.freeze({
-  url: ['/inicio', '/procesos']
+  url: ['/inicio', '/procesos', '/personal']
 })
 
 if (urlWithNavBar.url.find((url) => url === window.location.pathname)) {
