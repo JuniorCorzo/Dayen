@@ -70,8 +70,9 @@ async function createServer () {
   route('/validar-clave', 'pages/registros/registro_contraseña.html')
 
   app.use(vite.middlewares)
-  app.listen(5050, () => {
-    console.log('Server running at http://localhost:5050')
+  process.loadEnvFile()
+  app.listen(process.env.PORT, () => {
+    console.log(`Server running at http://localhost:${process.env.PORT}`)
   })
 }
 

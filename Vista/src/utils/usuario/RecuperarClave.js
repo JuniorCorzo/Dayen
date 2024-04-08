@@ -1,5 +1,5 @@
 import { validarClave } from '../ValidarForm'
-import { HOST_API } from '../HostAPI'
+import { HOST_API } from '../Env'
 
 function enviarCorreo (email) {
   fetch(`${HOST_API}/recuperar_clave?correo=${email}`, {
