@@ -1,6 +1,6 @@
 import { HOST_API } from './Env'
 
-async function getData (url) {
+function getData (url) {
   return fetch(`${HOST_API}${url}`, {
     method: 'GET',
     headers: {
@@ -38,9 +38,7 @@ export function deleteData (url) {
       Authorization: `Bearer ${sessionStorage.getItem('jwt')}`
     }
   })
-    .then((response) => {
-      if (!response.ok) throw Error(response.statusText)
-    })
+    .then((response) => response)
     .catch((err) => {
       throw Error(err)
     })

@@ -62,12 +62,10 @@ function updatePersonalSession () {
 }
 
 function updateLoteSession () {
-  const lote = sessionStorage.getItem('lotes')
-  if (lote) {
-    getData(`/lotes/${getCookie('userId')}`).then((data) => {
-      sessionStorage.setItem('lotes', JSON.stringify(data))
-    })
-  }
+  getData(`/lotes/${getCookie('userId')}`).then((data) => {
+    console.log(data)
+    sessionStorage.setItem('lotes', JSON.stringify(data))
+  })
 }
 
 function getCookie (name) {
