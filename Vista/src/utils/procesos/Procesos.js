@@ -1,7 +1,9 @@
 import DataTable from 'datatables.net-bs5'
 import 'datatables.net-responsive-bs5'
 import 'datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css'
+
 import insertsSelectInfo from './FormProcesos'
+import { HOST_API } from '../Env'
 
 const params = new URLSearchParams(window.location.search)
 document.querySelector('.title').innerHTML = `Procesos del lote ${params.get('nombre')}`
@@ -39,7 +41,7 @@ const tablaProceso = new DataTable('#tablaprocesos', {
   order: [[5, 'desc']],
   info: false,
   ajax: {
-    url: `${window.HOST_API}/proceso/${params.get('idLote')}`,
+    url: `${HOST_API}/proceso/${params.get('idLote')}`,
     method: 'GET',
     dataSrc: '',
     beforeSend: function (xhr) {

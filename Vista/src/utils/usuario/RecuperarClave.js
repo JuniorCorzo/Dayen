@@ -1,6 +1,8 @@
 import { validarClave } from '../ValidarForm'
+import { HOST_API } from '../HostAPI'
+
 function enviarCorreo (email) {
-  fetch(`${window.HOST_API}/recuperar_clave?correo=${email}`, {
+  fetch(`${HOST_API}/recuperar_clave?correo=${email}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -21,7 +23,7 @@ if (window.location.pathname === '/recuperar_clave') {
 
 function cambiarClave (clave) {
   const params = new URLSearchParams(window.location.search)
-  fetch(`${window.HOST_API}/recuperar_clave/${params.get('token')}?clave=${clave}`, {
+  fetch(`${HOST_API}/recuperar_clave/${params.get('token')}?clave=${clave}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

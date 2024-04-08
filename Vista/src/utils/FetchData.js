@@ -1,5 +1,7 @@
+import { HOST_API } from './Env'
+
 async function getData (url) {
-  return fetch(`${window.HOST_API}${url}`, {
+  return fetch(`${HOST_API}${url}`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json',
@@ -12,7 +14,7 @@ async function getData (url) {
 }
 
 export function pushData (url, data, method = 'POST') {
-  return fetch(`${window.HOST_API}${url}`, {
+  return fetch(`${HOST_API}${url}`, {
     method: method.toUpperCase(),
     headers: {
       'content-type': 'application/json',
@@ -29,7 +31,7 @@ export function pushData (url, data, method = 'POST') {
 }
 
 export function deleteData (url) {
-  return fetch(`${window.HOST_API}${url}`, {
+  return fetch(`${HOST_API}${url}`, {
     method: 'DELETE',
     headers: {
       'content-type': 'application/json',

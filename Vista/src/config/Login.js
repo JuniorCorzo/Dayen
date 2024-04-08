@@ -1,4 +1,5 @@
 import { generalSessionStorage } from './ManageSessionStorage.js'
+import { HOST_API } from '../utils/Env.js'
 
 class Login {
   constructor (form, fields) {
@@ -26,7 +27,7 @@ class Login {
       })
 
       if (error === 0) {
-        fetch(`${window.HOST_API}/auth/login`, {
+        fetch(`${HOST_API}/auth/login`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

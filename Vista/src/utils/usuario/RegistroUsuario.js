@@ -1,7 +1,8 @@
 import { validarCedula, validarClave, validarCorreo, validarTexto } from '../ValidarForm'
+import { HOST_API } from '../Env'
 
 function registrarUsuario (data) {
-  fetch(`${window.HOST_API}/usuario/create`, {
+  fetch(`${HOST_API}/usuario/create`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

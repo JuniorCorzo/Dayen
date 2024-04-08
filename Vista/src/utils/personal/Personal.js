@@ -3,6 +3,7 @@ import 'datatables.net-bs5/css/dataTables.bootstrap5.min.css'
 import 'datatables.net-responsive-bs5'
 
 import { getCookie } from '../../config/ManageSessionStorage'
+import { HOST_API } from '../Env'
 
 const prepararModificar = () => {
   document.querySelectorAll('.modificar-personal').forEach((button) => {
@@ -36,7 +37,7 @@ const tablaPersona = new DataTable('#tabla_personal', {
   order: [[1, 'desc']],
   info: false,
   ajax: {
-    url: `${window.HOST_API}/personal/${getCookie('userId')}`,
+    url: `${HOST_API}/personal/${getCookie('userId')}`,
     method: 'GET',
     dataSrc: '',
     beforeSend: function (xhr) {
