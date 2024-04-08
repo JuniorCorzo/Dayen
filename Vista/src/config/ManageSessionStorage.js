@@ -16,8 +16,8 @@ function generalSessionStorage () {
         })
       )
 
-      sessionStorage.setItem('personal', JSON.stringify(data.personal))
       sessionStorage.setItem('lotes', JSON.stringify(data.lote))
+      sessionStorage.setItem('personal', JSON.stringify(data.personal))
     })
 
     getData('/producto/all').then((productos) => {

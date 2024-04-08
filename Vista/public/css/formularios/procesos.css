@@ -1,0 +1,91 @@
+/*Estilo del Modulo de Registro de Procesos*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crete+Round:ital@0;1&display=swap");
+
+/*Color del body */
+body {
+  background-color: grey;
+}
+/*Container principal*/
+.container-form {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Contenedor secundario */
+.row {
+  font-family: "Cormorant", serif;
+  background-color: #a0d7ac;
+  width: 350px !important;
+  border-radius: 15px;
+  box-shadow: rgba(5, 5, 5, 0.5) 0px 10px 20px;
+  box-sizing: border-box;
+}
+/*Titulo */
+h2 {
+  font-family: "Crete Round", serif;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+}
+/*Div de la imagen */
+.imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Imagen logo dayen*/
+.logo-dayen {
+  width: 100px;
+  height: 100px;
+}
+/*Tipo de letras de los label*/
+label {
+  font-size: 20px;
+  color: black;
+}
+/*Clases de calendario y descripcion*/
+.calen,
+.descripcion {
+  padding-left: 15px !important;
+}
+/*Formulario del login -- engloba el input */
+.form-control {
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #e2d197;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Cormorant", sans-serif;
+}
+/* Cambiar el color del borde cuando el input está enfocado */
+.form-control:focus {
+  background-color: #e2d197 !important;
+  box-shadow: 0 0 0 0.25rem #e2d197;
+  border: none;
+}
+/*Sirve para darle el color a los placeholder que esten dentro de la clase form-control*/
+.form-control::placeholder {
+  background-color: #e2d197 !important;
+  color: black;
+}
+
+/*Boton de volver*/
+.btn {
+  font-family: "Cormorant", serif;
+  width: 150px;
+  font-size: 20px;
+  background-color: #e0ab4e;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background-color: #e0ab4e;
+}

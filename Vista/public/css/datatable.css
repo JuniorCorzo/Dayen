@@ -1,12 +1,14 @@
+#tabla_personal_wrapper {
+  width: 100%;
+}
+
 /*Tablas de informacion de procesos*/
 #tablaprocesos_wrapper {
   width: 100%;
 }
 /*Contenedor de la tabla*/
-.dataTables_wrapper {
-  font-size: 18px;
-  color: black !important;
-  border-radius: 10px;
+.dt-body-scroll {
+  overflow-x: auto !important;
 }
 /*Div de enumeracion*/
 .dataTables_length {
@@ -29,16 +31,17 @@
 }
 
 .dt-search [type="search"] {
-  width: 20vw !important;
+  width: 10vw;
   margin: 0 !important;
-  border: 2px solid #e0ab4e !important;
-  padding-left: 10px !important;
+  border: 2px solid #e0ab4e;
+  padding-left: 10px !important ;
 }
 
 /*Clases de la información de las tablas
 Tabla color de la tabla en general*/
 table {
   background-color: #a5f5c9;
+  border-radius: 0;
 }
 /*Color del cuadro de los títulos*/
 thead {

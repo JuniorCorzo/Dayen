@@ -1,4 +1,4 @@
-import { pushData } from './FetchData'
+import { pushData } from '../FetchData'
 import insertsSelectInfo from './FormProcesos'
 /**
  * Registra los procesos en la base de datos median el uso de la API.

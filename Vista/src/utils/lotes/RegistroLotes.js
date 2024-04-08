@@ -1,13 +1,12 @@
-import { pushData } from './FetchData'
-import { getCookie, updateLoteSession } from '../config/ManageSessionStorage'
+import { pushData } from '../FetchData'
+import { getCookie, updateLoteSession } from '../../config/ManageSessionStorage'
 
 function registraLote (data, target) {
   pushData('/lotes/create', data)
     .then((data) => {
-      console.log(data)
       guardarImagen(target, data.tituloImagen.concat(data.idLote))
-      alert(`Se registro el lote llamado ${data.nombre}`)
       updateLoteSession()
+      alert(`Se registro el lote llamado ${data.nombre}`)
     })
 }
 
@@ -34,5 +33,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
     hectareas: document.querySelector('input[name="hectareas"]').value,
     fase: 'Preparacion'
   }
+
   registraLote(data, e.target)
 })
+
+export { guardarImagen }

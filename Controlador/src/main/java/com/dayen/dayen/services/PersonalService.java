@@ -2,6 +2,7 @@ package com.dayen.dayen.services;
 
 import com.dayen.dayen.dao.request.PersonalRequest;
 import com.dayen.dayen.entity.Personal;
+import com.dayen.dayen.entity.Procesos;
 import com.dayen.dayen.exceptions.personal.PersonalNotExists;
 import com.dayen.dayen.repository.PersonalRepository;
 import com.dayen.dayen.repository.UsuarioRepository;
@@ -23,6 +24,11 @@ public class PersonalService {
 
 	public List<Personal> getAllPersonalByUsuario(@NotNull Integer idUsuario) {
 		return this.personalRepository.findAllByIdUsuario(idUsuario);
+	}
+
+	public List<Procesos> getAllProcesosOfPersonal(@NotNull Integer idPersonal){
+		Personal personal = this.personalRepository.findById(idPersonal).orElseThrow(PersonalNotExists::new);
+		return personal.getProcesos();
 	}
 
 	public Personal createPersonal(@Valid PersonalRequest personal) {

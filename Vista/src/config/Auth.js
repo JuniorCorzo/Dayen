@@ -1,57 +1,59 @@
-import { generalSessionStorage } from './ManageSessionStorage'
+import { generalSessionStorage, getCookie } from './ManageSessionStorage'
 
-function validateAuth () {
-  const jwt = getCookie('jwt')
-  if (!jwt && window.location.pathname !== '/login') {
-    window.location.replace('/login')
-    return
-  }
-
-  if (jwt && window.location.pathname === '/login') {
-    window.location.replace('/inicio')
-  }
-
-  if (jwt) {
-    generalSessionStorage()
-  }
-}
-
-function closeSession () {
-  document.cookie =
-    'jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;'
-  document.cookie =
-    'userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;'
-  sessionStorage.clear()
-}
-
-function getCookie (name) {
-  return document.cookie.split('; ').find((row) => row.startsWith(name))
-}
-
-validateAuth()
-
-const changeUsername = (usuario) => {
-  if (usuario === null) {
-    setTimeout(() => {
-      usuario = JSON.parse(sessionStorage.getItem('usuario'))
-      changeUsername(usuario)
+class Auth {
+  constructor () {
+    this.withoutAuth = Object.freeze({
+      url: ['/', '/login', '/registrarse', '/recuperar_clave', '/validar-clave']
     })
-    return
+    this.validateAuth()
   }
 
-  const username = document.querySelector('.username')
-  username.innerHTML = `Hola, ${usuario.nombre} ${usuario.apellido}🌱`
+  validateAuth () {
+    const jwt = getCookie('jwt')
+    if (!jwt && !this.withoutAuth.url.find((url) => url === window.location.pathname)) {
+      window.location.replace('/login')
+      return
+    }
+
+    if (jwt && this.withoutAuth.url.find((url) => url === window.location.pathname)) {
+      window.location.replace('/inicio')
+    }
+
+    if (jwt) {
+      generalSessionStorage()
+    }
+  }
+
+  cambiarUsername () {
+    new Promise((resolve) => {
+      setInterval(() => {
+        if (sessionStorage.getItem('usuario')) {
+          clearInterval()
+          resolve()
+        }
+      }, 10)
+    }).then(() => {
+      const { nombre, apellido } = JSON.parse(sessionStorage.getItem('usuario'))
+      const username = document.querySelector('.username')
+      username.innerHTML = `Hola, ${nombre} ${apellido}🌱`
+    })
+  }
+
+  closeSession () {
+    document.cookie =
+      'jwt=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;'
+    document.cookie =
+      'userId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; SameSite=Strict; path=/;'
+    sessionStorage.clear()
+  }
 }
 
-const usuario = JSON.parse(sessionStorage.getItem('usuario'))
+const { cambiarUsername, closeSession } = new Auth()
+const urlWithNavBar = Object.freeze({
+  url: ['/inicio', '/procesos', '/personal']
+})
 
-console.log(window.location.pathname)
-if (window.location.pathname !== '/registro/proceso') {
-  changeUsername(usuario)
-}
-
-if (window.location.pathname !== '/login' && window.location.pathname !== '/registro/proceso') {
-  document
-    .querySelector('.close-session')
-    .addEventListener('click', closeSession)
+if (urlWithNavBar.url.find((url) => url === window.location.pathname)) {
+  document.querySelector('.close-session').addEventListener('click', closeSession)
+  cambiarUsername()
 }

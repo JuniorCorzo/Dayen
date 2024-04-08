@@ -1,4 +1,4 @@
-import { pushData, deleteData } from './FetchData'
+import { pushData, deleteData } from '../FetchData'
 import actualizarTabla from './Procesos'
 
 function modificarProceso (data) {
