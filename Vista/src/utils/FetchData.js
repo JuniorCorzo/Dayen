@@ -1,16 +1,14 @@
 async function getData (url) {
-  const response = await fetch(`${window.HOST_API}${url}`, {
+  return fetch(`${window.HOST_API}${url}`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json',
       Authorization: `Bearer ${sessionStorage.getItem('jwt')}`
     }
-  })
-
-  if (!response.ok) throw Error(response.statusText)
-
-  const data = await response.json()
-  return data
+  }).then((response) => response.json())
+    .catch((err) => {
+      console.error(err)
+    })
 }
 
 export function pushData (url, data, method = 'POST') {
