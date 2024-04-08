@@ -1,4 +1,4 @@
-import { validarCedula, validarClave, validarCorreo, validarTexto } from './ValidarForm'
+import { validarCedula, validarClave, validarCorreo, validarTexto } from '../ValidarForm'
 
 function registrarUsuario (data) {
   fetch(`${window.HOST_API}/usuario/create`, {
