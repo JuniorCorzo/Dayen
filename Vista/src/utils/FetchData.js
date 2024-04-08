@@ -1,4 +1,4 @@
-import { HOST_API } from './Env'
+import { HOST_API } from '../Env'
 
 async function getData (url) {
   return fetch(`${HOST_API}${url}`, {
