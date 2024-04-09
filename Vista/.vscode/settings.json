@@ -11,6 +11,7 @@
     "originalname",
     "sesion",
     "tablaprocesos",
-    "telefono"
+    "telefono",
+    "validacion"
   ]
 }

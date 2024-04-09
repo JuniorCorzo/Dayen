@@ -8,6 +8,24 @@ function modificarProceso (data) {
   })
 }
 
+function validacionForm (data) {
+  if (data.idTipo === '') {
+    document.getElementById('tipo_error_message').innerHTML = 'Seleccione un tipo de proceso'
+    return false
+  }
+
+  if (data.realizadoEn === '') {
+    document.getElementById('calen_error_message').innerHTML = 'Ingrese la fecha del proceso'
+    return false
+  }
+
+  if (data.descripcion === '') {
+    document.getElementById('descripcion_error_message').innerHTML = 'Ingrese la descripción del proceso'
+    return false
+  }
+  return true
+}
+
 document.querySelector('#modificar_form').addEventListener('submit', (e) => {
   e.preventDefault()
 
@@ -29,7 +47,7 @@ document.querySelector('#modificar_form').addEventListener('submit', (e) => {
     data.idPersonal.push(parseInt(personal.getAttribute('data-value')))
   })
 
-  modificarProceso(data)
+  if (validacionForm(data)) modificarProceso(data)
 })
 
 function eliminarProceso (idProceso) {

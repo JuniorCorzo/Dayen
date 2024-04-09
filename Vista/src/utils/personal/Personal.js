@@ -34,7 +34,7 @@ const tablaPersona = new DataTable('#tabla_personal', {
   lengthChange: false,
   pageLength: 10,
   ordering: true,
-  order: [[1, 'desc']],
+  order: [[1, 'asc']],
   info: false,
   ajax: {
     url: `${HOST_API}/personal/${getCookie('userId')}`,

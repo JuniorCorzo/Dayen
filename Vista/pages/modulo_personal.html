@@ -249,6 +249,7 @@
                             id="nombre"
                             placeholder="Nombre"
                           />
+                          <small id="nombre_error_message"></small>
                         </div>
                         <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
                         <label for="numero">Numero</label>
@@ -261,10 +262,10 @@
                             class="form-control propiedades"
                             name="numero"
                             id="numero"
-                            minlength="10"
                             maxlength="10"
                             placeholder="Numero Telefono"
                           />
+                          <small id="numero_error_message"></small>
                         </div>
                         <!-- Boton de Ingresar-->
                         <div class="d-flex justify-content-center">
@@ -272,7 +273,6 @@
                             type="submit"
                             class="btn"
                             value="modificar"
-                            data-bs-dismiss="modal"
                           >
                             Modificar
                           </button>

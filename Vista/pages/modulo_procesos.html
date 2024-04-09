@@ -89,7 +89,7 @@
               <!--li de Cerrar  -->
               <li class="nav-item text-end">
                 <a class="nav-link close-session" href="/">Cerrar</a>
-                <a href="/"> <i class="fa-solid fa-x  d-none d-lg-block"></i></a>
+                <a href="/"> <i class="fa-solid fa-x d-none d-lg-block"></i></a>
               </li>
             </ul>
           </div>
@@ -170,9 +170,7 @@
                   </div>
                   <div class="modal-body">Desea eliminar este proceso.</div>
                   <div class="modal-footer">
-                    <div
-                      class=" gap-2 mt-4 d-md-flex justify-content-center"
-                    >
+                    <div class="gap-2 mt-4 d-md-flex justify-content-center">
                       <button
                         type="button"
                         class="btn-modal"
@@ -231,6 +229,7 @@
                         <div class="form-group mb-2">
                           <!-- Iconos-->
                           <select id="select-tipo" class="select-tipo"></select>
+                          <small id="tipo_error_message"></small>
                         </div>
                         <!-- Contenedor  del select de Productos-->
                         <label for="select-productos" class="form-label"
@@ -270,6 +269,7 @@
                             class="form-control calen"
                             name="realizadoEn"
                           />
+                          <small id="calen_error_message"></small>
                         </div>
 
                         <!-- Div de Descripcion de la información-->
@@ -282,15 +282,11 @@
                             id="descripcion"
                             rows="3"
                           ></textarea>
+                          <small id="descripcion_error_message"></small>
                         </div>
 
                         <div class="d-flex justify-content-center">
-                          <button
-                            type="submit"
-                            class="btn"
-                            value="modificar"
-                            data-bs-dismiss="modal"
-                          >
+                          <button type="submit" class="btn" value="modificar">
                             Modificar
                           </button>
                         </div>
