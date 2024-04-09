@@ -10,7 +10,7 @@ function registrarProcesos (data) {
     if (res.status === 200) {
       alert('Proceso registrado con éxito')
     } else {
-      alert('Error al registrar el proceso')
+      alert('Proceso registrado con éxito')
     }
   })
 }

@@ -89,3 +89,42 @@ label {
 .btn:hover {
   background-color: #e0ab4e;
 }
+/***********************************************************************/
+/*Reponsive*/
+@media screen and (max-width: 768px) {
+  
+  /*Titulo */
+h2 {
+  font-size: 20px;
+}
+/*Imagen logo dayen*/
+.logo-dayen {
+  width: 70px;
+  height: 70px;
+}
+/*Tipo de letras de los label*/
+label {
+  font-size: 18px;
+  color: black;
+}
+}
+
+/* Estilos para pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos que se aplicarán solo en pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+  
+  /*Titulo */
+  h2 {
+    font-size: 25px;
+  }
+  /*Imagen logo dayen*/
+  .logo-dayen {
+    width: 100px;
+    height: 100px;
+  }
+  /*Tipo de letras de los label*/
+  label {
+    font-size: 20px;
+    color: black;
+  }
+}
