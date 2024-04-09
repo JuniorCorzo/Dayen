@@ -7,11 +7,11 @@ import insertsSelectInfo from './FormProcesos'
  */
 function registrarProcesos (data) {
   pushData('/proceso/create', data).then((res) => {
-    if (res.status === 200) {
-      alert('Proceso registrado con éxito')
-    } else {
-      alert('Proceso registrado con éxito')
+    if (data?.message) {
+      alert(data.message)
+      return
     }
+    alert('Proceso registrado con éxito')
   })
 }
 
@@ -39,4 +39,5 @@ document.querySelector('form').addEventListener('submit', (e) => {
 })
 
 insertsSelectInfo()
-document.querySelector('.volver').setAttribute('href', `/procesos?idLote=${new URLSearchParams(window.location.search).get('idLote')}`)
+const params = new URLSearchParams(window.location.search)
+document.querySelector('.volver').setAttribute('href', `/procesos?idLote=${params.get('idLote')}&nombre=${params.get('nombre')}`)

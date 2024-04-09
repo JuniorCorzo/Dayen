@@ -121,7 +121,7 @@ const tablaProceso = new DataTable('#tablaprocesos', {
 const choicesReturn = insertsSelectInfo()
 const containerSearch = document.querySelector('.dt-container .row')
 containerSearch.classList.remove('row')
-document.querySelector('.crear-proceso').href = `/registro/proceso?idLote=${params.get('idLote')}`
+document.querySelector('.crear-proceso').href = `/registro/proceso?idLote=${params.get('idLote')}&nombre=${params.get('nombre')}`
 
 function actualizarTabla () {
   tablaProceso.ajax.reload()

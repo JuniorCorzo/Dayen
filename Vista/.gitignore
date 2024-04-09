@@ -52,6 +52,9 @@ web_modules/
 # TypeScript cache
 *.tsbuildinfo
 
+#carpeta upload
+public/uploads/
+
 # Optional npm cache directory
 .npm
 

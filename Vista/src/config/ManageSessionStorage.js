@@ -63,8 +63,10 @@ function updatePersonalSession () {
 
 function updateLoteSession () {
   getData(`/lotes/${getCookie('userId')}`).then((data) => {
-    console.log(data)
     sessionStorage.setItem('lotes', JSON.stringify(data))
+    if (window.location.pathname === '/inicio') {
+      window.location.reload()
+    }
   })
 }
 
