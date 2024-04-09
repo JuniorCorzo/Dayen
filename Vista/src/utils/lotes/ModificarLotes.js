@@ -49,9 +49,6 @@ const eliminarLote = (idLote) => {
     if (response.ok) {
       alert('Se elimino el lote')
       updateLoteSession()
-      setTimeout(() => {
-        window.location.reload()
-      }, 300)
     }
   }
   )
