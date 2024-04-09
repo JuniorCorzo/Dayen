@@ -237,4 +237,22 @@ input[type="file"]::file-selector-button {
   }
   
 }
+/* Estilos para pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+@media (min-width: 768px) and (max-width: 1024px){
+  /*Estilo de infromacion de la barra de navegacion*/
+  .nav-link {
+    font-size: 20px;
+  }
+  /*Contenido de Modulo de bienvenida*/
+  /*Titulos*/
+  h1 {
+    font-size: 40px;
+  }
+  /*Imagen de dayen*/
+  .d-inline-block {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 35px;
+  }
+}
 

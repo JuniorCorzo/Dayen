@@ -90,12 +90,26 @@ p {
 .nav-footer a {
   color: #e8e6e6 !important;
 }
-.bi-whatsapp, .bi-facebook, .bi-github, .bi-instagram {
-  margin-left: 45px;
+.bi-whatsapp {
+  margin-left: 60px;
+  font-size: 40px !important;
+}
+.bi-facebook {
+  margin-left: 65px;
+  font-size: 40px !important;
+}
+.bi-instagram {
+  margin-left: 65px;
+  font-size: 40px !important;
+}
+.bi-github {
+  margin-left: 50px;
   font-size: 40px !important;
 }
 /*Estilo de imagenes de Bienvenida*/
-.img-1, .img-9, .img-7 {
+.img-1,
+.img-9,
+.img-7 {
   width: 350px;
   height: 350px;
   cursor: pointer;
@@ -111,8 +125,7 @@ p {
 }
 /************************************************************************************************/
 /*Reponsive*/
-@media  screen and (max-width: 768px) {
-  
+@media screen and (max-width: 768px) {
   /*Estilo de infromacion de la barra de navegacion*/
   .nav-link {
     font-size: 18px;
@@ -134,9 +147,68 @@ p {
     margin-bottom: 35px;
   }
   /*Estilo de imagenes de Bienvenida*/
-.img-1, .img-9, .img-7 {
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
+  .img-1,
+  .img-9,
+  .img-7 {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+  }
+  .bi-whatsapp {
+    margin-left: 50px;
+  }
+  .bi-facebook {
+    margin-left: 45px;
+  }
+  .bi-instagram {
+    margin-left: 45px;
+  }
+  .bi-github {
+    margin-left: 35px;
+  }
 }
+
+/* Estilos para pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos que se aplicarán solo en pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+  /*Estilo de infromacion de la barra de navegacion*/
+  .nav-link {
+    font-size: 18px;
+  }
+  /*Contenido de Modulo de bienvenida*/
+  /*Titulos*/
+  h1 {
+    font-size: 40px;
+  }
+  /*Parrafos y contenido*/
+  p {
+    text-align: justify;
+    font-size: 25px;
+  }
+  /*Imagen de dayen*/
+  .d-inline-block {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 35px;
+  }
+  /*Estilo de imagenes de Bienvenida*/
+  .img-1,
+  .img-9,
+  .img-7 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+  .bi-whatsapp {
+    margin-left: 50px;
+  }
+  .bi-facebook {
+    margin-left: 45px;
+  }
+  .bi-instagram {
+    margin-left: 45px;
+  }
+  .bi-github {
+    margin-left: 35px;
+  }
 }
