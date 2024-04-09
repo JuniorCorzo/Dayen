@@ -17,7 +17,6 @@ body {
 .navbar {
   font-family: "Cormorant", serif;
   border-radius: 15px;
-  height: 100px;
   visibility: visible;
   background-color: #a0d7ac !important;
 }
@@ -60,8 +59,17 @@ ul li a:hover {
 .fa-x {
   color: black;
   font-size: 26px;
-  margin-right: 30px;
+  margin-left: 30px !important;
   cursor: pointer;
+}
+/*Boton de responsive*/
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: #a0d7ac;
+  background-color: #a0d7ac;
+  border: black;
 }
 /*Titulos*/
 h4 {
@@ -202,3 +210,31 @@ input[type="file"]::file-selector-button {
 .botton:hover {
   background-color: #a0d7ac;
 }
+/************************************************************************************************/
+/*Reponsive*/
+@media  screen and (max-width: 768px) {
+  
+  /*Estilo de infromacion de la barra de navegacion*/
+  .nav-link {
+    font-size: 18px;
+  }
+  /*Contenido de Modulo de bienvenida*/
+  /*Titulos*/
+  h1 {
+    font-size: 40px;
+  }
+  /*Parrafos y contenido*/
+  p {
+    text-align: justify;
+    font-size: 18px;
+  }
+  /*Imagen de dayen*/
+  .d-inline-block {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 35px;
+    margin-left: 110px;
+  }
+  
+}
+

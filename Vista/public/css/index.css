@@ -19,7 +19,6 @@ body {
 .navbar {
   font-family: "Cormorant", serif;
   border-radius: 15px;
-  height: 100px;
   visibility: visible;
   background-color: #a0d7ac !important;
 }
@@ -38,6 +37,15 @@ ul li a:hover {
   text-shadow: 2px 2px 20px #04f839;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+/*Boton de responsive*/
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: #a0d7ac;
+  background-color: #a0d7ac;
+  border: black;
 }
 /*Inconos de la barra de navegacion de Bienvenida*/
 /*Icono inicio de sesion*/
@@ -82,17 +90,12 @@ p {
 .nav-footer a {
   color: #e8e6e6 !important;
 }
-.bi-whatsapp,
-.bi-facebook,
-.bi-github,
-.bi-instagram {
+.bi-whatsapp, .bi-facebook, .bi-github, .bi-instagram {
   margin-left: 45px;
   font-size: 40px !important;
 }
 /*Estilo de imagenes de Bienvenida*/
-.img-1,
-.img-9,
-.img-7 {
+.img-1, .img-9, .img-7 {
   width: 350px;
   height: 350px;
   cursor: pointer;
@@ -105,4 +108,35 @@ p {
 .img-lote:hover {
   -webkit-transform: scale(0.9);
   transform: scale(0.9);
+}
+/************************************************************************************************/
+/*Reponsive*/
+@media  screen and (max-width: 768px) {
+  
+  /*Estilo de infromacion de la barra de navegacion*/
+  .nav-link {
+    font-size: 18px;
+  }
+  /*Contenido de Modulo de bienvenida*/
+  /*Titulos*/
+  h1 {
+    font-size: 40px;
+  }
+  /*Parrafos y contenido*/
+  p {
+    text-align: justify;
+    font-size: 18px;
+  }
+  /*Imagen de dayen*/
+  .d-inline-block {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 35px;
+  }
+  /*Estilo de imagenes de Bienvenida*/
+.img-1, .img-9, .img-7 {
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+}
 }
