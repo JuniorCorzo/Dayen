@@ -73,6 +73,13 @@ h4:hover {
   width: 100px;
   height: 100px;
 }
+/*Titulos*/
+.title {
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+  color: #e8e6e6 !important;
+  cursor: pointer;
+}
 .title:hover {
   text-shadow: 2px 2px 20px #151615;
   -webkit-transform: scale(1.1);
