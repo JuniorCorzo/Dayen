@@ -108,6 +108,9 @@ a {
   cursor: pointer;
   border-radius: 15px;
 }
+.imagen-lotes:hover{
+  transform: scale(1.1);
+}
 /*Boton de ingresar*/
 .btn {
   font-family: "Cormorant", serif;
@@ -120,13 +123,13 @@ a {
   border: none;
 }
 .btn:hover {
-  background-color: #a3d4be;
+  background-color: #76f1ba;
 }
 /********************************************************/
 /*Modal Eliminar*/
-/*Contenedor del modal eliminar*/
+/*Contenedor del modal eliminar y modificar */
 .modal-content {
-  background-color: #a3d4be;
+  background-color: #98ddaa;
 }
 /*Titulo del modal eliminar*/
 .modal-title {
@@ -144,7 +147,7 @@ a {
   border: none;
 }
 .btn-modal:hover {
-  background-color: #9ea3a1;
+  background-color: #9baaa0 !important;
 }
 /*contenedor del modal que tiene mensaje*/
 .modal-body {

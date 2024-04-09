@@ -14,7 +14,7 @@ const insertLotes = () => {
                   title="Ir a los procesos del lote ${data.nombre}"
                 >
             </a>
-            <div class="d-flex gap-3 mt-2 justify-content-center"> 
+            <div class="gap-3 mt-4 justify-content-center"> 
               <button 
                 type="button" 
                 class="btn modificar-lote"
