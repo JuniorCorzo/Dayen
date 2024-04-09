@@ -155,15 +155,15 @@ h4:hover {
 /************************************/
 /*MODALES*/
 /*Modal Eliminar*/
-/*Contenedor del modal eliminar*/
+/*Contenedor del modal eliminar y modificar */
 .modal-content {
-  background-color: #a3d4be;
+  background-color: #98ddaa !important;
 }
 /*Titulo del modal eliminar*/
 .modal-title {
   color: black;
 }
-/*Boton del modal eliminar*/
+/*Boton del cerrar modal*/
 .btn-modal {
   font-family: "Cormorant", serif;
   width: 100px;
@@ -174,13 +174,15 @@ h4:hover {
   cursor: pointer;
   border: none;
 }
+.btn-modal:hover {
+  background-color: #9baaa0 !important;
+}
 /*contenedor del modal que tiene mensaje*/
 .modal-body {
   font-size: 20px;
 }
 /***************************************/
 /*Modal de modificar Personal */
-
 /*Titulo*/
 h2 {
   font-family: "Crete Round", serif;
@@ -219,20 +221,19 @@ h2 {
   margin-left: 9px;
   cursor: pointer;
 }
-
 /*Botones de modificar*/
-.botton {
+.btn-modificar {
   font-family: "Cormorant", serif;
-  width: 100px;
-  height: 30px;
+  width: 150px !important;
+  height: 50px;
   font-size: 20px;
   background-color: #e0ab4e;
   border-radius: 10px;
   cursor: pointer;
   border: none;
 }
-.botton:hover {
-  background-color: #a0d7ac;
+.btn-modificar:hover {
+  background-color: #9baaa0 !important;
 }
 /**************************************************************************/
 /*Reponsive*/
