@@ -25,18 +25,20 @@ class Auth {
   }
 
   cambiarUsername () {
-    new Promise((resolve) => {
-      setInterval(() => {
-        if (sessionStorage.getItem('usuario')) {
-          clearInterval()
-          resolve()
-        }
-      }, 10)
-    }).then(() => {
-      const { nombre, apellido } = JSON.parse(sessionStorage.getItem('usuario'))
-      const username = document.querySelector('.username')
-      username.innerHTML = `Hola, ${nombre} ${apellido}🌱`
-    })
+    if (getCookie('jwt') == null) {
+      new Promise((resolve) => {
+        setInterval(() => {
+          if (sessionStorage.getItem('usuario')) {
+            clearInterval()
+            resolve()
+          }
+        }, 10)
+      }).then(() => {
+        const { nombre, apellido } = JSON.parse(sessionStorage.getItem('usuario'))
+        const username = document.querySelector('.username')
+        username.innerHTML = `Hola, ${nombre} ${apellido}🌱`
+      })
+    }
   }
 
   closeSession () {

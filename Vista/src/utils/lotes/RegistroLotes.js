@@ -24,6 +24,24 @@ function guardarImagen (target, tituloImagen) {
     })
 }
 
+function validacionForm (data) {
+  if (document.querySelector('input[name="tituloImagen"]').files.length === 0) {
+    document.getElementById('file_error_message').innerHTML = 'Ingrese una imagen'
+    return false
+  }
+
+  if (data.nombre === '') {
+    document.getElementById('nombre_error_message').innerHTML = 'Ingrese el nombre del lote'
+    return false
+  }
+
+  if (data.hectareas === '') {
+    document.getElementById('hectareas_error_message').innerHTML = 'Ingrese las hectareas del lote'
+    return false
+  }
+  return true
+}
+
 document.querySelector('form').addEventListener('submit', (e) => {
   e.preventDefault()
   const data = {
@@ -34,7 +52,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     fase: 'Preparacion'
   }
 
-  registraLote(data, e.target)
+  if (validacionForm(data)) registraLote(data, e.target)
 })
 
 export { guardarImagen }

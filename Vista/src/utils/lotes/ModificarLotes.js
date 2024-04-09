@@ -28,6 +28,19 @@ const modificaLote = (data, target) => {
     })
 }
 
+function validacionForm (data) {
+  if (data.nombre === '') {
+    document.getElementById('nombre_error_message').innerHTML = 'Ingrese el nombre del lote'
+    return false
+  }
+
+  if (data.hectareas === '') {
+    document.getElementById('hectareas_error_message').innerHTML = 'Ingrese las hectareas del lote'
+    return false
+  }
+  return true
+}
+
 document.querySelector('#modificar_form').addEventListener('submit', (e) => {
   e.preventDefault()
 
@@ -40,8 +53,7 @@ document.querySelector('#modificar_form').addEventListener('submit', (e) => {
     hectareas: document.querySelector('input[name="hectareas"]').value,
     fase
   }
-  console.log(tituloImagen)
-  modificaLote(data, e.target)
+  if (validacionForm(data)) modificaLote(data, e.target)
 })
 
 const eliminarLote = (idLote) => {

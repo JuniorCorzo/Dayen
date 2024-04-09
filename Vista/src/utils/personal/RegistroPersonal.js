@@ -8,6 +8,24 @@ const postData = (data) => {
   })
 }
 
+function validacionForm (data) {
+  if (data.nombre === '') {
+    document.getElementById('nombre_error_message').innerHTML = 'Ingrese el nombre del trabajador'
+    return false
+  }
+
+  if (data.telefono === '') {
+    document.getElementById('numero_error_message').innerHTML = 'Ingrese el número de teléfono'
+    return false
+  }
+
+  if (data.telefono.length !== 10) {
+    document.getElementById('numero_error_message').innerHTML = 'Ingrese un número de teléfono válido'
+    return false
+  }
+  return true
+}
+
 const form = document.querySelector('form')
 form.addEventListener('submit', (event) => {
   event.preventDefault()
@@ -20,5 +38,5 @@ form.addEventListener('submit', (event) => {
     telefono: document.querySelector('input[name="numero"]').value
   }
 
-  postData(data)
+  if (validacionForm(data)) postData(data)
 })

@@ -157,22 +157,25 @@ h4:hover {
 /*Modal Eliminar*/
 /*Contenedor del modal eliminar*/
 .modal-content {
-  background-color: #a3d4be;
+  background-color: #98ddaa !important;
 }
 /*Titulo del modal eliminar*/
 .modal-title {
   color: black;
 }
-/*Boton del modal eliminar*/
-.btn-modal {
+/*Botones de modificar*/
+.btn-modificar {
   font-family: "Cormorant", serif;
-  width: 100px;
+  width: 150px !important;
   height: 50px;
   font-size: 20px;
   background-color: #e0ab4e;
   border-radius: 10px;
   cursor: pointer;
   border: none;
+}
+.btn-modificar:hover {
+  background-color: #9baaa0 !important;
 }
 /*contenedor del modal que tiene mensaje*/
 .modal-body {
@@ -224,19 +227,19 @@ h2 {
   background-color: #e2d197;
   border: none;
 }
-/*Botones de modificar*/
-.botton {
+/*Boton del cerrar modal*/
+.btn-modal {
   font-family: "Cormorant", serif;
-  width: 130px;
-  height: 30px;
+  width: 100px;
+  height: 50px;
   font-size: 20px;
   background-color: #e0ab4e;
   border-radius: 10px;
   cursor: pointer;
   border: none;
 }
-.botton:hover {
-  background-color: #a0d7ac;
+.btn-modal:hover {
+  background-color: #9baaa0 !important;
 }
 /************************************************************************************************/
 /*Reponsive*/
@@ -246,7 +249,10 @@ h2 {
   .nav-link {
     font-size: 18px;
   }
-
+ /*Titulos*/
+ h1, h4 {
+  font-size: 35px;
+}
   /*Parrafos y contenido*/
   p {
     text-align: justify;
@@ -309,8 +315,8 @@ h2 {
   }
   /*Contenido de Modulo de bienvenida*/
   /*Titulos*/
-  h1 {
-    font-size: 40px;
+  h1, h4 {
+    font-size: 35px;
   }
   /*Imagen de dayen*/
   .d-inline-block {

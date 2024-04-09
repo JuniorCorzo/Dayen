@@ -1,68 +1,92 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Registro del Personal</title>
-  <!-- Estilo del logo de doble ventana-->
-  <link rel="icon" href="/img/DAYEN-logo.png" type="image/x-icon" />
-  <!-- Estilo del Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <!-- Estilo de los iconos-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Estilo de css que se le asigna-->
-  <link rel="stylesheet" href="/css/formularios/personal.css" />
-  <!-- Verifica que exista una session iniciada -->
-  <script type="module" src="../src/config/Auth.js"></script>
-</head>
-<!-- Contenedor principal -->
-  <div class="container">
-    <!-- Contenedor SEGUNDARIO que engloba la estructura del registro de Personal-->
-    <div class="row registro justify-content-center pt-2">
-      <!--Titulo-->
-      <h2 class="">REGISTRAR PERSONAL</h2>
-      <!-- Contenedor de la imagen-->
-      <div class="image">
-        <img class="logo" src="/img/DAYEN-logo.png" />
-      </div>
-      
-      <!-- Contenedor  principal del formulario-->
-      <div class="personal pt-4">
-        <!-- Contenedor segundario que engloba la informacion del formulario-->
-        <form>
-          
-          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
-          <div class="form-group mb-3">
-            <!-- Iconos-->
-            <i class="bi bi-person"></i>
-            <!-- Input de Nombres con la clase form-control para dar las propiedades-->
-            <input type="text" class="form-control propiedades" name="nombre" placeholder="Nombre" />
-          </div>
-          
-          <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
-          <div class="form-group mb-3">
-            <!-- Iconos-->
-            <i class="bi bi-telephone"></i>
-            <!-- Input de Numero de Telefono con la clase form-control para dar las propiedades-->
-            <input type="text" class="form-control propiedades" name="numero" minlength="10" maxlength="10" placeholder="Numero Telefono" />
-          </div>
-          
-          <!-- Boton de Ingresar-->
-          <div class="justify-content-center d-flex mb-3 pb-2">
-            <button type="submit" class="btn  " value="ingresar">
-              Ingresar
-            </button>
-          </div>
-          <div class="justify-content-center d-flex pb-2">
-            <!-- Boton de Volver-->
-            <a class="btn  " href="/personal" role="button">Volver</a>
-          </div>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro del Personal</title>
+    <!-- Estilo del logo de doble ventana-->
+    <link rel="icon" href="/img/DAYEN-logo.png" type="image/x-icon" />
+    <!-- Estilo del Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Estilo de los iconos-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Estilo de css que se le asigna-->
+    <link rel="stylesheet" href="/css/formularios/personal.css" />
+    <!-- Verifica que exista una session iniciada -->
+    <script type="module" src="../src/config/Auth.js"></script>
+  </head>
+  <body>
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Contenedor SEGUNDARIO que engloba la estructura del registro de Personal-->
+      <div class="row registro justify-content-center pt-2">
+        <!--Titulo-->
+        <h2 class="">REGISTRAR PERSONAL</h2>
+        <!-- Contenedor de la imagen-->
+        <div class="image">
+          <img class="logo" src="/img/DAYEN-logo.png" />
+        </div>
 
-        </form>
+        <!-- Contenedor  principal del formulario-->
+        <div class="personal pt-4">
+          <!-- Contenedor segundario que engloba la informacion del formulario-->
+          <form>
+            <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
+            <div class="form-group mb-3">
+              <!-- Iconos-->
+              <i class="bi bi-person"></i>
+              <!-- Input de Nombres con la clase form-control para dar las propiedades-->
+              <input
+                type="text"
+                class="form-control propiedades"
+                name="nombre"
+                placeholder="Nombre"
+              />
+              <small id="nombre_error_message"></small>
+            </div>
+
+            <!-- Div que esta compuesta por la clase form-grup que componen el formulario de registro de Personal-->
+            <div class="form-group mb-3">
+              <!-- Iconos-->
+              <i class="bi bi-telephone"></i>
+              <!-- Input de Numero de Telefono con la clase form-control para dar las propiedades-->
+              <input
+                type="text"
+                class="form-control propiedades"
+                name="numero"
+                maxlength="10"
+                placeholder="Numero Telefono"
+              />
+              <small id="numero_error_message"></small>
+            </div>
+
+            <!-- Boton de Ingresar-->
+            <div class="justify-content-center d-flex mb-3 pb-2">
+              <button type="submit" class="btn" value="ingresar">
+                Ingresar
+              </button>
+            </div>
+            <div class="justify-content-center d-flex pb-2">
+              <!-- Boton de Volver-->
+              <a class="btn" href="/personal" role="button">Volver</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-  <script defer type="module" src="../src/utils/personal/RegistroPersonal.js"></script>
-  <script defer type="module" src="../src/utils/Env.js"></script>
-</body>
+    <script
+      defer
+      type="module"
+      src="../src/utils/personal/RegistroPersonal.js"
+    ></script>
+    <script defer type="module" src="../src/utils/Env.js"></script>
+  </body>
 </html>

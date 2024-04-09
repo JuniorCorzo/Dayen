@@ -7,12 +7,30 @@ import insertsSelectInfo from './FormProcesos'
  */
 function registrarProcesos (data) {
   pushData('/proceso/create', data).then((res) => {
-    if (res.status === 200) {
-      alert('Proceso registrado con éxito')
-    } else {
-      alert('Proceso registrado con éxito')
+    if (data?.message) {
+      alert(data.message)
+      return
     }
+    alert('Proceso registrado con éxito')
   })
+}
+
+function validacionForm (data) {
+  if (data.idTipo === '') {
+    document.getElementById('tipo_error_message').innerHTML = 'Seleccione un tipo de proceso'
+    return false
+  }
+
+  if (data.realizadoEn === '') {
+    document.getElementById('calen_error_message').innerHTML = 'Ingrese la fecha del proceso'
+    return false
+  }
+
+  if (data.descripcion === '') {
+    document.getElementById('descripcion_error_message').innerHTML = 'Ingrese la descripción del proceso'
+    return false
+  }
+  return true
 }
 
 document.querySelector('form').addEventListener('submit', (e) => {
@@ -35,8 +53,9 @@ document.querySelector('form').addEventListener('submit', (e) => {
     data.idPersonal.push(parseInt(personal.getAttribute('data-value')))
   })
 
-  registrarProcesos(data)
+  if (validacionForm(data)) registrarProcesos(data)
 })
 
 insertsSelectInfo()
-document.querySelector('.volver').setAttribute('href', `/procesos?idLote=${new URLSearchParams(window.location.search).get('idLote')}`)
+const params = new URLSearchParams(window.location.search)
+document.querySelector('.volver').setAttribute('href', `/procesos?idLote=${params.get('idLote')}&nombre=${params.get('nombre')}`)
