@@ -249,7 +249,10 @@ h2 {
   .nav-link {
     font-size: 18px;
   }
-
+ /*Titulos*/
+ h1, h4 {
+  font-size: 35px;
+}
   /*Parrafos y contenido*/
   p {
     text-align: justify;
@@ -312,8 +315,8 @@ h2 {
   }
   /*Contenido de Modulo de bienvenida*/
   /*Titulos*/
-  h1 {
-    font-size: 40px;
+  h1, h4 {
+    font-size: 35px;
   }
   /*Imagen de dayen*/
   .d-inline-block {
