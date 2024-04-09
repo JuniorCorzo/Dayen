@@ -62,12 +62,12 @@ function updatePersonalSession () {
 }
 
 function updateLoteSession () {
-  const lote = sessionStorage.getItem('lotes')
-  if (lote) {
-    getData(`/lotes/${getCookie('userId')}`).then((data) => {
-      sessionStorage.setItem('lotes', JSON.stringify(data))
-    })
-  }
+  getData(`/lotes/${getCookie('userId')}`).then((data) => {
+    sessionStorage.setItem('lotes', JSON.stringify(data))
+    if (window.location.pathname === '/inicio') {
+      window.location.reload()
+    }
+  })
 }
 
 function getCookie (name) {

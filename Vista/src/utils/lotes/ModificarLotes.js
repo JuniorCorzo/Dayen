@@ -45,12 +45,18 @@ document.querySelector('#modificar_form').addEventListener('submit', (e) => {
 })
 
 const eliminarLote = (idLote) => {
-  deleteData(`/lotes/delete/${idLote}`).then(
-    alert('Se elimino el lote')
+  deleteData(`/lotes/delete/${idLote}`).then((response) => {
+    if (response.ok) {
+      alert('Se elimino el lote')
+      updateLoteSession()
+    }
+  }
   )
 }
 
-document.querySelector('#eliminar_lote').addEventListener('click', (e) => { eliminarLote(e.target.dataset.idLote); updateLoteSession(); window.location.reload() })
+document.querySelector('#eliminar_lote').addEventListener('click', (e) => {
+  eliminarLote(e.target.dataset.idLote)
+})
 
 setTimeout(() => {
   document.querySelectorAll('.modificar-lote').forEach((button) => {

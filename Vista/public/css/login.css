@@ -123,3 +123,24 @@ h1 {
 .olvido:hover {
   box-shadow: 0 3px 2px #e2d197;
 }
+/***********************************************************************/
+/*Reponsive*/
+@media screen and (max-width: 768px) {
+  
+  /*Contenido de Modulo de bienvenida*/
+  /*Es para darle el tamaño y la fuente del label de la verificación del usuario*/
+.form-check-label {
+  font-size: 18px;
+  margin-left: 10px;
+}
+}
+
+/* Estilos para pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos que se aplicarán solo en pantallas con un ancho mínimo de 601px y un ancho máximo de 1024px */
+  /*Titulos*/
+  h1 {
+    font-size: 35px;
+  }
+  
+}
