@@ -41,11 +41,11 @@ if (window.location.pathname === '/validar-clave') {
     e.preventDefault()
 
     if (validarClave(document.querySelector('input[name="clave"]').value) !== true) {
-      document.querySelector('error-clave').textContent = validarClave(document.querySelector('input[name="clave"]').value)
+      document.querySelector('.clave-error').innerHTML = validarClave(document.querySelector('input[name="clave"]').value)
       return
     }
     if (document.querySelector('input[name="clave"]').value !== document.querySelector('input[name="confirmar-clave"]').value) {
-      document.querySelector('error-confirmar-clave').textContent = 'Las contraseña no coinciden'
+      document.querySelector('.confirmar-clave-error').innerHTML = 'Las contraseña no coinciden'
       return
     }
 
