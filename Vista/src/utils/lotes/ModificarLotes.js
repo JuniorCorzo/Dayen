@@ -70,7 +70,7 @@ document.querySelector('#eliminar_lote').addEventListener('click', (e) => {
   eliminarLote(e.target.dataset.idLote)
 })
 
-setTimeout(() => {
+export const createEventLotes = () => {
   document.querySelectorAll('.modificar-lote').forEach((button) => {
     button.addEventListener('click', () => {
       const { idLote, nombre, tituloImagen, hectareas, fase } = button.dataset
@@ -89,4 +89,4 @@ setTimeout(() => {
       })
     })
   })
-}, 100)
+}

@@ -1,3 +1,5 @@
+import { createEventLotes } from './ModificarLotes'
+
 const insertLotes = () => {
   const data = JSON.parse(sessionStorage.getItem('lotes'))
     .map((data) => {
@@ -53,7 +55,9 @@ const insertLotes = () => {
     `
     return
   }
+
   document.querySelector('.contenedor-lotes').innerHTML = data
+  createEventLotes()
 }
 
 new Promise((resolve) => {
