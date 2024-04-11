@@ -40,6 +40,7 @@ ul li a:hover {
 .d-inline-block {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 /*Icono de Registrar Personal*/
 .bi-people-fill {
@@ -52,14 +53,14 @@ ul li a:hover {
 .fa-sun-plant-wilt {
   color: black;
   font-size: 26px;
-  margin-left: 90px;
+  margin-left: 80px;
   cursor: pointer;
 }
 /*Icono de cerrar*/
 .fa-x {
   color: black;
   font-size: 26px;
-  margin-left: 30px !important;
+  margin-right: 30px;
   cursor: pointer;
 }
 /*Boton de responsive*/
@@ -186,12 +187,13 @@ h2 {
   color: black;
 }
 /*Iconos */
-.fa-solid,
-.fa-brands {
+/*Icono de lotes-camara-hectareas*/
+.fa-plant-wilt, .fa-camera, .fa-pagelines {
   color: black;
   position: absolute;
   padding: 10px;
   pointer-events: none;
+  cursor: pointer;
 }
 
 /* Clases del icono que están en el registre lotes*/

@@ -52,7 +52,7 @@ ul li a:hover {
 .bi-inicio {
   color: black;
   font-size: 26px;
-  margin-left: 65px;
+  margin-left: 70px;
   cursor: pointer;
 }
 /*Icono registro de persona*/
@@ -66,6 +66,7 @@ ul li a:hover {
 .d-inline-block {
   width: 100px;
   height: 100px;
+  cursor: pointer;
 }
 /*Contenido de Modulo de bienvenida*/
 
@@ -74,37 +75,39 @@ h1 {
   font-family: "Crete Round", serif;
   font-size: 50px;
   color: #e8e6e6;
-}
-h1:hover {
-  text-shadow: 2px 2px 20px #151615;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  cursor: pointer;
 }
 /*Parrafos y contenido*/
 p {
   text-align: justify;
   font-size: 25px;
   color: #e8e6e6;
+  cursor: pointer;
 }
 /*Pie de pagina*/
 .nav-footer a {
   color: #e8e6e6 !important;
+  cursor: pointer;
 }
 .bi-whatsapp {
   margin-left: 60px;
   font-size: 40px !important;
+  cursor: pointer;
 }
 .bi-facebook {
   margin-left: 65px;
   font-size: 40px !important;
+  cursor: pointer;
 }
 .bi-instagram {
   margin-left: 65px;
   font-size: 40px !important;
+  cursor: pointer;
 }
 .bi-github {
   margin-left: 50px;
   font-size: 40px !important;
+  cursor: pointer;
 }
 /*Estilo de imagenes de Bienvenida*/
 .img-1,
