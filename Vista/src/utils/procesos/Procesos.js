@@ -79,6 +79,7 @@ const tablaProceso = new DataTable('#tablaprocesos', {
       data: null,
       title: 'Acciones',
       orderable: false,
+      responsivePriority: 3,
       render: function (data) {
         return `
         <div class="d-flex justify-content-center gap-3">
@@ -117,6 +118,20 @@ const tablaProceso = new DataTable('#tablaprocesos', {
     prepararModificar()
     prepararEliminar()
   }
+}).on('responsive-display', function (e, datatable, row, showHide, update) {
+  document.querySelectorAll('.dtr-title').forEach((label) => {
+    if (label.textContent === 'Realizado en') {
+      label.textContent = 'Realizado en:'
+    }
+
+    if (label.textContent === 'Descripción') {
+      label.textContent = 'Descripción:'
+    }
+
+    if (label.textContent === 'Personal') {
+      label.textContent = 'Personal:'
+    }
+  })
 })
 const choicesReturn = insertsSelectInfo()
 const containerSearch = document.querySelector('.dt-container .row')
